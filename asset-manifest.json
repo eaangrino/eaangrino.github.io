@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.262f8c68.css",
+    "main.js": "/static/js/main.ad18c3e8.js",
+    "static/js/787.92e4d466.chunk.js": "/static/js/787.92e4d466.chunk.js",
+    "static/media/sanFranciscoDesktop.jpg": "/static/media/sanFranciscoDesktop.1b3f62dd8ec2ff1e6473.jpg",
+    "static/media/michiPsicologo.jpg": "/static/media/michiPsicologo.1a7d17d299639e516250.jpg",
+    "index.html": "/index.html",
+    "main.262f8c68.css.map": "/static/css/main.262f8c68.css.map",
+    "main.ad18c3e8.js.map": "/static/js/main.ad18c3e8.js.map",
+    "787.92e4d466.chunk.js.map": "/static/js/787.92e4d466.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.262f8c68.css",
+    "static/js/main.ad18c3e8.js"
+  ]
+}
