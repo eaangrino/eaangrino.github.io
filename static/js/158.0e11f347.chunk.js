@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeaaldark_github_io=self.webpackChunkeaaldark_github_io||[]).push([[158],{158:function(e,a,l){l.r(a);l(313);var t=l(417);a.default=function(e){return(0,t.jsx)("div",{className:"w-full h-full text-white",children:(0,t.jsx)("h1",{children:"Proyectos"})})}}}]);
