@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc581b76.css",
-    "main.js": "/static/js/main.7a1b69e8.js",
+    "main.css": "/static/css/main.69812802.css",
+    "main.js": "/static/js/main.54448dbf.js",
     "static/js/257.0343a3d7.chunk.js": "/static/js/257.0343a3d7.chunk.js",
     "static/js/151.662098bb.chunk.js": "/static/js/151.662098bb.chunk.js",
-    "static/js/653.27e34aaa.chunk.js": "/static/js/653.27e34aaa.chunk.js",
+    "static/js/653.558b3cf3.chunk.js": "/static/js/653.558b3cf3.chunk.js",
     "static/js/195.ee552ae4.chunk.js": "/static/js/195.ee552ae4.chunk.js",
     "static/js/402.204e788c.chunk.js": "/static/js/402.204e788c.chunk.js",
     "static/js/493.68beb798.chunk.js": "/static/js/493.68beb798.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/icons8-gmail.svg": "/static/media/icons8-gmail.e1bc2ceb745debf9361ad2160a79823a.svg"
   },
   "entrypoints": [
-    "static/css/main.dc581b76.css",
-    "static/js/main.7a1b69e8.js"
+    "static/css/main.69812802.css",
+    "static/js/main.54448dbf.js"
   ]
 }
