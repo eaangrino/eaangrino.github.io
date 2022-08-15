@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.bc3dc62a.css",
+    "main.css": "/static/css/main.0fda4dc8.css",
     "main.js": "/static/js/main.c9af60d0.js",
     "static/js/257.0343a3d7.chunk.js": "/static/js/257.0343a3d7.chunk.js",
     "static/js/151.8f131092.chunk.js": "/static/js/151.8f131092.chunk.js",
@@ -34,7 +34,7 @@
     "static/media/serverless_logo_icon_168838.svg": "/static/media/serverless_logo_icon_168838.3b018794f3a10fd19aec4acc8a7fc120.svg"
   },
   "entrypoints": [
-    "static/css/main.bc3dc62a.css",
+    "static/css/main.0fda4dc8.css",
     "static/js/main.c9af60d0.js"
   ]
 }
