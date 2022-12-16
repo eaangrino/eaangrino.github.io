@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.b76fa37e.css",
-    "main.js": "/static/js/main.a60596cc.js",
+    "main.css": "/static/css/main.8b5cbea4.css",
+    "main.js": "/static/js/main.9d6dc7c7.js",
     "static/js/257.1d0ff70a.chunk.js": "/static/js/257.1d0ff70a.chunk.js",
-    "static/js/151.1a388bde.chunk.js": "/static/js/151.1a388bde.chunk.js",
+    "static/js/151.de60ac6b.chunk.js": "/static/js/151.de60ac6b.chunk.js",
     "static/js/992.b7e1cb3f.chunk.js": "/static/js/992.b7e1cb3f.chunk.js",
-    "static/js/195.8b9b1010.chunk.js": "/static/js/195.8b9b1010.chunk.js",
-    "static/js/402.e5341734.chunk.js": "/static/js/402.e5341734.chunk.js",
-    "static/js/158.a3d04afc.chunk.js": "/static/js/158.a3d04afc.chunk.js",
+    "static/js/195.fbbf5322.chunk.js": "/static/js/195.fbbf5322.chunk.js",
+    "static/js/402.03b33287.chunk.js": "/static/js/402.03b33287.chunk.js",
+    "static/js/158.effb0452.chunk.js": "/static/js/158.effb0452.chunk.js",
     "static/js/27.4a8982ff.chunk.js": "/static/js/27.4a8982ff.chunk.js",
     "static/media/michiPsicologo.jpg": "/static/media/michiPsicologo.1a7d17d299639e516250.jpg",
     "static/media/2333386-code-linux-os_85584.svg": "/static/media/2333386-code-linux-os_85584.0abcc7526f44845339adfd6008c9c1e1.svg",
@@ -35,7 +35,7 @@
     "static/media/serverless_logo_icon_168838.svg": "/static/media/serverless_logo_icon_168838.3b018794f3a10fd19aec4acc8a7fc120.svg"
   },
   "entrypoints": [
-    "static/css/main.b76fa37e.css",
-    "static/js/main.a60596cc.js"
+    "static/css/main.8b5cbea4.css",
+    "static/js/main.9d6dc7c7.js"
   ]
 }
