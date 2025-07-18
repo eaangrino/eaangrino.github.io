@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  curriculum:
+    build:
+      context: ./
+      dockerfile: dockerfile
+    container_name: curriculum
+    volumes:
+      - ./:/app
+    ports:
+      - 2173:2173
+      - 3173:3173
+    tty: true
