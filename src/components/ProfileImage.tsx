@@ -14,10 +14,10 @@ export default function ProfileImage({
 	rotationDirection = 'right',
 }: ProfileImageProps) {
 	const sizeClasses = {
-		sm: 'w-32 h-32 sm:w-48 sm:h-48',
-		md: 'w-40 h-40 sm:w-64 sm:h-64',
-		lg: 'w-48 h-48 sm:w-80 sm:h-80',
-		xl: 'w-56 h-56 sm:w-96 sm:h-96',
+		sm: 'w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40',
+		md: 'w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56',
+		lg: 'w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64',
+		xl: 'w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72',
 	};
 
 	const rotationClasses = {
@@ -83,7 +83,7 @@ export default function ProfileImage({
 					) : (
 						<div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
 							<svg
-								className="h-16 w-16 text-gray-400 sm:h-32 sm:w-32"
+								className="h-16 w-16 text-gray-400 sm:h-18 sm:w-18 md:h-20 md:w-20"
 								fill="currentColor"
 								viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg">

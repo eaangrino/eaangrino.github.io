@@ -61,7 +61,7 @@ export default function AboutSection() {
 	];
 
 	return (
-		<section id="about" className="bg-base-200 px-4 py-28">
+		<section id="about" className="bg-base-200 px-4 py-20 md:px-8 md:py-28">
 			<div className="container mx-auto max-w-6xl">
 				{/* Section Header */}
 				<SectionHeader
@@ -70,16 +70,16 @@ export default function AboutSection() {
 				/>
 
 				{/* Content Grid */}
-				<div className="grid items-center gap-12 lg:grid-cols-2">
+				<div className="grid items-center gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12">
 					{/* Profile Image */}
-					<div className="flex justify-center lg:justify-start">
+					<div className="flex justify-center md:justify-center">
 						<ProfileImage size="xl" rotationDirection="left" />
 					</div>
 
 					{/* Content */}
-					<div className="text-center lg:text-left">
+					<div className="text-center md:text-center lg:text-left">
 						{/* Description */}
-						<p className="text-base-content/70 mb-6 text-lg leading-relaxed">
+						<p className="text-base-content/70 mb-6 text-base leading-relaxed md:text-lg">
 							{t('description')}
 						</p>
 
@@ -105,7 +105,7 @@ export default function AboutSection() {
 						</div>
 
 						{/* Stats */}
-						<div className="mb-8 grid grid-cols-3 gap-6">
+						<div className="mb-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
 							{stats.map((stat, index) => (
 								<StatsCard
 									key={index}

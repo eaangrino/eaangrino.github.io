@@ -32,21 +32,21 @@ export default function HeroSection({
 	return (
 		<section
 			id="home"
-			className="flex min-h-screen items-center justify-center px-4 pt-20 pb-16">
+			className="flex min-h-screen items-center justify-center px-4 pt-20 pb-16 md:px-8 md:pt-24">
 			<div className="container mx-auto max-w-6xl">
-				<div className="grid items-center gap-12 lg:grid-cols-2">
+				<div className="grid items-center gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12">
 					{/* Content */}
-					<div className="text-center lg:text-left">
-						<h1 className="text-base-content mb-4 text-5xl font-bold lg:text-6xl">
+					<div className="text-center md:text-center lg:text-left">
+						<h1 className="text-base-content mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
 							{t('greeting')} <span className="text-primary">{name}</span>
 						</h1>
 
-						<h2 className="text-base-content/70 mb-6 text-2xl lg:text-3xl">
+						<h2 className="text-base-content/70 mb-6 text-xl md:text-2xl lg:text-3xl">
 							{t('role')}
 						</h2>
 
 						<p
-							className={`text-base-content/60 mx-auto mb-8 max-w-lg text-lg transition-opacity duration-300 lg:mx-0 ${
+							className={`text-base-content/60 mx-auto mb-8 max-w-lg text-base transition-opacity duration-300 md:mx-auto md:text-lg lg:mx-0 ${
 								isVisible ? 'opacity-100' : 'opacity-0'
 							}`}>
 							{currentText}
@@ -75,7 +75,7 @@ export default function HeroSection({
 					</div>
 
 					{/* Profile Image */}
-					<div className="flex justify-center lg:justify-end">
+					<div className="flex justify-center md:justify-center">
 						<ProfileImage size="xl" rotationDirection="right" />
 					</div>
 				</div>
