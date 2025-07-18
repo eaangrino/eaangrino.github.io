@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../hooks/useTheme';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
 	const { isDarkMode, toggleTheme } = useTheme();
@@ -95,6 +96,8 @@ export default function Header() {
 								)}
 							</button>
 						</div>
+						{/* Language Selector */}
+						<LanguageSelector />
 
 						{/* Mobile Menu Button */}
 						<button
@@ -148,6 +151,15 @@ export default function Header() {
 									{item.name}
 								</button>
 							))}
+							{/* Mobile Language Selector */}
+							<div className="border-base-300 border-t pt-4">
+								<div className="flex items-center justify-between">
+									<span className="text-base-content/70 text-sm font-medium">
+										Language / Idioma
+									</span>
+									<LanguageSelector />
+								</div>
+							</div>
 						</nav>
 					</div>
 				)}

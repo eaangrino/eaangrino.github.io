@@ -11,6 +11,7 @@ export default {
     },
     toggleTheme: 'Toggle dark mode',
     toggleMenu: 'Toggle navigation menu',
+    languageSelector: 'Select language',
   },
   hero: {
     greeting: 'Hi, I\'m',
