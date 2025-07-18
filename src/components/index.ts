@@ -11,7 +11,7 @@ export { default as SectionHeader } from './SectionHeader';
 export { default as SkillsSection } from './SkillsSection';
 export { default as SkillCard } from './SkillCard';
 export { default as TechnologyIcon } from './TechnologyIcon';
-export { default as QualificationSection } from './QualificationSection';
+export { default as ExperienceSection } from './ExperienceSection';
 export { default as TabButton } from './TabButton';
 export { default as TimelineItem } from './TimelineItem';
 export { default as ServicesSection } from './ServicesSection';

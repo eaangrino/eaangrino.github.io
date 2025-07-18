@@ -32,7 +32,7 @@ export default function TimelineItem({
 					}`}>
 					{/* Badge for graduated or work status */}
 					{(graduated || work) && (
-						<div className="bg-primary text-primary-content absolute -top-2 -right-2 rounded-full p-1.5 shadow-lg">
+						<div className="bg-primary text-primary-content absolute -top-2 -right-2 space-y-2 rounded-full p-1.5 shadow-lg">
 							{graduated && (
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

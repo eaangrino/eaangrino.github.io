@@ -99,4 +99,12 @@ export default {
   construction: {
     message: 'Sitio en construcción - ¡Próximamente!',
   },
+  experience: {
+    title: 'Experiencia',
+    subtitle: 'Mi trayectoria personal',
+    tabs: {
+      work: 'Experiencia',
+      education: 'Educación',
+    },
+  },
 }; 

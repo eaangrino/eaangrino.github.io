@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionHeader from './SectionHeader';
 import TabButton from './TabButton';
 import TimelineItem from './TimelineItem';
 
-interface QualificationItem {
+interface ExperienceItem {
 	id: number;
 	title: string;
 	location: string;
@@ -13,31 +14,33 @@ interface QualificationItem {
 	work?: boolean;
 }
 
-interface QualificationTab {
+interface ExperienceTab {
 	id: 'education' | 'work';
 	label: string;
 	icon: React.ReactNode;
-	items: QualificationItem[];
+	items: ExperienceItem[];
 }
 
-export default function QualificationSection() {
+export default function ExperienceSection() {
+	const { t } = useTranslation('experience');
 	const [activeTab, setActiveTab] = useState<'education' | 'work'>('work');
 
-	const qualificationTabs: QualificationTab[] = [
+	const experienceTabs: ExperienceTab[] = [
 		{
 			id: 'work',
 			label: 'Work',
 			icon: (
 				<svg
-					className="h-5 w-5"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-5">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"
+						d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
 					/>
 				</svg>
 			),
@@ -58,6 +61,8 @@ export default function QualificationSection() {
 					dates: 'Nov 2018 - Abr 2019',
 					description:
 						'Soporte a aplicaciones Java, manejo de Oracle SQL y administración de servidores Linux.',
+					work: true,
+					graduated: true,
 				},
 			],
 		},
@@ -66,17 +71,16 @@ export default function QualificationSection() {
 			label: 'Education',
 			icon: (
 				<svg
-					className="h-5 w-5"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
-					<path d="M12 14l9-5-9-5-9 5 9 5z" />
-					<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+					className="size-5">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+						d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
 					/>
 				</svg>
 			),
@@ -150,21 +154,21 @@ export default function QualificationSection() {
 		},
 	];
 
-	const activeTabData = qualificationTabs.find((tab) => tab.id === activeTab);
+	const activeTabData = experienceTabs.find((tab) => tab.id === activeTab);
 
 	return (
 		<section className="bg-base-200 px-4 py-20">
 			<div className="container mx-auto max-w-4xl">
-				<SectionHeader title="Qualification" subtitle="My personal journey" />
+				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
 				{/* Tabs */}
 				<div className="mb-12 flex justify-center">
 					<div className="bg-base-100 flex gap-2 rounded-lg p-2 shadow-md">
-						{qualificationTabs.map((tab) => (
+						{experienceTabs.map((tab) => (
 							<TabButton
 								key={tab.id}
 								id={tab.id}
-								label={tab.label}
+								label={t(`tabs.${tab.id}`)}
 								icon={tab.icon}
 								isActive={activeTab === tab.id}
 								onClick={() => setActiveTab(tab.id)}
