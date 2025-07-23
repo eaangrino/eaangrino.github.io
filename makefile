@@ -27,3 +27,6 @@ rebuild:
 
 prettier:
 	${DOCKER_COMPOSE} npx prettier --write .
+
+deploy:
+	make build && npm run deploy
