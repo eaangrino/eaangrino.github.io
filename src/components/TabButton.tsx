@@ -19,7 +19,7 @@ export default function TabButton({
 	return (
 		<button
 			onClick={onClick}
-			className={`flex items-center space-x-2 rounded-md px-6 py-3 transition-all duration-300 ${
+			className={`flex cursor-pointer items-center space-x-2 rounded-md px-6 py-3 transition-all duration-300 ${
 				isActive
 					? 'bg-primary text-primary-content shadow-md'
 					: 'text-base-content/70 hover:bg-base-200 hover:text-base-content'
