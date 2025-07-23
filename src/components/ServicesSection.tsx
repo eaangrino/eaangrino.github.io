@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import SectionHeader from './SectionHeader';
 import ServiceCard from './ServiceCard';
 
@@ -9,10 +10,11 @@ interface Service {
 }
 
 export default function ServicesSection() {
+	const { t } = useTranslation('services');
 	const services: Service[] = [
 		// {
 		// 	id: 1,
-		// 	title: 'UI/UX Designer',
+		// 	title: 'uiUxDesigner',
 		// 	icon: (
 		// 		<svg
 		// 			className="h-8 w-8"
@@ -30,7 +32,7 @@ export default function ServicesSection() {
 		// },
 		{
 			id: 2,
-			title: 'Frontend Developer',
+			title: 'frontendDeveloper',
 			icon: (
 				<svg
 					className="h-8 w-8"
@@ -48,7 +50,7 @@ export default function ServicesSection() {
 		},
 		{
 			id: 3,
-			title: 'Backend Developer',
+			title: 'backendDeveloper',
 			icon: (
 				<svg
 					className="h-8 w-8"
@@ -87,13 +89,13 @@ export default function ServicesSection() {
 	return (
 		<section id="services" className="bg-base-100 px-4 py-28">
 			<div className="container mx-auto max-w-6xl">
-				<SectionHeader title="Services" subtitle="What I offer" />
+				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{services.map((service) => (
 						<ServiceCard
 							key={service.id}
-							title={service.title}
+							title={t(`services.${service.title}`)}
 							icon={service.icon}
 						/>
 					))}
