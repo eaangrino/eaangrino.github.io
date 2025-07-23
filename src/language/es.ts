@@ -77,7 +77,7 @@ export default {
     subtitle: 'Ponte en contacto',
     contactInfo: {
       callMe: 'Llamarme',
-      email: 'Email',
+      email: 'Correo electrónico',
       localisation: 'Ubicación',
     },
     form: {
