@@ -1,22 +1,82 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface Language {
 	code: string;
 	name: string;
 	flag: string;
+	flagSvg: React.ReactElement;
 }
+
+// Custom hook to detect if device is mobile
+const useIsMobile = () => {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkIsMobile = () => {
+			setIsMobile(window.innerWidth < 768); // md breakpoint
+		};
+
+		checkIsMobile();
+		window.addEventListener('resize', checkIsMobile);
+
+		return () => window.removeEventListener('resize', checkIsMobile);
+	}, []);
+
+	return isMobile;
+};
 
 const languages: Language[] = [
 	{
 		code: 'en',
 		name: 'English',
 		flag: '🇺🇸',
+		flagSvg: (
+			<svg viewBox="0 0 640 480" className="h-4 w-5 rounded-sm">
+				<path fill="#B22234" d="M0 0h640v480H0z" />
+				<path
+					fill="#FFF"
+					d="M0 0h640v37H0zM0 74h640v37H0zM0 148h640v37H0zM0 222h640v37H0zM0 296h640v37H0zM0 370h640v37H0zM0 444h640v37H0z"
+				/>
+				<path fill="#3C3B6E" d="M0 0h320v259H0z" />
+				<g fill="#FFF">
+					<g id="s">
+						<g id="t">
+							<g id="u">
+								<g id="v">
+									<g id="w">
+										<path
+											id="x"
+											d="M24 12l2.163 6.657h7.002l-5.666 4.117 2.163 6.657L24 25.314l-5.662-4.117 2.163-6.657-5.666-4.117h7.002z"
+										/>
+										<use href="#x" y="24" />
+									</g>
+									<use href="#w" y="48" />
+								</g>
+								<use href="#v" y="96" />
+							</g>
+							<use href="#u" y="192" />
+						</g>
+						<use href="#t" x="48" />
+					</g>
+					<use href="#s" x="96" />
+					<use href="#s" x="192" />
+					<use href="#t" x="240" />
+				</g>
+			</svg>
+		),
 	},
 	{
 		code: 'es',
 		name: 'Español',
-		flag: '🇪🇸',
+		flag: '🇨🇴',
+		flagSvg: (
+			<svg viewBox="0 0 640 480" className="h-4 w-5 rounded-sm">
+				<path fill="#FCD116" d="M0 0h640v240H0z" />
+				<path fill="#003893" d="M0 240h640v120H0z" />
+				<path fill="#CE1126" d="M0 360h640v120H0z" />
+			</svg>
+		),
 	},
 ];
 
@@ -24,6 +84,7 @@ export default function LanguageSelector() {
 	const { i18n, t } = useTranslation('header');
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
+	const isMobile = useIsMobile();
 
 	// const currentLanguage =
 	// 	languages.find((lang) => lang.code === i18n.language) || languages[0];
@@ -87,7 +148,9 @@ export default function LanguageSelector() {
 										? 'bg-primary/10 text-primary'
 										: 'text-base-content'
 								}`}>
-								<span className="text-base">{language.flag}</span>
+								<span className="text-base">
+									{isMobile ? language.flag : language.flagSvg}
+								</span>
 								<span className="font-medium">{language.name}</span>
 								{i18n.language === language.code && (
 									<svg
