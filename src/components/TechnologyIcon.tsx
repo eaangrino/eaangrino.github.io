@@ -4,6 +4,7 @@ interface TechnologyIconProps {
 	icon: string;
 	color: string;
 	size?: 'sm' | 'md' | 'lg';
+	name?: string;
 	className?: string;
 	iconUrl?: string;
 	isBlack?: boolean;
@@ -12,6 +13,7 @@ interface TechnologyIconProps {
 export default function TechnologyIcon({
 	icon,
 	size = 'md',
+	name = '',
 	className = '',
 	iconUrl,
 	isBlack = false,
@@ -31,7 +33,7 @@ export default function TechnologyIcon({
 	}`;
 
 	return (
-		<div className={`flex flex-col items-center ${className}`}>
+		<div className={`flex flex-col items-center gap-1 ${className}`}>
 			{iconUrl ? (
 				<img src={iconUrl} alt={icon} className={imageClasses} />
 			) : (
@@ -40,6 +42,9 @@ export default function TechnologyIcon({
 					<span className="text-base-content font-semibold">{icon}</span>
 				</div>
 			)}
+			<span className="text-base-content text-center font-semibold">
+				{name}
+			</span>
 		</div>
 	);
 }
