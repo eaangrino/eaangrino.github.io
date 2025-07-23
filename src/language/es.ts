@@ -35,7 +35,8 @@ export default {
       backendGood: 'Backend - Buen Conocimiento',
       devopsStrong: 'DevOps - Buen Conocimiento',
       devopsBasic: 'DevOps - Comprensión Básica',
-      mobileGood: 'Móvil - Buen Conocimiento',
+      databaseGood: 'Base de Datos - Buen Conocimiento',
+      mobileBasic: 'Móvil - Conocimiento Básico',
       tools: 'Herramientas',
     },
   },
@@ -87,9 +88,9 @@ export default {
       sendMessage: 'Enviar Mensaje',
     },
     contactDetails: {
-      phone: '+210-21-261-063',
-      email: 'anlaliman@gmail.com',
-      location: 'Túnez - Le Bardo',
+      phone: '+57 000 000-0000',
+      email: 'eaangrino@gmail.com',
+      location: 'Colombia',
     },
   },
   footer: {
@@ -105,6 +106,15 @@ export default {
     tabs: {
       work: 'Experiencia',
       education: 'Educación',
+    },
+  },
+  services: {
+    title: 'Servicios',
+    subtitle: 'Lo que ofrezco',
+    services: {
+      frontendDeveloper: 'Desarrollador Frontend',
+      backendDeveloper: 'Desarrollador Backend',
+      uiUxDesigner: 'Diseñador UI/UX',
     },
   },
 }; 

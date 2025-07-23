@@ -35,7 +35,8 @@ export default {
       backendGood: 'Backend - Good Knowledge',
       devopsStrong: 'DevOps - Good Knowledge',
       devopsBasic: 'DevOps - Basic Understanding',
-      mobileGood: 'Mobile - Good Knowledge',
+      databaseGood: 'Database - Good Knowledge',
+      mobileBasic: 'Mobile - Basic Knowledge',
       tools: 'Tools',
     },
   },
@@ -77,7 +78,7 @@ export default {
     contactInfo: {
       callMe: 'Call Me',
       email: 'Email',
-      localisation: 'Localisation',
+      localisation: 'Location',
     },
     form: {
       name: 'Name',
@@ -87,9 +88,9 @@ export default {
       sendMessage: 'Send Message',
     },
     contactDetails: {
-      phone: '+210-21-261-063',
-      email: 'anlaliman@gmail.com',
-      location: 'Tunis - Le Bardo',
+      phone: '+57 000 000-0000',
+      email: 'eaangrino@gmail.com',
+      location: 'Colombia',
     },
   },
   footer: {
@@ -105,6 +106,15 @@ export default {
     tabs: {
       work: 'Work',
       education: 'Education',
+    },
+  },
+  services: {
+    title: 'Services',
+    subtitle: 'What I offer',
+    services: {
+      frontendDeveloper: 'Frontend Developer',
+      backendDeveloper: 'Backend Developer',
+      uiUxDesigner: 'UI/UX Designer',
     },
   },
 };
