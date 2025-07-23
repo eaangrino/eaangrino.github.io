@@ -24,15 +24,16 @@ export default function SkillsSection() {
 			name: t('categories.frontendStrong'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+						d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
 					/>
 				</svg>
 			),
@@ -90,15 +91,16 @@ export default function SkillsSection() {
 			name: t('categories.frontendGood'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+						d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
 					/>
 				</svg>
 			),
@@ -133,21 +135,16 @@ export default function SkillsSection() {
 			name: t('categories.backendStrong'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-					/>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+						d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z"
 					/>
 				</svg>
 			),
@@ -174,40 +171,22 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg',
 				},
-				{
-					name: 'PostgreSQL',
-					icon: 'P',
-					color: 'bg-blue-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg',
-				},
-				{
-					name: 'Oracle SQL',
-					icon: 'O',
-					color: 'bg-red-500',
-					iconUrl: 'https://www.oracle.com/a/ocom/img/sql-dev3.svg',
-				},
 			],
 		},
 		{
 			name: t('categories.backendGood'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-					/>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+						d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z"
 					/>
 				</svg>
 			),
@@ -226,21 +205,73 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
 				},
+				{
+					name: 'NestJS',
+					icon: 'N',
+					color: 'bg-red-500',
+					iconUrl: 'https://nestjs.com/logo-small-gradient.d792062c.svg',
+				},
+				{
+					name: 'TypeORM',
+					icon: 'T',
+					color: 'bg-purple-500',
+					iconUrl: '/typeorm.svg',
+				},
+				{
+					name: 'Sequelize',
+					icon: 'S',
+					color: 'bg-purple-500',
+					iconUrl: 'https://sequelize.org/img/logo.svg',
+				},
+			],
+		},
+		{
+			name: t('categories.databaseGood'),
+			icon: (
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
+					stroke="currentColor"
+					className="size-6">
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+					/>
+				</svg>
+			),
+			technologies: [
+				{
+					name: 'PostgreSQL',
+					icon: 'P',
+					color: 'bg-blue-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg',
+				},
+				{
+					name: 'Oracle SQL',
+					icon: 'O',
+					color: 'bg-red-500',
+					iconUrl: '/sql-dev3.svg',
+				},
 			],
 		},
 		{
 			name: t('categories.devopsStrong'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+						d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
 					/>
 				</svg>
 			),
@@ -265,15 +296,16 @@ export default function SkillsSection() {
 			name: t('categories.devopsBasic'),
 			icon: (
 				<svg
-					className="h-6 w-6"
+					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
 					stroke="currentColor"
-					viewBox="0 0 24 24">
+					className="size-6">
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+						d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
 					/>
 				</svg>
 			),
@@ -334,10 +366,17 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://www.vectorlogo.zone/logos/terraformio/terraformio-icon.svg',
 				},
+				{
+					name: 'DynamoDB',
+					icon: 'D',
+					color: 'bg-orange-500',
+					iconUrl:
+						'https://a.b.cdn.console.awsstatic.com/a/v1/AN2R6BU3DBLYCROPWJWYQWM62AYYLMXTM5V7AHNGQIU34L2VIEEA/icon/6f419a45e63123b4c16bd679549610f6-87862c68693445999110bbd6a467ce88.svg',
+				},
 			],
 		},
 		{
-			name: t('categories.mobileGood'),
+			name: t('categories.mobileBasic'),
 			icon: (
 				<svg
 					className="h-6 w-6"
@@ -432,6 +471,19 @@ export default function SkillsSection() {
 					color: 'bg-green-500',
 					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
 				},
+				{
+					name: 'Figma',
+					icon: 'F',
+					color: 'bg-purple-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/figma/figma-original.svg',
+				},
+				{
+					name: 'DeepSeek',
+					icon: 'D',
+					color: 'bg-purple-500',
+					iconUrl: '/deepseek.svg',
+				},
 			],
 		},
 	];
@@ -444,7 +496,7 @@ export default function SkillsSection() {
 				<div className="grid gap-8 md:grid-cols-2">
 					{skillCategories.map((category, index) => (
 						<SkillCard key={index} title={category.name} icon={category.icon}>
-							<div className="grid grid-cols-4 gap-4">
+							<div className="grid grid-cols-5 gap-4">
 								{category.technologies.map((tech, techIndex) => (
 									<TechnologyIcon
 										key={techIndex}
@@ -452,6 +504,7 @@ export default function SkillsSection() {
 										color={tech.color}
 										iconUrl={tech.iconUrl}
 										isBlack={tech.isBlack}
+										name={tech.name}
 									/>
 								))}
 							</div>
