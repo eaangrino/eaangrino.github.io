@@ -55,7 +55,7 @@ export default function SocialMediaBar() {
 	];
 
 	return (
-		<div className="fixed top-1/2 left-8 z-40 hidden -translate-y-1/2 transform lg:block">
+		<div className="fixed top-1/2 left-8 z-40 hidden -translate-y-1/2 transform xl:block">
 			<div className="flex flex-col space-y-4">
 				{socialLinks.map((link) => (
 					<a
