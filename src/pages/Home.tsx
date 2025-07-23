@@ -4,6 +4,7 @@ import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection';
 import ServicesSection from '../components/ServicesSection';
+import ContactSection from '../components/ContactSection';
 // import PortfolioSection from '../components/PortfolioSection';
 // import CTASection from '../components/CTASection';
 // import TestimonialSection from '../components/TestimonialSection';
@@ -20,7 +21,7 @@ export default function Home() {
 			{/* <PortfolioSection /> */}
 			{/* <TestimonialSection /> */}
 			{/* <CTASection /> */}
-			{/* <ContactSection /> */}
+			<ContactSection />
 		</Layout>
 	);
 }
