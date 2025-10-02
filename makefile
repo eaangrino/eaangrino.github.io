@@ -30,3 +30,6 @@ prettier:
 
 deploy:
 	make build && npm run deploy
+
+test:
+	${DOCKER_COMPOSE} npm run test

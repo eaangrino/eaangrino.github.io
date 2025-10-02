@@ -76,7 +76,11 @@ export default function HeroSection({
 
 					{/* Profile Image */}
 					<div className="flex justify-center md:justify-center">
-						<ProfileImage size="xl" rotationDirection="right" />
+						<ProfileImage
+							size="xl"
+							rotationDirection="right"
+							src="/1687745637419.jpeg"
+						/>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Button from './Button';
-import ProfileImage from './ProfileImage';
+// import ProfileImage from './ProfileImage';
 import StatsCard from './StatsCard';
 import SectionHeader from './SectionHeader';
 
@@ -70,14 +70,14 @@ export default function AboutSection() {
 				/>
 
 				{/* Content Grid */}
-				<div className="grid items-center gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12">
+				<div className="grid items-center gap-8 md:gap-10 lg:grid-cols-1 lg:gap-12">
 					{/* Profile Image */}
-					<div className="flex justify-center md:justify-center">
+					{/* <div className="flex justify-center md:justify-center">
 						<ProfileImage size="xl" rotationDirection="left" />
-					</div>
+					</div> */}
 
 					{/* Content */}
-					<div className="text-center md:text-center lg:text-left">
+					<div className="text-center md:text-center">
 						{/* Description */}
 						<p className="text-base-content/70 mb-6 text-base leading-relaxed md:text-lg">
 							{t('description')}

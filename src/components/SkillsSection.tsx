@@ -496,7 +496,7 @@ export default function SkillsSection() {
 				<div className="grid gap-8 md:grid-cols-2">
 					{skillCategories.map((category, index) => (
 						<SkillCard key={index} title={category.name} icon={category.icon}>
-							<div className="grid grid-cols-5 gap-4">
+							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
 								{category.technologies.map((tech, techIndex) => (
 									<TechnologyIcon
 										key={techIndex}
