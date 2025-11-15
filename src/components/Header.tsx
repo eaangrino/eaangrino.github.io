@@ -40,15 +40,28 @@ export default function Header() {
 	};
 
 	return (
-		<header className="navbar bg-base-100/95 border-base-300 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-sm">
+		<header className="navbar bg-base-100/65 border-base-300 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-sm">
 			<div className="container mx-auto px-4">
 				<div className="flex w-full items-center justify-between py-3">
 					{/* Logo */}
-					<button
-						onClick={() => scrollToSection('home')}
-						className="text-base-content hover:text-primary cursor-pointer text-xl font-bold transition-colors md:text-2xl">
-						{t('logo')}
-					</button>
+					<div className="flex flex-row gap-6">
+						<svg
+							className="h-10 w-10"
+							viewBox="0 0 700 700"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								opacity="0.9"
+								d="M319.5 497.5V618L244.5 558V452L319.5 497.5ZM454.75 558L379.75 618V497.5L454.75 452V558ZM215.5 468V558L170 513V437.5L215.5 468ZM529.25 513L483.75 558V468L529.25 437.5V513ZM408.699 81L484.66 218.037L409.25 259.5V333.5L467.75 364L524.758 314.355L573.536 379.214L543.75 409H394.75L349.5 484L304.5 409H155.5L125.714 379.214L174.492 314.355L231.5 364L290 333.5V259.5L154.5 185L111.5 215.5V259.5L142.709 286.678L95.5 349L36 289.5L154.938 81H408.699ZM663.25 289.5L603.75 349L556.541 286.678L587.75 259.5V215.5L544.75 185L524.093 196.356L460.149 81H544.312L663.25 289.5Z"
+								fill="white"
+							/>
+						</svg>
+						<button
+							onClick={() => scrollToSection('home')}
+							className="text-base-content hover:text-primary cursor-pointer text-xl font-bold transition-colors md:text-2xl">
+							{t('logo')}
+						</button>
+					</div>
 
 					{/* Desktop Navigation */}
 					<nav className="hidden items-center space-x-6 md:flex lg:space-x-8">

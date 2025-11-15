@@ -21,7 +21,8 @@ export default {
       second: 'Experienced in React and TypeScript, focused on clean and maintainable code.',
       third: 'Delivering consistent, quality solutions in modern frontend and backend development.',
       fourth: 'Skilled in shipping reliable web solutions used in real production environments.',
-      fifth: 'I rely on reusable patterns to ensure maintainable and predictable results.'
+      fifth: 'I rely on reusable patterns to ensure maintainable and predictable results.',
+      sixth: 'I use modern CSS frameworks to create attractive, accessible, and maintainable interfaces.',
     },
     contactButton: 'Contact Me',
   },

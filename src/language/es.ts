@@ -21,7 +21,8 @@ export default {
       second: 'Experto en React y TypeScript, enfocado en código limpio y mantenible.',
       third: 'Entregando soluciones consistentes y de calidad en desarrollo frontend y backend moderno.',
       fourth: 'Hábil en el despliegue de soluciones web confiables utilizadas en entornos de producción reales.',
-      fifth: 'Me baso en patrones reutilizables para asegurar resultados mantenibles y predecibles.'
+      fifth: 'Me baso en patrones reutilizables para asegurar resultados mantenibles y predecibles.',
+      sixth: 'Utilizo frameworks de CSS modernos para crear interfaces atractivas, accesibles y mantenibles.',
     },
     contactButton: 'Contáctame',
   },
