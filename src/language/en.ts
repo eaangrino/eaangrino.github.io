@@ -117,4 +117,26 @@ export default {
       uiUxDesigner: 'UI/UX Designer',
     },
   },
+  portfolio: {
+    title: 'Portfolio',
+    subtitle: 'List of projects I\'ve worked on',
+    viewButton: 'View',
+    close: 'Close',
+    link: 'Link',
+    backButton: 'Back',
+    project: {
+      itemOne: {
+        title: 'ArtesLafaux - Landing Page',
+        tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
+        description:
+          'Landing page for a digital artist, featuring an image gallery, contact section, and responsive design.',
+      },
+      itemTwo: {
+        title: 'Personal Portfolio',
+        tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
+        description:
+          'A personal portfolio website showcasing projects, skills, and experience with a modern UI and responsive layout.',
+      },
+    }
+  },
 };

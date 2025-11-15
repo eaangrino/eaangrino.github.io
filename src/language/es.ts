@@ -117,4 +117,26 @@ export default {
       uiUxDesigner: 'Diseñador UI/UX',
     },
   },
+  portfolio: {
+    title: 'Portafolio',
+    subtitle: 'Listado de proyectos en los que he trabajado',
+    viewButton: 'Ver',
+    close: 'Cerrar',
+    link: 'Enlace',
+    backButton: 'Volver',
+    project: {
+      itemOne: {
+        title: 'ArtesLafaux - Landing Page',
+        tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
+        description:
+          'Landing page para artista digital, con galería de imágenes, sección de contacto y diseño responsivo.',
+      },
+      itemTwo: {
+        title: 'eaangrino - Portafolio Personal',
+        tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
+        description:
+          'Portafolio personal completamente responsivo para mostrar habilidades, experiencia y proyectos.',
+      }
+    }
+  },
 }; 
