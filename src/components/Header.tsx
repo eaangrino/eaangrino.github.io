@@ -2,20 +2,29 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../hooks/useTheme';
 import LanguageSelector from './LanguageSelector';
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export default function Header() {
 	const { isDarkMode, toggleTheme } = useTheme();
 	const { t } = useTranslation('header');
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const navigate = useNavigate();
+	const location = useLocation();
+	const isPortfolio = location.pathname.startsWith('/portfolio');
 
 	const navItems = [
-		{ name: t('navigation.home'), sectionId: 'home' },
+		{ name: t('navigation.home'), sectionId: 'home', link: '/' },
 		{ name: t('navigation.about'), sectionId: 'about' },
 		{ name: t('navigation.skills'), sectionId: 'skills' },
-		{ name: t('navigation.services'), sectionId: 'services' },
-		{ name: t('navigation.portfolio'), sectionId: 'portfolio' },
+		// { name: t('navigation.services'), sectionId: 'services' },
+		{ name: t('navigation.portfolio'), link: 'portfolio' },
 		{ name: t('navigation.contact'), sectionId: 'contact' },
 	];
+
+	const filteredItems = isPortfolio
+		? navItems.filter((i) => i.link === '/' || i.link === 'portfolio')
+		: navItems;
 
 	const scrollToSection = (sectionId: string) => {
 		const element = document.getElementById(sectionId);
@@ -43,10 +52,19 @@ export default function Header() {
 
 					{/* Desktop Navigation */}
 					<nav className="hidden items-center space-x-6 md:flex lg:space-x-8">
-						{navItems.map((item) => (
+						{filteredItems.map((item) => (
 							<button
 								key={item.name}
-								onClick={() => scrollToSection(item.sectionId)}
+								onClick={() => {
+									if (isPortfolio) {
+										// En /portfolio SIEMPRE navega con link
+										navigate(item.link === '/' ? '/' : `/${item.link}`);
+									} else {
+										// En / usa scroll cuando tenga sectionId
+										if (item.sectionId) scrollToSection(item.sectionId);
+										else if (item.link) navigate(`/${item.link}`);
+									}
+								}}
 								className="text-base-content/70 hover:text-primary cursor-pointer text-sm transition-colors lg:text-base">
 								{item.name}
 							</button>
@@ -143,14 +161,28 @@ export default function Header() {
 				{isMobileMenuOpen && (
 					<div className="border-base-300 border-t py-4 md:hidden">
 						<nav className="flex flex-col space-y-4">
-							{navItems.map((item) => (
+							{filteredItems.map((item) => (
 								<button
 									key={item.name}
-									onClick={() => scrollToSection(item.sectionId)}
+									onClick={() => {
+										if (isPortfolio) {
+											// En /portfolio SIEMPRE usar navigate
+											navigate(item.link === '/' ? '/' : `/${item.link}`);
+										} else {
+											// En la raíz, scroll si existe sectionId
+											if (item.sectionId) {
+												scrollToSection(item.sectionId);
+											} else if (item.link) {
+												navigate(`/${item.link}`);
+											}
+										}
+										setIsMobileMenuOpen(false);
+									}}
 									className="text-base-content/70 hover:text-primary hover:bg-base-200 cursor-pointer rounded-lg px-4 py-2 text-left transition-colors">
 									{item.name}
 								</button>
 							))}
+
 							{/* Mobile Language Selector */}
 							<div className="border-base-300 border-t pt-4">
 								<div className="flex items-center justify-between">

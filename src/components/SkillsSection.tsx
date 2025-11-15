@@ -466,12 +466,6 @@ export default function SkillsSection() {
 						'https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg',
 				},
 				{
-					name: 'ChatGPT',
-					icon: 'C',
-					color: 'bg-green-500',
-					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
-				},
-				{
 					name: 'Figma',
 					icon: 'F',
 					color: 'bg-purple-500',
@@ -479,10 +473,36 @@ export default function SkillsSection() {
 						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/figma/figma-original.svg',
 				},
 				{
+					name: 'ChatGPT',
+					icon: 'C',
+					color: 'bg-green-500',
+					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
+				},
+				{
 					name: 'DeepSeek',
 					icon: 'D',
 					color: 'bg-purple-500',
 					iconUrl: '/deepseek.svg',
+				},
+				{
+					name: 'Gemini',
+					icon: 'G',
+					color: 'bg-yellow-500',
+					iconUrl:
+						'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg',
+				},
+				{
+					name: 'Meta AI',
+					icon: 'M',
+					color: 'bg-blue-500',
+					iconUrl: '/metaai-color.svg',
+				},
+				{
+					name: 'MarkText',
+					icon: 'M',
+					color: 'bg-green-600',
+					iconUrl:
+						'https://raw.githubusercontent.com/marktext/marktext/refs/heads/develop/resources/icons/128x128/marktext.png',
 				},
 			],
 		},

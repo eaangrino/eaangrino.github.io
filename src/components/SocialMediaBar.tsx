@@ -52,6 +52,19 @@ export default function SocialMediaBar() {
 				</svg>
 			),
 		},
+		{
+			name: 'Stackblitz',
+			url: 'https://stackblitz.com/@eaangrino',
+			icon: (
+				<svg
+					className="h-6 w-6"
+					fill="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.9923 13.8183H5L15.957 2L13.0077 10.1817H19L8.04304 22L10.9923 13.8183Z" />
+				</svg>
+			),
+		},
 	];
 
 	return (
