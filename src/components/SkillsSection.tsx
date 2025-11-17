@@ -209,7 +209,7 @@ export default function SkillsSection() {
 					name: 'NestJS',
 					icon: 'N',
 					color: 'bg-red-500',
-					iconUrl: 'https://nestjs.com/logo-small-gradient.d792062c.svg',
+					iconUrl: '/nestjs.svg',
 				},
 				{
 					name: 'TypeORM',
