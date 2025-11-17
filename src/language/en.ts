@@ -42,6 +42,10 @@ export default {
     },
   },
   about: {
+    year: 'year',
+    years: 'years',
+    month: 'month',
+    months: 'months',
     title: 'About Me',
     // subtitle: 'My Introduction',
     description: 'React and TypeScript developer with backend experience in Node.js, working on production-grade web apps.',
@@ -49,7 +53,7 @@ export default {
       title: 'Learn more about my experience and approach',
       content: {
         paragraph1: 'I\'m a Fullstack Developer specialized in building custom web applications using React, TypeScript, Node.js and AWS. I focus on writing clean, maintainable, and scalable code, always looking to improve code reuse and consistency across projects.',
-        paragraph2: 'With over {{experience}} of hands-on experience, I\'ve worked on frontend and backend development, deploying production-ready solutions using AWS Amplify, Lambda, and Docker. My frontend work emphasizes responsive and accessible interfaces, mainly using TailwindCSS, DaisyUI and React Hook Form.',
+        paragraph2: 'With over {{years}} {{pluralYears}} and {{months}} {{pluralMonths}} of experience, I\'ve worked on frontend and backend development, deploying production-ready solutions using AWS Amplify, Lambda, and Docker. My frontend work emphasizes responsive and accessible interfaces, mainly using TailwindCSS, DaisyUI and React Hook Form.',
         paragraph3: 'I rely on reusable patterns, test code and proven practices to ensure my projects are easy to maintain and evolve. I\'m also constantly exploring tools like Terraform, AI-assisted workflows, and new stacks to stay updated and efficient.',
         paragraph4: 'My work is not just about delivering features, but building systems that are clear, reliable and aligned with real business needs.',
       },

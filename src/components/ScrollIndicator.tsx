@@ -8,7 +8,7 @@ export default function ScrollIndicator() {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY + window.innerHeight;
 			const documentHeight = document.documentElement.scrollHeight;
-			const footerThreshold = 100; // Hide when 100px from bottom
+			const footerThreshold = 60; // Hide when 60px from bottom
 
 			// Check if we're in the hero section
 			const heroSection = document.getElementById('home');

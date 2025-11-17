@@ -42,6 +42,10 @@ export default {
     },
   },
   about: {
+    year: 'año',
+    years: 'años',
+    month: 'mes',
+    months: 'meses',
     title: 'Acerca de Mí',
     // subtitle: 'Mi Introducción',
     description: 'Desarrollador React y TypeScript con experiencia backend en Node.js, trabajando en aplicaciones web de nivel de producción.',
@@ -49,7 +53,7 @@ export default {
       title: 'Conoce más sobre mi experiencia y enfoque',
       content: {
         paragraph1: 'Soy un Desarrollador Fullstack especializado en construir aplicaciones web personalizadas usando React, TypeScript, Node.js y AWS. Me enfoco en escribir código limpio, mantenible y escalable, siempre buscando mejorar la reutilización de código y consistencia entre proyectos.',
-        paragraph2: 'Con más de {{experience}} de experiencia práctica, he trabajado en desarrollo frontend y backend, desplegando soluciones listas para producción usando AWS Amplify, Lambda y Docker. Mi trabajo frontend enfatiza interfaces responsivas y accesibles, principalmente usando TailwindCSS, DaisyUI y React Hook Form.',
+        paragraph2: 'Con más de {{years}} {{pluralYears}} y {{months}} {{pluralMonths}} de experiencia, he trabajado en desarrollo frontend y backend, desplegando soluciones listas para producción usando AWS Amplify, Lambda y Docker. Mi trabajo frontend enfatiza interfaces responsivas y accesibles, principalmente usando TailwindCSS, DaisyUI y React Hook Form.',
         paragraph3: 'Me baso en patrones reutilizables, pruebas de código y prácticas probadas para asegurar que mis proyectos sean fáciles de mantener y evolucionar. También estoy constantemente explorando herramientas como Terraform, flujos de trabajo asistidos por IA y nuevos stacks para mantenerme actualizado y eficiente.',
         paragraph4: 'Mi trabajo no es solo entregar funcionalidades, sino construir sistemas que sean claros, confiables y alineados con las necesidades reales del negocio.',
       },

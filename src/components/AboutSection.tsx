@@ -26,22 +26,6 @@ export default function AboutSection() {
 
 	const { years, months } = calculateExperience();
 
-	// Debug: Log the calculated values
-	console.log('Calculated experience:', { years, months });
-
-	// Format the experience string for the collapse content
-	const formatExperienceText = (years: number, months: number) => {
-		if (years === 0) {
-			return `${months} month${months !== 1 ? 's' : ''}`;
-		} else if (months === 0) {
-			return `${years} year${years !== 1 ? 's' : ''}`;
-		} else {
-			return `${years} year${years !== 1 ? 's' : ''} and ${months} month${months !== 1 ? 's' : ''}`;
-		}
-	};
-
-	const experienceText = formatExperienceText(years, months);
-
 	const stats = [
 		{
 			number: t('stats.experience.number', { years }),
@@ -95,9 +79,13 @@ export default function AboutSection() {
 									<p className="mb-4">{t('collapse.content.paragraph1')}</p>
 									<p className="mb-4">
 										{t('collapse.content.paragraph2', {
-											experience: experienceText,
+											years,
+											pluralYears: years === 1 ? t('year') : t('years'),
+											months,
+											pluralMonths: months === 1 ? t('month') : t('months'),
 										})}
 									</p>
+
 									<p className="mb-4">{t('collapse.content.paragraph3')}</p>
 									<p className="mb-0">{t('collapse.content.paragraph4')}</p>
 								</div>
