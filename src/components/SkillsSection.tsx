@@ -80,6 +80,13 @@ export default function SkillsSection() {
 						'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
 				},
 				{
+					name: 'Redux Toolkit Query',
+					icon: 'RTKQ',
+					color: 'bg-purple-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg',
+				},
+				{
 					name: 'Axios',
 					icon: 'A',
 					color: 'bg-purple-600',
