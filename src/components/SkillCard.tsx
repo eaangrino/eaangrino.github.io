@@ -17,9 +17,9 @@ export default function SkillCard({
 }: SkillCardProps) {
 	return (
 		<div
-			className={`bg-base-200 rounded-xl p-6 shadow-lg transition-shadow hover:shadow-xl ${className}`}>
+			className={`group bg-base-200 rounded-xl p-6 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${className}`}>
 			{/* Category Header */}
-			<div className="mb-6 flex items-center">
+			<div className="group-hover:bg-primary/10 -m-2 mb-6 flex items-center rounded-lg p-2 transition-colors duration-300">
 				<div className="bg-primary/10 mr-4 flex h-12 w-12 items-center justify-center rounded-lg">
 					<div className="text-primary">{icon}</div>
 				</div>
