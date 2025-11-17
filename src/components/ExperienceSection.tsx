@@ -180,14 +180,22 @@ export default function ExperienceSection() {
 				{/* Timeline */}
 				<div className="relative">
 					{/* Vertical Line - Hidden on mobile */}
-					<div className="bg-primary absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 transform md:block"></div>
+					<div
+						className={` ${
+							activeTab === 'education' ? 'bg-accent' : 'bg-primary'
+						} absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 transform md:block`}></div>
 
 					{/* Timeline Items */}
 					<div className="space-y-8">
 						{activeTabData?.items.map((item, index) => (
-							<div key={item.id} className="relative">
+							<div
+								key={item.id}
+								className="animate-fade-in-up animation-delay-[index * 100] relative opacity-0">
 								{/* Timeline Dot - Hidden on mobile */}
-								<div className="border-base-100 bg-primary absolute left-1/2 z-10 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 shadow-md md:block"></div>
+								<div
+									className={`border-base-100 ${
+										activeTab === 'education' ? 'bg-accent' : 'bg-primary'
+									} absolute left-1/2 z-10 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-4 shadow-md md:block`}></div>
 
 								{/* Content */}
 								<TimelineItem

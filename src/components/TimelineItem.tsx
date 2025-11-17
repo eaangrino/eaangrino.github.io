@@ -27,12 +27,17 @@ export default function TimelineItem({
 					position === 'left' ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
 				}`}>
 				<div
-					className={`bg-base-100 relative rounded-lg p-6 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg ${
-						position === 'left' ? 'hover:-translate-x-2' : 'hover:translate-x-2'
-					}`}>
+					className={`bg-base-100 relative rounded-lg p-6 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl ${
+						work
+							? 'border-primary'
+							: graduated
+								? 'border-accent'
+								: 'border-base-300'
+					} ${position === 'left' ? 'border-l-4 hover:-translate-x-2' : 'border-r-4 hover:translate-x-2'}`}>
 					{/* Badge for graduated or work status */}
 					{(graduated || work) && (
-						<div className="bg-primary text-primary-content absolute -top-2 -right-2 space-y-2 rounded-full p-1.5 shadow-lg">
+						<div
+							className={`bg-base-100 ${work ? 'ring-primary' : 'ring-accent'} absolute -top-3 flex flex-col gap-2 rounded-full p-2 shadow-xl ring-2 transition-transform hover:scale-110 ${position === 'left' ? '-left-3' : '-right-3'}`}>
 							{graduated && (
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +73,11 @@ export default function TimelineItem({
 					<h3 className="text-base-content mb-2 text-lg font-semibold">
 						{title}
 					</h3>
+					{/* {description && (
+						<p className="text-base-content/80 mb-3 text-sm leading-relaxed">
+							{description}
+						</p>
+					)} */}
 					<p className="text-base-content/70 mb-2">{location}</p>
 					<div
 						className={`text-base-content/50 flex items-center text-sm ${
