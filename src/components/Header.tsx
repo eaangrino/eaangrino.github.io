@@ -46,7 +46,7 @@ export default function Header() {
 					{/* Logo */}
 					<div className="flex flex-row gap-6">
 						<svg
-							className="h-10 w-10"
+							className={`h-10 w-10 ${isDarkMode ? '' : 'brightness-1000 invert'}`}
 							viewBox="0 0 700 700"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg">
