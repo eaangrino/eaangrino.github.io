@@ -23,6 +23,7 @@ export default {
       fourth: 'Skilled in shipping reliable web solutions used in real production environments.',
       fifth: 'I rely on reusable patterns to ensure maintainable and predictable results.',
       sixth: 'I use modern CSS frameworks to create attractive, accessible, and maintainable interfaces.',
+      seventh: 'I use AI tools to build frontends faster while keeping them easy to maintain.',
     },
     contactButton: 'Contact Me',
   },

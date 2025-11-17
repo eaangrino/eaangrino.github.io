@@ -23,6 +23,7 @@ export default {
       fourth: 'Hábil en el despliegue de soluciones web confiables utilizadas en entornos de producción reales.',
       fifth: 'Me baso en patrones reutilizables para asegurar resultados mantenibles y predecibles.',
       sixth: 'Utilizo frameworks de CSS modernos para crear interfaces atractivas, accesibles y mantenibles.',
+      seventh: 'Utilizo herramientas de AI para crear frontends rápido y mantenerlos fáciles de modificar.',
     },
     contactButton: 'Contáctame',
   },

@@ -22,6 +22,8 @@ export default function HeroSection({
 		t('description.third'),
 		t('description.fourth'),
 		t('description.fifth'),
+		t('description.sixth'),
+		t('description.seventh'),
 	];
 
 	const { currentText, isVisible } = useRotatingText({
