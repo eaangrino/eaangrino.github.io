@@ -1,6 +1,6 @@
 ## 🌍 Languages
 
-[🇺🇸 English](readme.en.md) | [🇪🇸 Español](readme.es.md)
+[🇺🇸 English](readme.md) | [🇪🇸 Español](readme.es.md)
 
 ---
 
