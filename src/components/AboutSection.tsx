@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import Button from './Button';
-// import ProfileImage from './ProfileImage';
 import StatsCard from './StatsCard';
 import SectionHeader from './SectionHeader';
 
@@ -24,7 +23,7 @@ export default function AboutSection() {
 		return { years, months };
 	};
 
-	const { years, months } = calculateExperience();
+	const { years } = calculateExperience();
 
 	const stats = [
 		{
@@ -45,7 +44,9 @@ export default function AboutSection() {
 	];
 
 	return (
-		<section id="about" className="bg-base-200 px-4 py-20 md:px-8 md:py-28">
+		<section
+			id="about"
+			className="bg-base-200 flex min-h-screen items-center px-4 py-20 md:px-8 md:py-28">
 			<div className="container mx-auto max-w-6xl">
 				{/* Section Header */}
 				<SectionHeader
@@ -53,46 +54,33 @@ export default function AboutSection() {
 					// subtitle={t('subtitle')}
 				/>
 
-				{/* Content Grid */}
 				<div className="grid items-center gap-8 md:gap-10 lg:grid-cols-1 lg:gap-12">
-					{/* Profile Image */}
-					{/* <div className="flex justify-center md:justify-center">
-						<ProfileImage size="xl" rotationDirection="left" />
-					</div> */}
-
-					{/* Content */}
 					<div className="text-center md:text-center">
-						{/* Description */}
 						<p className="text-base-content/70 mb-6 text-base leading-relaxed md:text-lg">
 							{t('description')}
 						</p>
 
-						{/* Collapsible Content */}
-						<div className="mb-8">
-							<div
-								tabIndex={0}
-								className="collapse-arrow bg-base-100 border-base-300 collapse border">
-								<div className="collapse-title font-semibold">
-									{t('collapse.title')}
-								</div>
-								<div className="collapse-content text-base">
-									<p className="mb-4">{t('collapse.content.paragraph1')}</p>
-									<p className="mb-4">
-										{t('collapse.content.paragraph2', {
-											years,
-											pluralYears: years === 1 ? t('year') : t('years'),
-											months,
-											pluralMonths: months === 1 ? t('month') : t('months'),
-										})}
-									</p>
-
-									<p className="mb-4">{t('collapse.content.paragraph3')}</p>
-									<p className="mb-0">{t('collapse.content.paragraph4')}</p>
-								</div>
-							</div>
+						<div className="bg-base-100 border-base-300 mb-8 rounded-2xl border p-6 text-left shadow-sm md:p-8">
+							<p className="text-base-content/80 mb-4 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph1')}
+							</p>
+							<p className="text-base-content/80 mb-4 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph2')}
+							</p>
+							<p className="text-base-content/80 mb-4 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph3')}
+							</p>
+							<p className="text-base-content/80 mb-4 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph4')}
+							</p>
+							<p className="text-base-content/80 mb-4 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph5')}
+							</p>
+							<p className="text-base-content/80 text-base leading-relaxed md:text-lg">
+								{t('content.paragraph6')}
+							</p>
 						</div>
 
-						{/* Stats */}
 						<div className="mb-8 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
 							{stats.map((stat, index) => (
 								<StatsCard
@@ -104,7 +92,6 @@ export default function AboutSection() {
 							))}
 						</div>
 
-						{/* Download CV Button */}
 						<Button
 							variant="primary"
 							size="lg"

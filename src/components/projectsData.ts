@@ -18,4 +18,22 @@ export default [
     image: "/projects/brave_lGDmttIy9E.png",
     // link: "https://arteslafaux.github.io"
   },
+  {
+    id: 3,
+    title: "project.itemThree.title",
+    tech: "project.itemThree.tech",
+    description:
+      "project.itemThree.description",
+    image: "/projects/excavator.png",
+    link: "https://github.com/eaangrino/mine-excavators"
+  },
+  {
+    id: 4,
+    title: "project.itemFour.title",
+    tech: "project.itemFour.tech",
+    description:
+      "project.itemFour.description",
+    image: "/projects/hammer.png",
+    link: "https://github.com/eaangrino/mine-hammers"
+  },
 ];

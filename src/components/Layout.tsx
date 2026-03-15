@@ -1,12 +1,17 @@
 import Header from './Header';
 import SocialMediaBar from './SocialMediaBar';
 // import ScrollIndicator from './ScrollIndicator';
-import Footer from './Footer';
+// import Footer from './Footer';
 // import ConstructionNotification from './ConstructionNotification';
-import { Outlet, useLocation } from 'react-router-dom';
+import {
+	Outlet,
+	// useLocation
+} from 'react-router-dom';
 
 export default function Layout() {
-	const location = useLocation();
+	// const location = useLocation();
+	// const isPortfolioRoute = location.pathname.startsWith('/portfolio');
+
 	return (
 		<div className="bg-base-100 min-h-screen">
 			<Header />
@@ -17,7 +22,7 @@ export default function Layout() {
 			{/* {location.pathname !== '/portfolio' && <ScrollIndicator />} */}
 
 			{/* <ConstructionNotification /> */}
-			{location.pathname !== '/portfolio' && <Footer />}
+			{/* {!isPortfolioRoute && <Footer />} */}
 		</div>
 	);
 }

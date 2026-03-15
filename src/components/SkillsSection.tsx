@@ -21,6 +21,98 @@ export default function SkillsSection() {
 
 	const skillCategories: SkillCategory[] = [
 		{
+			name: t('categories.tools'),
+			icon: (
+				<svg
+					className="h-6 w-6"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24">
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+					/>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+					/>
+				</svg>
+			),
+			technologies: [
+				{
+					name: 'Git',
+					icon: 'G',
+					color: 'bg-orange-500',
+					iconUrl: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
+				},
+				{
+					name: 'Linux',
+					icon: 'L',
+					color: 'bg-yellow-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg',
+				},
+				{
+					name: 'Postman',
+					icon: 'P',
+					color: 'bg-orange-500',
+					iconUrl:
+						'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
+				},
+				{
+					name: 'Bash',
+					icon: 'B',
+					color: 'bg-gray-600',
+					isBlack: true,
+					iconUrl:
+						'https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg',
+				},
+				{
+					name: 'Figma',
+					icon: 'F',
+					color: 'bg-purple-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/figma/figma-original.svg',
+				},
+				{
+					name: 'ChatGPT',
+					icon: 'C',
+					color: 'bg-green-500',
+					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
+				},
+				{
+					name: 'DeepSeek',
+					icon: 'D',
+					color: 'bg-purple-500',
+					iconUrl: '/deepseek.svg',
+				},
+				{
+					name: 'Gemini',
+					icon: 'G',
+					color: 'bg-yellow-500',
+					iconUrl:
+						'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg',
+				},
+				{
+					name: 'Meta AI',
+					icon: 'M',
+					color: 'bg-blue-500',
+					iconUrl: '/metaai-color.svg',
+				},
+				{
+					name: 'MarkText',
+					icon: 'M',
+					color: 'bg-green-600',
+					iconUrl:
+						'https://raw.githubusercontent.com/marktext/marktext/refs/heads/develop/resources/icons/128x128/marktext.png',
+				},
+			],
+		},
+		{
 			name: t('categories.frontendStrong'),
 			icon: (
 				<svg
@@ -421,102 +513,12 @@ export default function SkillsSection() {
 				},
 			],
 		},
-		{
-			name: t('categories.tools'),
-			icon: (
-				<svg
-					className="h-6 w-6"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24">
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-					/>
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						strokeWidth={2}
-						d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-					/>
-				</svg>
-			),
-			technologies: [
-				{
-					name: 'Git',
-					icon: 'G',
-					color: 'bg-orange-500',
-					iconUrl: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg',
-				},
-				{
-					name: 'Linux',
-					icon: 'L',
-					color: 'bg-yellow-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg',
-				},
-				{
-					name: 'Postman',
-					icon: 'P',
-					color: 'bg-orange-500',
-					iconUrl:
-						'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
-				},
-				{
-					name: 'Bash',
-					icon: 'B',
-					color: 'bg-gray-600',
-					isBlack: true,
-					iconUrl:
-						'https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg',
-				},
-				{
-					name: 'Figma',
-					icon: 'F',
-					color: 'bg-purple-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/figma/figma-original.svg',
-				},
-				{
-					name: 'ChatGPT',
-					icon: 'C',
-					color: 'bg-green-500',
-					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
-				},
-				{
-					name: 'DeepSeek',
-					icon: 'D',
-					color: 'bg-purple-500',
-					iconUrl: '/deepseek.svg',
-				},
-				{
-					name: 'Gemini',
-					icon: 'G',
-					color: 'bg-yellow-500',
-					iconUrl:
-						'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg',
-				},
-				{
-					name: 'Meta AI',
-					icon: 'M',
-					color: 'bg-blue-500',
-					iconUrl: '/metaai-color.svg',
-				},
-				{
-					name: 'MarkText',
-					icon: 'M',
-					color: 'bg-green-600',
-					iconUrl:
-						'https://raw.githubusercontent.com/marktext/marktext/refs/heads/develop/resources/icons/128x128/marktext.png',
-				},
-			],
-		},
 	];
 
 	return (
-		<section id="skills" className="bg-base-100 px-4 py-28">
+		<section
+			id="skills"
+			className="bg-base-100 flex min-h-screen items-center px-4 py-28">
 			<div className="container mx-auto max-w-6xl">
 				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 

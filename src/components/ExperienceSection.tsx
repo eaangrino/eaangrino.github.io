@@ -102,54 +102,54 @@ export default function ExperienceSection() {
 					dates: '2017 - 2019',
 					graduated: true,
 				},
-				{
-					id: 3,
-					title: 'Curso de Prompt Engineering con ChatGPT',
-					location: 'Platzi - Virtual',
-					dates: '2023',
-					description:
-						'Diseño de prompts efectivos para mejorar la interacción con modelos de lenguaje.',
-				},
-				{
-					id: 4,
-					title: 'Curso de Diseño Web con Figma',
-					location: 'Platzi - Virtual',
-					dates: '2022',
-					description:
-						'Creación de interfaces modernas y componentes reutilizables con enfoque UX/UI.',
-				},
-				{
-					id: 5,
-					title: 'Curso de Fundamentos de TypeScript',
-					location: 'Platzi - Virtual',
-					dates: '2021',
-					description:
-						'Conceptos base de tipado estático, interfaces, tipos y estructuras avanzadas en TypeScript.',
-				},
-				{
-					id: 6,
-					title: 'Curso Definitivo de HTML y CSS',
-					location: 'Platzi - Virtual',
-					dates: '2021',
-					description:
-						'Fundamentos sólidos en maquetación web, buenas prácticas semánticas y diseño responsive.',
-				},
-				{
-					id: 7,
-					title: 'AWS Partner: Accreditation (Business)',
-					location: 'AWS Partner Network - Virtual',
-					dates: '2021',
-					description:
-						'Certificación orientada a comprender el valor de negocio de las soluciones AWS.',
-				},
-				{
-					id: 8,
-					title: 'AWS Partner: Accreditation (Technical)',
-					location: 'AWS Partner Network - Virtual',
-					dates: '2021',
-					description:
-						'Certificación técnica de fundamentos de AWS, buenas prácticas y servicios cloud principales.',
-				},
+				// {
+				// 	id: 3,
+				// 	title: 'Curso de Prompt Engineering con ChatGPT',
+				// 	location: 'Platzi - Virtual',
+				// 	dates: '2023',
+				// 	description:
+				// 		'Diseño de prompts efectivos para mejorar la interacción con modelos de lenguaje.',
+				// },
+				// {
+				// 	id: 4,
+				// 	title: 'Curso de Diseño Web con Figma',
+				// 	location: 'Platzi - Virtual',
+				// 	dates: '2022',
+				// 	description:
+				// 		'Creación de interfaces modernas y componentes reutilizables con enfoque UX/UI.',
+				// },
+				// {
+				// 	id: 5,
+				// 	title: 'Curso de Fundamentos de TypeScript',
+				// 	location: 'Platzi - Virtual',
+				// 	dates: '2021',
+				// 	description:
+				// 		'Conceptos base de tipado estático, interfaces, tipos y estructuras avanzadas en TypeScript.',
+				// },
+				// {
+				// 	id: 6,
+				// 	title: 'Curso Definitivo de HTML y CSS',
+				// 	location: 'Platzi - Virtual',
+				// 	dates: '2021',
+				// 	description:
+				// 		'Fundamentos sólidos en maquetación web, buenas prácticas semánticas y diseño responsive.',
+				// },
+				// {
+				// 	id: 7,
+				// 	title: 'AWS Partner: Accreditation (Business)',
+				// 	location: 'AWS Partner Network - Virtual',
+				// 	dates: '2021',
+				// 	description:
+				// 		'Certificación orientada a comprender el valor de negocio de las soluciones AWS.',
+				// },
+				// {
+				// 	id: 8,
+				// 	title: 'AWS Partner: Accreditation (Technical)',
+				// 	location: 'AWS Partner Network - Virtual',
+				// 	dates: '2021',
+				// 	description:
+				// 		'Certificación técnica de fundamentos de AWS, buenas prácticas y servicios cloud principales.',
+				// },
 			],
 		},
 	];
@@ -157,7 +157,9 @@ export default function ExperienceSection() {
 	const activeTabData = experienceTabs.find((tab) => tab.id === activeTab);
 
 	return (
-		<section className="bg-base-200 px-4 py-20">
+		<section
+			id="experience"
+			className="bg-base-200 flex min-h-screen items-center px-4 py-20">
 			<div className="container mx-auto max-w-4xl">
 				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 

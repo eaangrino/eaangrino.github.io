@@ -5,6 +5,7 @@ export default {
       home: 'Inicio',
       about: 'Acerca de',
       skills: 'Habilidades',
+      experience: 'Experiencia',
       services: 'Servicios',
       portfolio: 'Portafolio',
       contact: 'Contáctame',
@@ -48,16 +49,14 @@ export default {
     month: 'mes',
     months: 'meses',
     title: 'Acerca de Mí',
-    // subtitle: 'Mi Introducción',
-    description: 'Desarrollador React y TypeScript con experiencia backend en Node.js, trabajando en aplicaciones web de nivel de producción.',
-    collapse: {
-      title: 'Conoce más sobre mi experiencia y enfoque',
-      content: {
-        paragraph1: 'Soy un Desarrollador Fullstack especializado en construir aplicaciones web personalizadas usando React, TypeScript, Node.js y AWS. Me enfoco en escribir código limpio, mantenible y escalable, siempre buscando mejorar la reutilización de código y consistencia entre proyectos.',
-        paragraph2: 'Con más de {{years}} {{pluralYears}} y {{months}} {{pluralMonths}} de experiencia, he trabajado en desarrollo frontend y backend, desplegando soluciones listas para producción usando AWS Amplify, Lambda y Docker. Mi trabajo frontend enfatiza interfaces responsivas y accesibles, principalmente usando TailwindCSS, DaisyUI y React Hook Form.',
-        paragraph3: 'Me baso en patrones reutilizables, pruebas de código y prácticas probadas para asegurar que mis proyectos sean fáciles de mantener y evolucionar. También estoy constantemente explorando herramientas como Terraform, flujos de trabajo asistidos por IA y nuevos stacks para mantenerme actualizado y eficiente.',
-        paragraph4: 'Mi trabajo no es solo entregar funcionalidades, sino construir sistemas que sean claros, confiables y alineados con las necesidades reales del negocio.',
-      },
+    description: 'Ingeniero de software enfocado en el desarrollo de aplicaciones y sistemas web escalables utilizando Node.js y herramientas de inteligencia artificial como apoyo en el desarrollo.',
+    content: {
+      paragraph1: 'Tengo experiencia construyendo soluciones web trabajando con tecnologias como Node.js, SQL y Docker. Tambien cuento con experiencia administrando entornos Linux y gestionando el flujo completo de una aplicacion: desde la interfaz de usuario hasta el almacenamiento y procesamiento de datos.',
+      paragraph2: 'Aunque Node.js es mi stack principal, selecciono tecnologias y lenguajes segun las necesidades del problema, aprovechando librerias y herramientas especializadas cuando aportan una mejor solucion, siempre bajo los fundamentos de la ingenieria de software.',
+      paragraph3: 'Me interesa especialmente el diseno de sistemas, la optimizacion de procesos y el desarrollo de software que pueda escalar y mantenerse en produccion de forma confiable.',
+      paragraph4: 'Exploro el uso de herramientas de inteligencia artificial integrandolas dentro de procesos de ingenieria donde el codigo generado es evaluado, refinado y llevado a produccion bajo criterios tecnicos y buenas practicas.',
+      paragraph5: 'El desarrollo se realiza de manera iterativa, validando cada etapa antes de avanzar.',
+      paragraph6: 'Disfruto construir soluciones completas y aprender continuamente nuevas formas de resolver problemas complejos mediante la tecnologia.',
     },
     downloadCV: 'Descargar CV',
     stats: {
@@ -142,6 +141,18 @@ export default {
         tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
         description:
           'Portafolio personal completamente responsivo para mostrar habilidades, experiencia y proyectos.',
+      },
+      itemThree: {
+        title: 'Mine Excavators',
+        tech: 'Java + Modding de Minecraft',
+        description:
+          'Un mod de Minecraft escrito en Java que agrega herramientas tipo excavadora para limpiar terreno y bloques mas rapidamente.',
+      },
+      itemFour: {
+        title: 'Mine Hammers',
+        tech: 'Java + Modding de Minecraft',
+        description:
+          'Un mod de Minecraft escrito en Java que agrega mecanicas de mineria por area usando martillos para recolectar recursos con mayor eficiencia.',
       }
     }
   },

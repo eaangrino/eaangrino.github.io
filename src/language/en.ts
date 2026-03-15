@@ -5,6 +5,7 @@ export default {
       home: 'Home',
       about: 'About',
       skills: 'Skills',
+      experience: 'Experience',
       services: 'Services',
       portfolio: 'Portfolio',
       contact: 'Contact me',
@@ -48,16 +49,14 @@ export default {
     month: 'month',
     months: 'months',
     title: 'About Me',
-    // subtitle: 'My Introduction',
-    description: 'React and TypeScript developer with backend experience in Node.js, working on production-grade web apps.',
-    collapse: {
-      title: 'Learn more about my experience and approach',
-      content: {
-        paragraph1: 'I\'m a Fullstack Developer specialized in building custom web applications using React, TypeScript, Node.js and AWS. I focus on writing clean, maintainable, and scalable code, always looking to improve code reuse and consistency across projects.',
-        paragraph2: 'With over {{years}} {{pluralYears}} and {{months}} {{pluralMonths}} of experience, I\'ve worked on frontend and backend development, deploying production-ready solutions using AWS Amplify, Lambda, and Docker. My frontend work emphasizes responsive and accessible interfaces, mainly using TailwindCSS, DaisyUI and React Hook Form.',
-        paragraph3: 'I rely on reusable patterns, test code and proven practices to ensure my projects are easy to maintain and evolve. I\'m also constantly exploring tools like Terraform, AI-assisted workflows, and new stacks to stay updated and efficient.',
-        paragraph4: 'My work is not just about delivering features, but building systems that are clear, reliable and aligned with real business needs.',
-      },
+    description: 'Software engineer focused on developing scalable web applications and systems using Node.js, with AI tools as support within the development process.',
+    content: {
+      paragraph1: 'I have experience building web solutions with technologies such as Node.js, SQL, and Docker. I also have experience administering Linux environments and handling the full flow of an application, from the user interface to data storage and processing.',
+      paragraph2: 'Although Node.js is my main stack, I choose technologies and languages based on the needs of the problem, taking advantage of specialized libraries and tools when they provide a better solution, always grounded in software engineering fundamentals.',
+      paragraph3: 'I am especially interested in system design, process optimization, and developing software that can scale and remain reliable in production.',
+      paragraph4: 'I explore the use of artificial intelligence tools by integrating them into engineering processes where generated code is evaluated, refined, and taken to production under technical criteria and good practices.',
+      paragraph5: 'Development is carried out iteratively, validating each stage before moving forward.',
+      paragraph6: 'I enjoy building complete solutions and continuously learning new ways to solve complex problems through technology.',
     },
     downloadCV: 'Download CV',
     stats: {
@@ -142,6 +141,18 @@ export default {
         tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
         description:
           'A personal portfolio website showcasing projects, skills, and experience with a modern UI and responsive layout.',
+      },
+      itemThree: {
+        title: 'Mine Excavators',
+        tech: 'Java + Minecraft Modding',
+        description:
+          'A Minecraft mod written in Java that adds excavator-style tools for faster terrain and block clearing.',
+      },
+      itemFour: {
+        title: 'Mine Hammers',
+        tech: 'Java + Minecraft Modding',
+        description:
+          'A Minecraft mod written in Java that adds hammer-based area mining mechanics for more efficient resource gathering.',
       },
     }
   },
