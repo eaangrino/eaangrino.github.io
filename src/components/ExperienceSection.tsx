@@ -12,6 +12,7 @@ interface ExperienceItem {
 	description?: string;
 	graduated?: boolean;
 	work?: boolean;
+	isCurrentWork?: boolean;
 }
 
 interface ExperienceTab {
@@ -53,6 +54,7 @@ export default function ExperienceSection() {
 					description:
 						'Desarrollo de soluciones web a medida con React, Node.js y AWS. Mantenimiento, soporte y despliegue en producción.',
 					work: true,
+					isCurrentWork: true,
 				},
 				{
 					id: 2,
@@ -159,13 +161,13 @@ export default function ExperienceSection() {
 	return (
 		<section
 			id="experience"
-			className="bg-base-200 flex min-h-screen items-center px-4 py-20">
+			className="bg-base-200 flex min-h-screen items-start px-4 pt-24 pb-14 md:items-center md:pt-28 md:pb-20">
 			<div className="container mx-auto max-w-4xl">
 				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
 				{/* Tabs */}
-				<div className="mb-12 flex justify-center">
-					<div className="bg-base-100 flex gap-2 rounded-lg p-2 shadow-md">
+				<div className="mb-10 flex justify-center md:mb-12">
+					<div className="bg-base-100 inline-flex gap-2 rounded-lg p-2 shadow-md">
 						{experienceTabs.map((tab) => (
 							<TabButton
 								key={tab.id}
@@ -207,6 +209,7 @@ export default function ExperienceSection() {
 									position={index % 2 === 0 ? 'left' : 'right'}
 									graduated={item.graduated}
 									work={item.work}
+									isCurrentWork={item.isCurrentWork}
 								/>
 							</div>
 						))}

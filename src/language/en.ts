@@ -18,13 +18,13 @@ export default {
     greeting: 'Hi, I\'m',
     role: 'Analyst and Software Developer',
     description: {
-      first: 'Solid experience building scalable and responsive web applications.',
-      second: 'Experienced in React and TypeScript, focused on clean and maintainable code.',
-      third: 'Delivering consistent, quality solutions in modern frontend and backend development.',
-      fourth: 'Skilled in shipping reliable web solutions used in real production environments.',
-      fifth: 'I rely on reusable patterns to ensure maintainable and predictable results.',
-      sixth: 'I use modern CSS frameworks to create attractive, accessible, and maintainable interfaces.',
-      seventh: 'I use AI tools to build frontends faster while keeping them easy to maintain.',
+      first: 'Focused on building scalable web applications and systems with Node.js.',
+      second: 'Experienced with Node.js, SQL, Docker, and Linux-based environments.',
+      third: 'Comfortable handling the full application flow, from UI to data processing.',
+      fourth: 'I choose technologies based on the problem, not on a fixed stack.',
+      fifth: 'Especially interested in system design and process optimization.',
+      sixth: 'I integrate AI tools into engineering workflows with technical oversight.',
+      seventh: 'I enjoy building complete solutions to complex problems through technology.',
     },
     contactButton: 'Contact Me',
   },
@@ -108,6 +108,7 @@ export default {
   experience: {
     title: 'Experience',
     subtitle: 'My personal journey',
+    currentWork: 'Current role',
     tabs: {
       work: 'Work',
       education: 'Education',

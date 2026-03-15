@@ -14,13 +14,13 @@ export default function SectionHeader({
 	subtitleClassName = '',
 }: SectionHeaderProps) {
 	return (
-		<div className={`mb-16 text-center ${className}`}>
+		<div className={`mb-10 text-center md:mb-16 ${className}`}>
 			<h2
-				className={`text-base-content mb-2 text-4xl font-bold ${titleClassName}`}>
+				className={`text-base-content mb-2 text-3xl font-bold sm:text-4xl ${titleClassName}`}>
 				{title}
 			</h2>
 			{subtitle && (
-				<p className={`text-base-content/70 text-xl ${subtitleClassName}`}>
+				<p className={`text-base-content/70 text-base sm:text-lg md:text-xl ${subtitleClassName}`}>
 					{subtitle}
 				</p>
 			)}

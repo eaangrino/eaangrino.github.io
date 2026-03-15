@@ -49,21 +49,21 @@ export default function Portfolio() {
 
 	console.log(ProjectsData);
 	return (
-		<main className="relative flex min-h-screen w-full flex-col items-center justify-center gap-12 text-gray-200">
+		<main className="relative flex min-h-screen w-full flex-col items-center justify-center gap-8 px-4 pt-24 pb-12 text-gray-200 md:gap-12 md:px-0">
 			<Outlet />
 
 			{/* Título */}
 			<div className="text-center leading-tight">
-				<h1 className="mb-4 text-5xl font-extrabold tracking-wide text-white">
+				<h1 className="mb-4 text-3xl font-extrabold tracking-wide text-white sm:text-4xl md:text-5xl">
 					{t('title')}
 				</h1>
-				<p className="mx-auto max-w-xl text-lg text-gray-300">
+				<p className="mx-auto max-w-xl text-base text-gray-300 sm:text-lg">
 					{t('subtitle')}
 				</p>
 			</div>
 
 			{/* Carousel */}
-			<div className="relative flex w-11/12 max-w-6xl flex-col items-center justify-center md:flex-row">
+			<div className="relative flex w-full max-w-6xl flex-col items-center justify-center md:w-11/12 md:flex-row">
 				{/* Botón izquierda */}
 				<button
 					aria-label="Prev"
@@ -74,7 +74,7 @@ export default function Portfolio() {
 
 				<div
 					ref={carouselRef}
-					className="carousel carousel-center bg-base-200 rounded-box w-full space-x-6 scroll-smooth p-8 shadow-lg">
+					className="carousel carousel-center bg-base-200 rounded-box w-full space-x-4 scroll-smooth p-4 shadow-lg sm:space-x-6 sm:p-6 md:p-8">
 					{ProjectsData.map((project) => (
 						<div
 							key={project.id}
@@ -96,12 +96,12 @@ export default function Portfolio() {
 										? project.image[0]
 										: project.image
 								}
-								className="rounded-box h-96 w-80 object-cover transition-transform duration-500 group-hover:scale-105"
+								className="rounded-box h-72 w-[78vw] max-w-80 object-cover transition-transform duration-500 group-hover:scale-105 sm:h-80 md:h-96"
 								alt={t(project.title)}
 							/>
 
-							<div className="rounded-b-box absolute bottom-0 left-0 w-full bg-white/40 px-4 py-3 backdrop-blur-md">
-								<h3 className="text-lg font-semibold text-black">
+							<div className="rounded-b-box absolute bottom-0 left-0 w-full bg-white/40 px-3 py-3 backdrop-blur-md sm:px-4">
+								<h3 className="text-base font-semibold text-black sm:text-lg">
 									{t(project.title)}
 								</h3>
 							</div>
@@ -118,7 +118,7 @@ export default function Portfolio() {
 				</button>
 
 				{/* Controles móviles */}
-				<div className="mt-6 flex w-full justify-center gap-10 md:hidden">
+				<div className="mt-6 flex w-full justify-center gap-6 md:hidden">
 					<button
 						aria-label="Prev-Mobile"
 						onClick={() => simulateKey('ArrowLeft')}

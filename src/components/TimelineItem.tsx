@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 interface TimelineItemProps {
 	title: string;
 	location: string;
@@ -6,6 +8,7 @@ interface TimelineItemProps {
 	className?: string;
 	graduated?: boolean;
 	work?: boolean;
+	isCurrentWork?: boolean;
 }
 
 export default function TimelineItem({
@@ -16,7 +19,10 @@ export default function TimelineItem({
 	className = '',
 	graduated = false,
 	work = false,
+	isCurrentWork = false,
 }: TimelineItemProps) {
+	const { t } = useTranslation('experience');
+
 	return (
 		<div
 			className={`flex items-center ${
@@ -27,17 +33,25 @@ export default function TimelineItem({
 					position === 'left' ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
 				}`}>
 				<div
-					className={`bg-base-100 relative rounded-lg p-6 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl ${
+					className={`bg-base-100 relative rounded-lg border-l-4 p-5 shadow-md transition-transform duration-300 ease-in-out md:p-6 md:hover:scale-[1.03] md:hover:shadow-xl ${
 						work
 							? 'border-primary'
 							: graduated
 								? 'border-accent'
 								: 'border-base-300'
-					} ${position === 'left' ? 'border-l-4 hover:-translate-x-2' : 'border-r-4 hover:translate-x-2'}`}>
+					} ${
+						position === 'left'
+							? 'md:border-r-0 md:hover:-translate-x-2'
+							: 'md:border-l-0 md:border-r-4 md:hover:translate-x-2'
+					}`}>
 					{/* Badge for graduated or work status */}
 					{(graduated || work) && (
 						<div
-							className={`bg-base-100 ${work ? 'ring-primary' : 'ring-accent'} absolute -top-3 flex flex-col gap-2 rounded-full p-2 shadow-xl ring-2 transition-transform hover:scale-110 ${position === 'left' ? '-left-3' : '-right-3'}`}>
+							className={`bg-base-100 ${work ? 'ring-primary' : 'ring-accent'} absolute -top-3 -right-3 flex flex-row gap-2 rounded-full p-2 shadow-xl ring-2 transition-transform md:hover:scale-110 ${
+								position === 'left'
+									? 'md:-left-3 md:right-auto'
+									: 'md:-right-3 md:left-auto'
+							}`}>
 							{graduated && (
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -70,17 +84,24 @@ export default function TimelineItem({
 							)}
 						</div>
 					)}
-					<h3 className="text-base-content mb-2 text-lg font-semibold">
+					<h3 className="text-base-content mb-2 text-base font-semibold sm:text-lg">
 						{title}
 					</h3>
+					{isCurrentWork && (
+						<div className="mb-3">
+							<span className="badge badge-success badge-soft badge-sm">
+								{t('currentWork')}
+							</span>
+						</div>
+					)}
 					{/* {description && (
 						<p className="text-base-content/80 mb-3 text-sm leading-relaxed">
 							{description}
 						</p>
 					)} */}
-					<p className="text-base-content/70 mb-2">{location}</p>
+					<p className="text-base-content/70 mb-2 text-sm sm:text-base">{location}</p>
 					<div
-						className={`text-base-content/50 flex items-center text-sm ${
+						className={`text-base-content/50 flex items-center text-xs sm:text-sm ${
 							position === 'left' ? 'md:justify-end' : 'md:justify-start'
 						}`}>
 						<svg

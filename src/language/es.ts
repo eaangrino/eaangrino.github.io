@@ -18,13 +18,13 @@ export default {
     greeting: 'Hola, soy',
     role: 'Analista y Desarrollador de Software',
     description: {
-      first: 'Experiencia sólida construyendo aplicaciones web escalables y responsivas.',
-      second: 'Experto en React y TypeScript, enfocado en código limpio y mantenible.',
-      third: 'Entregando soluciones consistentes y de calidad en desarrollo frontend y backend moderno.',
-      fourth: 'Hábil en el despliegue de soluciones web confiables utilizadas en entornos de producción reales.',
-      fifth: 'Me baso en patrones reutilizables para asegurar resultados mantenibles y predecibles.',
-      sixth: 'Utilizo frameworks de CSS modernos para crear interfaces atractivas, accesibles y mantenibles.',
-      seventh: 'Utilizo herramientas de AI para crear frontends rápido y mantenerlos fáciles de modificar.',
+      first: 'Enfocado en construir aplicaciones y sistemas web escalables con Node.js.',
+      second: 'Experiencia con Node.js, SQL, Docker y entornos basados en Linux.',
+      third: 'Comodo gestionando el flujo completo de una aplicacion, desde UI hasta datos.',
+      fourth: 'Selecciono tecnologias segun el problema, no por un stack fijo.',
+      fifth: 'Me interesa especialmente el diseno de sistemas y la optimizacion de procesos.',
+      sixth: 'Integro herramientas de IA en flujos de ingenieria con supervision tecnica.',
+      seventh: 'Disfruto construir soluciones completas para problemas complejos con tecnologia.',
     },
     contactButton: 'Contáctame',
   },
@@ -108,6 +108,7 @@ export default {
   experience: {
     title: 'Experiencia',
     subtitle: 'Mi trayectoria personal',
+    currentWork: 'Trabajo actual',
     tabs: {
       work: 'Experiencia',
       education: 'Educación',

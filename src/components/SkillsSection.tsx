@@ -518,7 +518,7 @@ export default function SkillsSection() {
 	return (
 		<section
 			id="skills"
-			className="bg-base-100 flex min-h-screen items-center px-4 py-28">
+			className="bg-base-100 flex min-h-screen items-start px-4 pt-24 pb-14 md:items-center md:pt-28 md:pb-20">
 			<div className="container mx-auto max-w-6xl">
 				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 

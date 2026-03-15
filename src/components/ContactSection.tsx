@@ -76,14 +76,16 @@ export default function ContactSection() {
 	];
 
 	return (
-		<section id="contact" className="bg-base-100 flex min-h-screen items-center py-28">
-			<div className="container mx-auto px-4">
+		<section
+			id="contact"
+			className="bg-base-100 flex min-h-screen items-start px-4 pt-24 pb-14 md:items-center md:pt-28 md:pb-20">
+			<div className="container mx-auto px-0">
 				{/* Section Header */}
 				<div className="mb-16 text-center">
-					<h2 className="text-base-content mb-4 text-4xl font-bold">
+					<h2 className="text-base-content mb-4 text-3xl font-bold sm:text-4xl">
 						{t('title')}
 					</h2>
-					<p className="text-base-content/70 text-xl">{t('subtitle')}</p>
+					<p className="text-base-content/70 text-base sm:text-lg md:text-xl">{t('subtitle')}</p>
 				</div>
 
 				{/* Contact Content */}
@@ -165,7 +167,7 @@ export default function ContactSection() {
 					</div>
 
 					{/* Social Media Buttons - Only visible on mobile and tablet */}
-					<div className="mt-12 flex justify-center space-x-4 xl:hidden">
+					<div className="mt-12 flex flex-wrap justify-center gap-4 xl:hidden">
 						{socialLinks.map((link) => (
 							<a
 								key={link.name}

@@ -47,7 +47,7 @@ export default function ContactInfoCard({
 			</div>
 			<div className="flex-1">
 				<h3 className="text-base-content text-lg font-semibold">{title}</h3>
-				<p className="text-base-content/70">{value}</p>
+				<p className="text-base-content/70 break-words text-sm sm:text-base">{value}</p>
 			</div>
 		</div>
 	);

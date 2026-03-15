@@ -4,10 +4,10 @@ export default function Footer() {
 	const { t } = useTranslation('footer');
 
 	return (
-		<footer className="footer sm:footer-horizontal bg-primary text-primary-content flex items-center justify-center p-10">
+		<footer className="footer sm:footer-horizontal bg-primary text-primary-content flex items-center justify-center p-6 sm:p-10">
 			<aside className="flex flex-col items-center justify-center">
 				<svg
-					className="h-32 w-32"
+					className="h-24 w-24 sm:h-32 sm:w-32"
 					viewBox="0 0 700 700"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@ export default function Footer() {
 					/>
 				</svg>
 
-				<p className="text-center">
+				<p className="text-center text-sm sm:text-base">
 					<br />
 					{t('copyright')} {new Date().getFullYear()}
 				</p>

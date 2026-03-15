@@ -46,7 +46,7 @@ export default function AboutSection() {
 	return (
 		<section
 			id="about"
-			className="bg-base-200 flex min-h-screen items-center px-4 py-20 md:px-8 md:py-28">
+			className="bg-base-200 flex min-h-screen items-start px-4 pt-24 pb-14 md:items-center md:px-8 md:pt-28 md:pb-20">
 			<div className="container mx-auto max-w-6xl">
 				{/* Section Header */}
 				<SectionHeader

@@ -10,6 +10,7 @@ interface TabButtonProps {
 }
 
 export default function TabButton({
+	id,
 	label,
 	icon,
 	isActive,
@@ -20,8 +21,8 @@ export default function TabButton({
 		<button
 			onClick={onClick}
 			className={`flex cursor-pointer items-center space-x-2 rounded-md px-6 py-3 transition-all duration-300 ${
-				isActive && label === 'Work' ? 'bg-primary text-primary-content' : ''
-			} ${isActive && label === 'Education' ? 'bg-accent text-primary-content' : ''} ${
+				isActive && id === 'work' ? 'bg-primary text-primary-content' : ''
+			} ${isActive && id === 'education' ? 'bg-accent text-primary-content' : ''} ${
 				isActive
 					? 'scale-105 shadow-md'
 					: 'text-base-content/70 hover:bg-base-200 hover:text-base-content'
