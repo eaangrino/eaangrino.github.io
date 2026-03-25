@@ -44,6 +44,12 @@ export default function SkillsSection() {
 			),
 			technologies: [
 				{
+					name: 'Docker',
+					icon: 'D',
+					color: 'bg-blue-500',
+					iconUrl: '/docker-icon-svgrepo-com.svg',
+				},
+				{
 					name: 'Git',
 					icon: 'G',
 					color: 'bg-orange-500',
@@ -79,7 +85,7 @@ export default function SkillsSection() {
 						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/figma/figma-original.svg',
 				},
 				{
-					name: 'ChatGPT',
+					name: 'Codex',
 					icon: 'C',
 					color: 'bg-green-500',
 					iconUrl: 'https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg',
@@ -91,11 +97,27 @@ export default function SkillsSection() {
 					iconUrl: '/deepseek.svg',
 				},
 				{
+					name: 'ollama',
+					icon: 'O',
+					color: 'bg-gray-600',
+					isBlack: true,
+					iconUrl: '/ollama.svg',
+					// iconSVG: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" /><path d="M8.5 9L12 12.5L15.5 9" /></svg>`,
+				},
+				{
 					name: 'Gemini',
 					icon: 'G',
 					color: 'bg-yellow-500',
 					iconUrl:
 						'https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg',
+				},
+				{
+					name: 'Claude',
+					icon: 'C',
+					color: 'bg-yellow-500',
+					iconUrl:
+						'https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg',
+					// iconSVG: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" /><path d="M8.5 9L12 12.5L15.5 9" /></svg>`,
 				},
 				{
 					name: 'Meta AI',
@@ -113,7 +135,7 @@ export default function SkillsSection() {
 			],
 		},
 		{
-			name: t('categories.frontendStrong'),
+			name: t('categories.frontend'),
 			icon: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -184,26 +206,6 @@ export default function SkillsSection() {
 					color: 'bg-purple-600',
 					iconUrl: 'https://axios-http.com/assets/favicon.ico',
 				},
-			],
-		},
-		{
-			name: t('categories.frontendGood'),
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth={1.5}
-					stroke="currentColor"
-					className="size-6">
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-					/>
-				</svg>
-			),
-			technologies: [
 				{
 					name: 'Angular',
 					icon: 'A',
@@ -231,7 +233,7 @@ export default function SkillsSection() {
 			],
 		},
 		{
-			name: t('categories.backendStrong'),
+			name: t('categories.backend'),
 			icon: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -270,26 +272,6 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg',
 				},
-			],
-		},
-		{
-			name: t('categories.backendGood'),
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth={1.5}
-					stroke="currentColor"
-					className="size-6">
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M21.75 17.25v-.228a4.5 4.5 0 0 0-.12-1.03l-2.268-9.64a3.375 3.375 0 0 0-3.285-2.602H7.923a3.375 3.375 0 0 0-3.285 2.602l-2.268 9.64a4.5 4.5 0 0 0-.12 1.03v.228m19.5 0a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3m19.5 0a3 3 0 0 0-3-3H5.25a3 3 0 0 0-3 3m16.5 0h.008v.008h-.008v-.008Zm-3 0h.008v.008h-.008v-.008Z"
-					/>
-				</svg>
-			),
-			technologies: [
 				{
 					name: '.NET Core',
 					icon: 'N',
@@ -325,7 +307,7 @@ export default function SkillsSection() {
 			],
 		},
 		{
-			name: t('categories.databaseGood'),
+			name: t('categories.database'),
 			icon: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -358,7 +340,7 @@ export default function SkillsSection() {
 			],
 		},
 		{
-			name: t('categories.devopsStrong'),
+			name: t('categories.devops'),
 			icon: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -389,26 +371,6 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://a.b.cdn.console.awsstatic.com/a/v1/FZWU7QTHKFSAFINJXIT6LM6IFFFZXRJNFG2Y5GLC3HF6JMOCJEVQ/icon/9da5a168cf8194c8ee5ed192a443d563-674375b53bc8ae94f48cfdb5c81e8363.svg',
 				},
-			],
-		},
-		{
-			name: t('categories.devopsBasic'),
-			icon: (
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					strokeWidth={1.5}
-					stroke="currentColor"
-					className="size-6">
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
-					/>
-				</svg>
-			),
-			technologies: [
 				{
 					name: 'AWS',
 					icon: 'A',
@@ -475,7 +437,7 @@ export default function SkillsSection() {
 			],
 		},
 		{
-			name: t('categories.mobileBasic'),
+			name: t('categories.mobile'),
 			icon: (
 				<svg
 					className="h-6 w-6"
@@ -522,10 +484,10 @@ export default function SkillsSection() {
 			<div className="container mx-auto max-w-6xl">
 				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
-				<div className="grid gap-8 md:grid-cols-2">
+				<div className="grid gap-8 md:grid-cols-1">
 					{skillCategories.map((category, index) => (
 						<SkillCard key={index} title={category.name} icon={category.icon}>
-							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
 								{category.technologies.map((tech, techIndex) => (
 									<TechnologyIcon
 										key={techIndex}

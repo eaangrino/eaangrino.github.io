@@ -16,7 +16,7 @@ export default {
   },
   hero: {
     greeting: 'Hi, I\'m',
-    role: 'Analyst and Software Developer',
+    role: 'Analyst and Software Engineer',
     description: {
       first: 'Focused on building scalable web applications and systems with Node.js.',
       second: 'Experienced with Node.js, SQL, Docker, and Linux-based environments.',
@@ -32,14 +32,11 @@ export default {
     title: 'Skills',
     subtitle: 'My technical level',
     categories: {
-      frontendStrong: 'Frontend - Strong Experience',
-      frontendGood: 'Frontend - Good Knowledge',
-      backendStrong: 'Backend - Strong Experience',
-      backendGood: 'Backend - Good Knowledge',
-      devopsStrong: 'DevOps - Good Knowledge',
-      devopsBasic: 'DevOps - Basic Understanding',
-      databaseGood: 'Database - Good Knowledge',
-      mobileBasic: 'Mobile - Basic Knowledge',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      devops: 'DevOps',
+      database: 'Database',
+      mobile: 'Mobile',
       tools: 'Tools',
     },
   },
