@@ -1,7 +1,4 @@
-import {
-	ShareIcon,
-	XMarkIcon,
-} from '@heroicons/react/24/outline';
+import { ShareIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useRef, useState, type ReactNode } from 'react';
 
 type FabVariant = 'vertical' | 'flower';
@@ -47,10 +44,7 @@ function Fab({
 }: FabProps) {
 	return (
 		<div className={cx('fab', variant === 'flower' && 'fab-flower', className)}>
-			<div
-				tabIndex={0}
-				role="button"
-				className={cx(trigger.wrapperClassName)}>
+			<div tabIndex={0} role="button" className={cx(trigger.wrapperClassName)}>
 				<div className="bg-primary/20 absolute inset-0 animate-ping rounded-full"></div>
 				<div className={cx('btn btn-circle btn-lg', trigger.className)}>
 					{trigger.icon}
@@ -74,7 +68,10 @@ function Fab({
 			)}
 
 			{items.map((item, index) => (
-				<div key={index} className="tooltip tooltip-left" data-tip={item.tooltip}>
+				<div
+					key={index}
+					className="tooltip tooltip-left"
+					data-tip={item.tooltip}>
 					<a
 						href={item.href}
 						target="_blank"
@@ -167,12 +164,14 @@ export default function SocialMediaBar() {
 				/>
 			)}
 
-			<div
+			<section
 				ref={wrapperRef}
-				className="fixed right-4 bottom-5 z-50 hidden md:block md:right-8 md:bottom-8"
+				className="fixed right-4 bottom-5 z-50 hidden md:right-8 md:bottom-8 md:block"
 				onFocusCapture={() => setIsOpen(true)}
 				onBlurCapture={(event) => {
-					if (!wrapperRef.current?.contains(event.relatedTarget as Node | null)) {
+					if (
+						!wrapperRef.current?.contains(event.relatedTarget as Node | null)
+					) {
 						setIsOpen(false);
 					}
 				}}>
@@ -196,7 +195,7 @@ export default function SocialMediaBar() {
 						items={items}
 					/>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 }
