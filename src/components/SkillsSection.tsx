@@ -410,8 +410,7 @@ export default function SkillsSection() {
 					name: 'Docker',
 					icon: 'D',
 					color: 'bg-blue-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg',
+					iconUrl: '/docker-icon-svgrepo-com.svg',
 				},
 				{
 					name: 'Serverless',
@@ -480,14 +479,24 @@ export default function SkillsSection() {
 	return (
 		<section
 			id="skills"
-			className="bg-base-100 flex min-h-screen items-start px-4 pt-24 pb-14 md:items-center md:pt-28 md:pb-20">
-			<div className="container mx-auto max-w-6xl">
-				<SectionHeader title={t('title')} subtitle={t('subtitle')} />
+			className="from-base-100 via-base-200/35 to-base-100 bg-gradient-to-b px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
+			<div className="mx-auto max-w-6xl">
+				<SectionHeader
+					title={t('title')}
+					subtitle={t('subtitle')}
+					className="max-w-3xl text-left"
+					titleClassName="text-left text-4xl sm:text-5xl font-semibold tracking-tight"
+					subtitleClassName="text-left text-base leading-7 sm:text-lg"
+				/>
 
-				<div className="grid gap-8 md:grid-cols-1">
+				<div className="grid gap-4">
 					{skillCategories.map((category, index) => (
-						<SkillCard key={index} title={category.name} icon={category.icon}>
-							<div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
+						<SkillCard
+							key={index}
+							title={category.name}
+							icon={category.icon}
+							subtitle={t('cardSubtitle')}>
+							<div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
 								{category.technologies.map((tech, techIndex) => (
 									<TechnologyIcon
 										key={techIndex}

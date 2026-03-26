@@ -3,6 +3,7 @@ export default {
     logo: 'Edgar Angrino',
     navigation: {
       home: 'Home',
+      personalWebsite: 'Personal Website',
       about: 'About',
       skills: 'Skills',
       experience: 'Experience',
@@ -15,6 +16,7 @@ export default {
     languageSelector: 'Select language',
   },
   hero: {
+    eyebrow: 'Personal Website',
     greeting: 'Hi, I\'m',
     role: 'Analyst and Software Engineer',
     description: {
@@ -31,6 +33,7 @@ export default {
   skills: {
     title: 'Skills',
     subtitle: 'My technical level',
+    cardSubtitle: 'Technologies and tools',
     categories: {
       frontend: 'Frontend',
       backend: 'Backend',
@@ -56,6 +59,10 @@ export default {
       paragraph6: 'I enjoy building complete solutions and continuously learning new ways to solve complex problems through technology.',
     },
     downloadCV: 'Download CV',
+    sections: {
+      eyebrow: 'About',
+      storyEyebrow: 'More about me',
+    },
     stats: {
       experience: {
         number: '{{years}}',
@@ -98,6 +105,7 @@ export default {
   footer: {
     name: 'Edgar Angrino',
     copyright: '© Edgar Angrino. All rights reserved.',
+    contactMe: 'Contact me',
   },
   construction: {
     message: 'Site under construction - Coming soon!',
@@ -109,6 +117,22 @@ export default {
     tabs: {
       work: 'Work',
       education: 'Education',
+    },
+  },
+  social: {
+    open: 'Open social links',
+    close: 'Close social links',
+    title: 'Social links',
+    hint: 'Press an icon to open my profile in a new tab.',
+  },
+  home: {
+    projects: {
+      eyebrow: 'Selected projects',
+      title: 'A few projects I have been working on',
+      description:
+        'A selection of recent projects that reflect the kind of products, tools, and solutions I enjoy building.',
+      cardLabel: 'Project {{index}}',
+      visitProject: 'Visit project',
     },
   },
   services: {
@@ -151,6 +175,12 @@ export default {
         tech: 'Java + Minecraft Modding',
         description:
           'A Minecraft mod written in Java that adds hammer-based area mining mechanics for more efficient resource gathering.',
+      },
+      itemFive: {
+        title: 'Multi-WhatsApp',
+        tech: 'Electron + Vite + WhatsApp Web',
+        description:
+          'A desktop app created to manage multiple independent WhatsApp Web sessions at the same time, with persistent sessions and fast switching between accounts.',
       },
     }
   },

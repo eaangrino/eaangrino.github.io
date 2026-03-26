@@ -1,22 +1,22 @@
 // src/pages/projectsData.ts
 export default [
   {
-    id: 1,
-    title: "project.itemOne.title",
-    tech: "project.itemOne.tech",
+    id: 5,
+    title: "project.itemFive.title",
+    tech: "project.itemFive.tech",
     description:
-      "project.itemOne.description",
-    image: "/projects/brave_xxLcYyD2AZ.png",
-    link: "https://arteslafaux.github.io"
+      "project.itemFive.description",
+    image: "/projects/multiwa.png",
+    link: "https://github.com/eaangrino/multi-whatsapp"
   },
   {
-    id: 2,
-    title: "project.itemTwo.title",
-    tech: "project.itemTwo.tech",
+    id: 4,
+    title: "project.itemFour.title",
+    tech: "project.itemFour.tech",
     description:
-      "project.itemTwo.description",
-    image: "/projects/brave_lGDmttIy9E.png",
-    // link: "https://arteslafaux.github.io"
+      "project.itemFour.description",
+    image: "/projects/hammer.png",
+    link: "https://github.com/eaangrino/mine-hammers"
   },
   {
     id: 3,
@@ -28,12 +28,21 @@ export default [
     link: "https://github.com/eaangrino/mine-excavators"
   },
   {
-    id: 4,
-    title: "project.itemFour.title",
-    tech: "project.itemFour.tech",
+    id: 2,
+    title: "project.itemTwo.title",
+    tech: "project.itemTwo.tech",
     description:
-      "project.itemFour.description",
-    image: "/projects/hammer.png",
-    link: "https://github.com/eaangrino/mine-hammers"
+      "project.itemTwo.description",
+    image: "/projects/brave_lGDmttIy9E.png",
+    // link: "https://arteslafaux.github.io"
+  },
+  {
+    id: 1,
+    title: "project.itemOne.title",
+    tech: "project.itemOne.tech",
+    description:
+      "project.itemOne.description",
+    image: "/projects/brave_xxLcYyD2AZ.png",
+    link: "https://arteslafaux.github.io"
   },
 ];

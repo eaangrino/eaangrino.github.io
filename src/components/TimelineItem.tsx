@@ -29,7 +29,7 @@ export default function TimelineItem({
 				position === 'left' ? 'md:justify-start' : 'md:justify-end'
 			} ${className}`}>
 			<div
-				className={`w-full md:w-5/12 ${
+				className={`w-full ${
 					position === 'left' ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
 				}`}>
 				<div
@@ -94,11 +94,6 @@ export default function TimelineItem({
 							</span>
 						</div>
 					)}
-					{/* {description && (
-						<p className="text-base-content/80 mb-3 text-sm leading-relaxed">
-							{description}
-						</p>
-					)} */}
 					<p className="text-base-content/70 mb-2 text-sm sm:text-base">{location}</p>
 					<div
 						className={`text-base-content/50 flex items-center text-xs sm:text-sm ${

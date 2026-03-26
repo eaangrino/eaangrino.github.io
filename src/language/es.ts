@@ -3,6 +3,7 @@ export default {
     logo: 'Edgar Angrino',
     navigation: {
       home: 'Inicio',
+      personalWebsite: 'Personal Website',
       about: 'Acerca de',
       skills: 'Habilidades',
       experience: 'Experiencia',
@@ -15,6 +16,7 @@ export default {
     languageSelector: 'Seleccionar idioma',
   },
   hero: {
+    eyebrow: 'Personal Website',
     greeting: 'Hola, soy',
     role: 'Analista e Ingeniero de Software',
     description: {
@@ -31,6 +33,7 @@ export default {
   skills: {
     title: 'Habilidades',
     subtitle: 'Mi nivel técnico',
+    cardSubtitle: 'Tecnologías y herramientas',
     categories: {
       frontend: 'Frontend',
       backend: 'Backend',
@@ -56,6 +59,10 @@ export default {
       paragraph6: 'Disfruto construir soluciones completas y aprender continuamente nuevas formas de resolver problemas complejos mediante la tecnologia.',
     },
     downloadCV: 'Descargar CV',
+    sections: {
+      eyebrow: 'About',
+      storyEyebrow: 'Más sobre mí',
+    },
     stats: {
       experience: {
         number: '{{years}}',
@@ -98,6 +105,7 @@ export default {
   footer: {
     name: 'Edgar Angrino',
     copyright: '© Edgar Angrino. Todos los derechos reservados.',
+    contactMe: 'Contáctame',
   },
   construction: {
     message: 'Sitio en construcción - ¡Próximamente!',
@@ -109,6 +117,22 @@ export default {
     tabs: {
       work: 'Experiencia',
       education: 'Educación',
+    },
+  },
+  social: {
+    open: 'Abrir redes sociales',
+    close: 'Cerrar redes sociales',
+    title: 'Redes sociales',
+    hint: 'Presiona un icono para abrir mi perfil en una nueva pestaña.',
+  },
+  home: {
+    projects: {
+      eyebrow: 'Proyectos seleccionados',
+      title: 'Algunos proyectos en los que he estado trabajando',
+      description:
+        'Una selección de proyectos recientes que reflejan el tipo de productos, herramientas y soluciones que disfruto construir.',
+      cardLabel: 'Proyecto {{index}}',
+      visitProject: 'Ver proyecto',
     },
   },
   services: {
@@ -151,6 +175,12 @@ export default {
         tech: 'Java + Modding de Minecraft',
         description:
           'Un mod de Minecraft escrito en Java que agrega mecanicas de mineria por area usando martillos para recolectar recursos con mayor eficiencia.',
+      },
+      itemFive: {
+        title: 'Multi-WhatsApp',
+        tech: 'Electron + Vite + WhatsApp Web',
+        description:
+          'Aplicación de escritorio creada para gestionar múltiples sesiones independientes de WhatsApp Web al mismo tiempo, con sesiones persistentes y cambio rápido entre cuentas.',
       }
     }
   },
