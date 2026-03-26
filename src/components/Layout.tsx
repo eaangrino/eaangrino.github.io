@@ -1,8 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
 import SocialMediaBar from './SocialMediaBar';
-// import ScrollIndicator from './ScrollIndicator';
-// import ConstructionNotification from './ConstructionNotification';
 import {
 	Outlet,
 	useLocation,
@@ -19,9 +17,6 @@ export default function Layout() {
 			<main className="relative">
 				<Outlet />
 			</main>
-			{/* {location.pathname !== '/portfolio' && <ScrollIndicator />} */}
-
-			{/* <ConstructionNotification /> */}
 			{!isPortfolioRoute && <Footer />}
 		</div>
 	);
