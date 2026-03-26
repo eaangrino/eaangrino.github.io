@@ -18,7 +18,7 @@ export default {
   hero: {
     eyebrow: 'Personal Website',
     greeting: 'Hi, I\'m',
-    role: 'Analyst and Software Engineer',
+    role: 'Software Engineer',
     description: {
       first: 'Focused on building scalable web applications and systems with Node.js.',
       second: 'Experienced with Node.js, SQL, Docker, and Linux-based environments.',
@@ -35,6 +35,7 @@ export default {
     subtitle: 'My technical level',
     cardSubtitle: 'Technologies and tools',
     categories: {
+      primary: 'Primary',
       frontend: 'Frontend',
       backend: 'Backend',
       devops: 'DevOps',
@@ -49,14 +50,14 @@ export default {
     month: 'month',
     months: 'months',
     title: 'About Me',
-    description: 'Software engineer focused on developing scalable web applications and systems using Node.js, with AI tools as support within the development process.',
+    description: 'Software engineer focused on building scalable backend systems using Node.js and TypeScript, working primarily in Linux environments and Dockerized applications.',
     content: {
-      paragraph1: 'I have experience building web solutions with technologies such as Node.js, SQL, and Docker. I also have experience administering Linux environments and handling the full flow of an application, from the user interface to data storage and processing.',
-      paragraph2: 'Although Node.js is my main stack, I choose technologies and languages based on the needs of the problem, taking advantage of specialized libraries and tools when they provide a better solution, always grounded in software engineering fundamentals.',
-      paragraph3: 'I am especially interested in system design, process optimization, and developing software that can scale and remain reliable in production.',
-      paragraph4: 'I explore the use of artificial intelligence tools by integrating them into engineering processes where generated code is evaluated, refined, and taken to production under technical criteria and good practices.',
-      paragraph5: 'Development is carried out iteratively, validating each stage before moving forward.',
-      paragraph6: 'I enjoy building complete solutions and continuously learning new ways to solve complex problems through technology.',
+      paragraph1: 'I have built end-to-end solutions, covering everything from API development and business logic to SQL database management and deployments in real environments. I also have experience administering Linux servers and structuring production-oriented services.',
+      paragraph2: 'My approach is practical and problem-driven: I choose technologies based on performance, maintainability, and system complexity, avoiding decisions based on trends.',
+      paragraph3: 'I integrate artificial intelligence tools into the development workflow as support for productivity and analysis, always ensuring technical validation, refactoring, and quality before anything reaches production.',
+      paragraph4: 'I am especially focused on system design, process optimization, and building software that can support real growth and real load.',
+      paragraph5: '',
+      paragraph6: '',
     },
     downloadCV: 'Download CV',
     sections: {
@@ -180,7 +181,7 @@ export default {
         title: 'Multi-WhatsApp',
         tech: 'Electron + Vite + WhatsApp Web',
         description:
-          'A desktop app created to manage multiple independent WhatsApp Web sessions at the same time, with persistent sessions and fast switching between accounts.',
+          'Desktop application that manages multiple concurrent WhatsApp Web sessions with persistent session handling and fast account switching. Built with Electron + Node.js, solving session isolation, state persistence, and multi-instance control.',
       },
     }
   },

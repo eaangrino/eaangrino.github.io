@@ -14,6 +14,15 @@ interface ExperienceItem {
 export default function AboutPageContent() {
 	const { t } = useTranslation(['about', 'experience']);
 
+	const aboutParagraphs = [
+		t('about:content.paragraph1'),
+		t('about:content.paragraph2'),
+		t('about:content.paragraph3'),
+		t('about:content.paragraph4'),
+		t('about:content.paragraph5'),
+		t('about:content.paragraph6'),
+	].filter(Boolean);
+
 	const workItems: ExperienceItem[] = [
 		{
 			id: 1,
@@ -120,24 +129,13 @@ export default function AboutPageContent() {
 
 					<div className="border-base-300/70 bg-base-100 rounded-[2rem] border p-6 shadow-[0_18px_60px_rgba(15,23,42,0.08)] dark:shadow-[0_18px_60px_rgba(255,255,255,0.08)] sm:p-8">
 						<div className="space-y-5">
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph1')}
-							</p>
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph2')}
-							</p>
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph3')}
-							</p>
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph4')}
-							</p>
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph5')}
-							</p>
-							<p className="text-base-content/80 text-base leading-8">
-								{t('about:content.paragraph6')}
-							</p>
+							{aboutParagraphs.map((paragraph, index) => (
+								<p
+									key={index}
+									className="text-base-content/80 text-base leading-8">
+									{paragraph}
+								</p>
+							))}
 						</div>
 					</div>
 				</section>

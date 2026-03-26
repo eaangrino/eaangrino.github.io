@@ -30,7 +30,44 @@ export default function Header() {
 		<header className="border-base-300/60 bg-base-100/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-xl">
 			<div className="mx-auto max-w-6xl px-4 md:px-8">
 				<div className="flex w-full items-center justify-between py-3">
-					<nav className="bg-base-200/80 hidden items-center rounded-full p-0.5 md:flex">
+					<div className="sm:hidden">
+						<button
+							onClick={toggleMobileMenu}
+							className="btn btn-ghost btn-circle btn-sm"
+							aria-label={t('toggleMenu')}>
+							{isMobileMenuOpen ? (
+								<svg
+									className="h-5 w-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+							) : (
+								<svg
+									className="h-5 w-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M4 6h16M4 12h16M4 18h16"
+									/>
+								</svg>
+							)}
+						</button>
+					</div>
+
+					<nav className="bg-base-200/80 hidden items-center rounded-full p-0.5 sm:flex">
 						{navItems.map((item) => (
 							<button
 								key={item.name}
@@ -84,46 +121,11 @@ export default function Header() {
 							</button>
 						</div>
 						<LanguageSelector />
-
-						<button
-							onClick={toggleMobileMenu}
-							className="btn btn-ghost btn-circle btn-sm md:hidden"
-							aria-label={t('toggleMenu')}>
-							{isMobileMenuOpen ? (
-								<svg
-									className="h-5 w-5"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={2}
-										d="M6 18L18 6M6 6l12 12"
-									/>
-								</svg>
-							) : (
-								<svg
-									className="h-5 w-5"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={2}
-										d="M4 6h16M4 12h16M4 18h16"
-									/>
-								</svg>
-							)}
-						</button>
 					</div>
 				</div>
 
 				{isMobileMenuOpen && (
-					<div className="border-base-300/60 border-t py-3 md:hidden">
+					<div className="border-base-300/60 border-t py-3 sm:hidden">
 						<nav className="flex flex-col space-y-3">
 							{navItems.map((item) => (
 								<button
@@ -137,15 +139,6 @@ export default function Header() {
 									{item.name}
 								</button>
 							))}
-
-							<div className="border-base-300/60 border-t pt-4">
-								<div className="flex items-center justify-between">
-									<span className="text-base-content/70 text-sm font-medium">
-										Language / Idioma
-									</span>
-									<LanguageSelector />
-								</div>
-							</div>
 						</nav>
 					</div>
 				)}

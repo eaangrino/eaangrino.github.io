@@ -12,7 +12,7 @@ interface TechnologyIconProps {
 
 export default function TechnologyIcon({
 	icon,
-	size = 'sm',
+	size = 'md',
 	name = '',
 	className = '',
 	iconUrl,
@@ -34,8 +34,8 @@ export default function TechnologyIcon({
 
 	return (
 		<div
-			className={`border-base-300/70 bg-base-200/65 flex min-h-[88px] flex-col items-center justify-center gap-2 rounded-xl border px-3 py-3 text-center ${className}`}>
-			<div className="flex h-10 w-10 items-center justify-center">
+			className={`border-base-300/70 bg-base-200/65 flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border px-3 py-3.5 text-center ${className}`}>
+			<div className="flex h-11 w-11 items-center justify-center">
 				{iconUrl ? (
 					<img src={iconUrl} alt={icon} className={imageClasses} />
 				) : (
@@ -45,7 +45,7 @@ export default function TechnologyIcon({
 					</div>
 				)}
 			</div>
-			<span className="text-base-content text-center text-xs leading-tight font-semibold">
+			<span className="text-base-content text-center text-[0.8rem] leading-tight font-semibold">
 				{name}
 			</span>
 		</div>

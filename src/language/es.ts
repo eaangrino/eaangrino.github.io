@@ -18,7 +18,7 @@ export default {
   hero: {
     eyebrow: 'Personal Website',
     greeting: 'Hola, soy',
-    role: 'Analista e Ingeniero de Software',
+    role: 'Ingeniero de Software',
     description: {
       first: 'Enfocado en construir aplicaciones y sistemas web escalables con Node.js.',
       second: 'Experiencia con Node.js, SQL, Docker y entornos basados en Linux.',
@@ -35,6 +35,7 @@ export default {
     subtitle: 'Mi nivel técnico',
     cardSubtitle: 'Tecnologías y herramientas',
     categories: {
+      primary: 'Principal',
       frontend: 'Frontend',
       backend: 'Backend',
       devops: 'DevOps',
@@ -49,14 +50,14 @@ export default {
     month: 'mes',
     months: 'meses',
     title: 'Acerca de Mí',
-    description: 'Ingeniero de software enfocado en el desarrollo de aplicaciones y sistemas web escalables utilizando Node.js y herramientas de inteligencia artificial como apoyo en el desarrollo.',
+    description: 'Ingeniero de software enfocado en el desarrollo de sistemas backend escalables utilizando Node.js y TypeScript, trabajando principalmente en entornos Linux y aplicaciones contenerizadas con Docker.',
     content: {
-      paragraph1: 'Tengo experiencia construyendo soluciones web trabajando con tecnologias como Node.js, SQL y Docker. Tambien cuento con experiencia administrando entornos Linux y gestionando el flujo completo de una aplicacion: desde la interfaz de usuario hasta el almacenamiento y procesamiento de datos.',
-      paragraph2: 'Aunque Node.js es mi stack principal, selecciono tecnologias y lenguajes segun las necesidades del problema, aprovechando librerias y herramientas especializadas cuando aportan una mejor solucion, siempre bajo los fundamentos de la ingenieria de software.',
-      paragraph3: 'Me interesa especialmente el diseno de sistemas, la optimizacion de procesos y el desarrollo de software que pueda escalar y mantenerse en produccion de forma confiable.',
-      paragraph4: 'Exploro el uso de herramientas de inteligencia artificial integrandolas dentro de procesos de ingenieria donde el codigo generado es evaluado, refinado y llevado a produccion bajo criterios tecnicos y buenas practicas.',
-      paragraph5: 'El desarrollo se realiza de manera iterativa, validando cada etapa antes de avanzar.',
-      paragraph6: 'Disfruto construir soluciones completas y aprender continuamente nuevas formas de resolver problemas complejos mediante la tecnologia.',
+      paragraph1: 'He desarrollado soluciones end-to-end, cubriendo desde la construccion de APIs y logica de negocio hasta la gestion de bases de datos SQL y despliegues en entornos reales. Tengo experiencia administrando servidores Linux y estructurando servicios orientados a produccion.',
+      paragraph2: 'Mi enfoque es practico y orientado a problemas: selecciono tecnologias segun rendimiento, mantenibilidad y complejidad del sistema, evitando decisiones basadas en tendencias.',
+      paragraph3: 'Integro herramientas de inteligencia artificial dentro del flujo de desarrollo como apoyo en productividad y analisis, asegurando siempre validacion tecnica, refactorizacion y calidad antes de llegar a produccion.',
+      paragraph4: 'Estoy especialmente enfocado en diseno de sistemas, optimizacion de procesos y construccion de software que soporte crecimiento y carga real.',
+      paragraph5: '',
+      paragraph6: '',
     },
     downloadCV: 'Descargar CV',
     sections: {
@@ -180,7 +181,7 @@ export default {
         title: 'Multi-WhatsApp',
         tech: 'Electron + Vite + WhatsApp Web',
         description:
-          'Aplicación de escritorio creada para gestionar múltiples sesiones independientes de WhatsApp Web al mismo tiempo, con sesiones persistentes y cambio rápido entre cuentas.',
+          'Aplicación de escritorio que gestiona múltiples sesiones concurrentes de WhatsApp Web con manejo persistente de sesiones y cambio rápido entre cuentas. Desarrollada con Electron + Node.js, resolviendo aislamiento de sesiones, persistencia de estado y control multiinstancia.',
       }
     }
   },
