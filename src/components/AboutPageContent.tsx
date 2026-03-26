@@ -74,12 +74,12 @@ export default function AboutPageContent() {
 						</p>
 					</div>
 
-					<div className="grid gap-6 lg:grid-cols-2">
-						<div className="border-base-300/70 bg-base-200/70 rounded-[2rem] border p-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] dark:shadow-[0_14px_36px_rgba(255,255,255,0.07)] sm:p-8">
-							<h2 className="text-base-content mb-8 text-2xl font-semibold">
+					<div className="grid gap-5 lg:grid-cols-2">
+						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)] sm:p-6">
+							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
 								{t('experience:tabs.work')}
 							</h2>
-							<div className="space-y-6">
+							<div className="space-y-4">
 								{workItems.map((item, index) => (
 									<TimelineItem
 										key={item.id}
@@ -94,11 +94,11 @@ export default function AboutPageContent() {
 							</div>
 						</div>
 
-						<div className="border-base-300/70 bg-base-200/70 rounded-[2rem] border p-6 shadow-[0_14px_36px_rgba(15,23,42,0.08)] dark:shadow-[0_14px_36px_rgba(255,255,255,0.07)] sm:p-8">
-							<h2 className="text-base-content mb-8 text-2xl font-semibold">
+						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)] sm:p-6">
+							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
 								{t('experience:tabs.education')}
 							</h2>
-							<div className="space-y-6">
+							<div className="space-y-4">
 								{educationItems.map((item, index) => (
 									<TimelineItem
 										key={item.id}

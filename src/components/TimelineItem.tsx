@@ -30,10 +30,10 @@ export default function TimelineItem({
 			} ${className}`}>
 			<div
 				className={`w-full ${
-					position === 'left' ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
+					position === 'left' ? 'md:pr-6 md:text-right' : 'md:pl-6 md:text-left'
 				}`}>
 				<div
-					className={`bg-base-100 relative rounded-lg border-l-4 p-5 shadow-md transition-transform duration-300 ease-in-out md:p-6 md:hover:scale-[1.03] md:hover:shadow-xl ${
+					className={`bg-base-100/95 relative rounded-2xl border-l-4 px-4 py-4 shadow-sm transition-all duration-200 md:px-5 md:py-4 ${
 						work
 							? 'border-primary'
 							: graduated
@@ -41,13 +41,12 @@ export default function TimelineItem({
 								: 'border-base-300'
 					} ${
 						position === 'left'
-							? 'md:border-r-0 md:hover:-translate-x-2'
-							: 'md:border-l-0 md:border-r-4 md:hover:translate-x-2'
+							? 'md:border-r-0'
+							: 'md:border-l-0 md:border-r-4'
 					}`}>
-					{/* Badge for graduated or work status */}
 					{(graduated || work) && (
 						<div
-							className={`bg-base-100 ${work ? 'ring-primary' : 'ring-accent'} absolute -top-3 -right-3 flex flex-row gap-2 rounded-full p-2 shadow-xl ring-2 transition-transform md:hover:scale-110 ${
+							className={`bg-base-100 ${work ? 'ring-primary' : 'ring-accent'} absolute -top-3 -right-3 flex flex-row gap-2 rounded-full p-2 shadow-md ring-2 ${
 								position === 'left'
 									? 'md:-left-3 md:right-auto'
 									: 'md:-right-3 md:left-auto'
@@ -84,23 +83,25 @@ export default function TimelineItem({
 							)}
 						</div>
 					)}
-					<h3 className="text-base-content mb-2 text-base font-semibold sm:text-lg">
+					<h3 className="text-base-content mb-1 text-[0.95rem] font-semibold sm:text-base">
 						{title}
 					</h3>
 					{isCurrentWork && (
-						<div className="mb-3">
+						<div className="mb-2">
 							<span className="badge badge-success badge-soft badge-sm">
 								{t('currentWork')}
 							</span>
 						</div>
 					)}
-					<p className="text-base-content/70 mb-2 text-sm sm:text-base">{location}</p>
+					<p className="text-base-content/70 mb-1 text-sm leading-6 sm:text-[0.95rem]">
+						{location}
+					</p>
 					<div
 						className={`text-base-content/50 flex items-center text-xs sm:text-sm ${
 							position === 'left' ? 'md:justify-end' : 'md:justify-start'
 						}`}>
 						<svg
-							className="mr-2 h-4 w-4"
+							className="mr-1.5 h-4 w-4"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24">
