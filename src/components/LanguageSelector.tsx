@@ -86,8 +86,12 @@ export default function LanguageSelector() {
 	const dropdownRef = useRef<HTMLDivElement>(null);
 	const isMobile = useIsMobile();
 
-	// const currentLanguage =
-	// 	languages.find((lang) => lang.code === i18n.language) || languages[0];
+	const resolvedLanguageCode = i18n.language?.toLowerCase().startsWith('en')
+		? 'en'
+		: 'es';
+
+	const currentLanguage =
+		languages.find((lang) => lang.code === resolvedLanguageCode) || languages[0];
 
 	const changeLanguage = (languageCode: string) => {
 		i18n.changeLanguage(languageCode);
@@ -113,31 +117,32 @@ export default function LanguageSelector() {
 
 	return (
 		<div className="relative" ref={dropdownRef}>
-			{/* Language Toggle Button */}
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className="btn btn-ghost btn-circle btn-sm md:btn-md"
+				className="btn btn-sm rounded-xl border-base-300/80 bg-base-100/70 px-2.5 shadow-sm hover:bg-base-200/85 md:px-3"
 				aria-label={t('languageSelector')}>
-				<div className="flex items-center space-x-1">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						strokeWidth={1.5}
-						stroke="currentColor"
-						className="size-6">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
-						/>
-					</svg>
-				</div>
+				<span className="text-base leading-none">
+					{isMobile ? currentLanguage.flag : currentLanguage.flagSvg}
+				</span>
+				<span className="text-[0.72rem] font-semibold tracking-[0.03em] sm:text-xs">
+					{currentLanguage.code.toUpperCase()}
+				</span>
+				<svg
+					className="h-3.5 w-3.5"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24">
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M19 9l-7 7-7-7"
+					/>
+				</svg>
 			</button>
 
-			{/* Dropdown Menu */}
 			{isOpen && (
-				<div className="bg-base-100 ring-base-300 absolute top-full right-0 z-50 mt-2 min-w-[140px] rounded-lg shadow-lg ring-1">
+				<div className="bg-base-100/95 ring-base-300 absolute top-full right-0 z-50 mt-2 min-w-[150px] rounded-xl shadow-lg ring-1 backdrop-blur-md">
 					<div className="py-1">
 						{languages.map((language) => (
 							<button
