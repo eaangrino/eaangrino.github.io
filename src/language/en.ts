@@ -1,4 +1,9 @@
 export default {
+  seo: {
+    title: 'Edgar Angrino | Full-Stack Software Engineer',
+    description:
+      'Portfolio of Edgar Angrino, a full-stack software engineer specialized in TypeScript, Node.js, React, SQL, Docker, Linux, and AI-assisted automation.',
+  },
   header: {
     logo: 'Edgar Angrino',
     navigation: {
@@ -182,6 +187,12 @@ export default {
         tech: 'Electron + Vite + WhatsApp Web',
         description:
           'Desktop application that manages multiple concurrent WhatsApp Web sessions with persistent session handling and fast account switching. Built with Electron + Node.js, solving session isolation, state persistence, and multi-instance control.',
+      },
+      itemSix: {
+        title: 'Orqent',
+        tech: 'TypeScript + Node.js + React Ink + Ollama + Local models',
+        description:
+          'Local AI terminal agent built to run models on my own hardware and reduce recurring AI costs to zero. The approach is local-first: real conversation history, reasoning control, tool calling, external action execution, and orchestration without depending on paid cloud AI services. Coming soon.',
       },
     }
   },

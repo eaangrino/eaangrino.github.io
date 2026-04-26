@@ -60,7 +60,9 @@ export default function AboutPageContent() {
 
 	return (
 		<div className="px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
-			<div className="mx-auto max-w-6xl space-y-16">
+			<div
+				id="about"
+				className="mx-auto max-w-6xl scroll-mt-28 space-y-16 md:scroll-mt-32">
 				<section>
 					<div className="mb-10 max-w-3xl">
 						<p className="text-primary mb-3 text-sm font-semibold tracking-[0.28em] uppercase">
@@ -75,7 +77,7 @@ export default function AboutPageContent() {
 					</div>
 
 					<div className="grid gap-5 lg:grid-cols-2">
-						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)] sm:p-6">
+						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)]">
 							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
 								{t('experience:tabs.work')}
 							</h2>
@@ -94,7 +96,7 @@ export default function AboutPageContent() {
 							</div>
 						</div>
 
-						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)] sm:p-6">
+						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)]">
 							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
 								{t('experience:tabs.education')}
 							</h2>
@@ -127,7 +129,7 @@ export default function AboutPageContent() {
 						</p>
 					</div>
 
-					<div className="border-base-300/70 bg-base-100 rounded-[2rem] border p-6 shadow-[0_18px_60px_rgba(15,23,42,0.08)] dark:shadow-[0_18px_60px_rgba(255,255,255,0.08)] sm:p-8">
+					<div className="border-base-300/70 bg-base-100 rounded-[2rem] border p-6 shadow-[0_18px_60px_rgba(15,23,42,0.08)] sm:p-8 dark:shadow-[0_18px_60px_rgba(255,255,255,0.08)]">
 						<div className="space-y-5">
 							{aboutParagraphs.map((paragraph, index) => (
 								<p

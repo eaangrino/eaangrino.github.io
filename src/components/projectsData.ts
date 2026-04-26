@@ -1,6 +1,14 @@
 // src/pages/projectsData.ts
 export default [
   {
+    id: 6,
+    title: "project.itemSix.title",
+    tech: "project.itemSix.tech",
+    description:
+      "project.itemSix.description",
+    image: "/projects/orqent.png",
+  },
+  {
     id: 5,
     title: "project.itemFive.title",
     tech: "project.itemFive.tech",

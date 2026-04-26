@@ -1,17 +1,16 @@
-import { useEffect } from 'react';
+import type { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import SocialMediaBar from './SocialMediaBar';
-import { Outlet, useLocation } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
+import Seo from './Seo';
 
-export default function Layout() {
-	const location = useLocation();
+interface LayoutProps {
+	children: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
 	const { isDarkMode } = useTheme();
-
-	useEffect(() => {
-		window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-	}, [location.pathname]);
 
 	return (
 		<div className="bg-base-100 relative min-h-screen overflow-x-hidden">
@@ -33,11 +32,10 @@ export default function Layout() {
 				}}
 			/>
 			<div className="relative z-10">
+				<Seo />
 				<Header />
 				<SocialMediaBar />
-				<main className="relative">
-					<Outlet />
-				</main>
+				<main className="relative">{children}</main>
 				<Footer />
 			</div>
 		</div>

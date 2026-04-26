@@ -85,3 +85,6 @@ For collaboration, hiring, technical consulting, or legal questions regarding co
 **Edgar Angrino**
 📧 [eaangrino@gmail.com](mailto:eaangrino@gmail.com)
 🌐 [https://eaaldark.github.io](https://eaaldark.github.io)
+
+
+codex resume 019d48e5-88dc-7bc2-accf-56a7255094ca

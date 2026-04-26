@@ -14,8 +14,8 @@ i18n
 			en,
 			es,
 		},
-		lng: 'en',
-		fallbackLng: 'en',
+		lng: 'es',
+		fallbackLng: 'es',
 		debug: true,
 		supportedLngs: [ 'en', 'es' ],
 		detection: {

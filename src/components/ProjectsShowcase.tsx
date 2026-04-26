@@ -6,7 +6,9 @@ export default function ProjectsShowcase() {
 	const { t } = useTranslation(['home', 'portfolio']);
 
 	return (
-		<section className="px-4 py-14 md:px-8 md:py-20">
+		<section
+			id="projects"
+			className="scroll-mt-28 px-4 py-14 md:scroll-mt-32 md:px-8 md:py-20">
 			<div className="mx-auto max-w-6xl">
 				<div className="mb-10 max-w-3xl">
 					<p className="text-primary mb-3 text-sm font-semibold tracking-[0.28em] uppercase">
