@@ -7,6 +7,7 @@ export default [
     description:
       "project.itemSix.description",
     image: "/projects/orqent.png",
+    link: "https://github.com/eaangrino/orqent"
   },
   {
     id: 5,

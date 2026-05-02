@@ -192,7 +192,7 @@ export default {
         title: 'Orqent',
         tech: 'TypeScript + Node.js + React Ink + Ollama + Local models',
         description:
-          'Local AI terminal agent built to run models on my own hardware and reduce recurring AI costs to zero. The approach is local-first: real conversation history, reasoning control, tool calling, external action execution, and orchestration without depending on paid cloud AI services. Coming soon.',
+          'Hobby and practice project focused on learning how to run AI models locally and orchestrate tools according to clear runtime specifications. Built as a local-first terminal agent with conversation history, reasoning control, tool calling, and explicit execution boundaries.',
       },
     }
   },

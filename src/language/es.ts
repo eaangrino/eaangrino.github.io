@@ -192,7 +192,7 @@ export default {
         title: 'Orqent',
         tech: 'TypeScript + Node.js + React Ink + Ollama + Modelos locales',
         description:
-          'Agente local de IA en terminal, construido para ejecutar modelos en mi propio hardware y reducir a cero el costo recurrente de IA. El enfoque es local-first: conversación con historial real, control del razonamiento, tool calling, ejecución de acciones externas y orquestación sin depender de servicios cloud pagos. Próximamente será publicado.',
+          'Proyecto hobby y de práctica enfocado en aprender a ejecutar modelos de IA en local y orquestar tools según especificaciones claras del runtime. Construido como un agente de terminal local-first con historial conversacional, control del razonamiento, tool calling y límites de ejecución explícitos.',
       },
     }
   },
