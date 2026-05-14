@@ -1,8 +1,8 @@
 export default {
   seo: {
-    title: 'Edgar Angrino | Ingeniero de Software Full-Stack',
+    title: 'Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack',
     description:
-      'Portafolio de Edgar Angrino, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA.',
+      'Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA.',
   },
   header: {
     logo: 'Edgar Angrino',
