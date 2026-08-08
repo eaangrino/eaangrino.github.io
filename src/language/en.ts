@@ -194,6 +194,12 @@ export default {
         description:
           'Hobby and practice project focused on learning how to run AI models locally and orchestrate tools according to clear runtime specifications. Built as a local-first terminal agent with conversation history, reasoning control, tool calling, and explicit execution boundaries.',
       },
+      itemSeven: {
+        title: 'OBS Voice Isolator',
+        tech: 'C + CMake + PowerShell + OBS Studio Plugin',
+        description:
+          'Native OBS Studio audio filter that reduces noise, suppresses breathing, and isolates speech with optional two-microphone cancellation.',
+      },
     }
   },
 };

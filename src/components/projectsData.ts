@@ -1,6 +1,15 @@
 // src/pages/projectsData.ts
 export default [
   {
+    id: 7,
+    title: "project.itemSeven.title",
+    tech: "project.itemSeven.tech",
+    description:
+      "project.itemSeven.description",
+    image: "/projects/voice-isolator.png",
+    link: "https://github.com/eaangrino/obs-voice-isolator"
+  },
+  {
     id: 6,
     title: "project.itemSix.title",
     tech: "project.itemSix.tech",
