@@ -62,17 +62,18 @@ export default {
 		months: 'months',
 		title: 'About Me',
 		description:
-			'Software engineer focused on building scalable backend systems using Node.js and TypeScript, working primarily in Linux environments and Dockerized applications.',
+			'Software engineer focused on building and evolving systems with a practical approach centered on maintainability and real-world needs.',
 		content: {
 			paragraph1:
-				'I have built end-to-end solutions, covering everything from API development and business logic to SQL database management and deployments in real environments. I also have experience administering Linux servers and structuring production-oriented services.',
+				'Software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.',
 			paragraph2:
-				'My approach is practical and problem-driven: I choose technologies based on performance, maintainability, and system complexity, avoiding decisions based on trends.',
+				'My approach is practical: I select technologies based on performance, maintainability, and complexity, avoiding decisions based solely on trends.',
 			paragraph3:
-				'I integrate artificial intelligence tools into the development workflow as support for productivity and analysis, always ensuring technical validation, refactoring, and quality before anything reaches production.',
+				'I use artificial intelligence as a complementary tool to accelerate development, analysis, and automation, always with technical validation, code review, and refactoring before production.',
 			paragraph4:
-				'I am especially focused on system design, process optimization, and building software that can support real growth and real load.',
-			paragraph5: '',
+				'Whenever possible, I prioritize local development in isolated environments using Docker and tools that simulate cloud services, reducing costs and detecting issues before deployment.',
+			paragraph5:
+				'In my free time, I usually explore tools and approaches that can simplify and improve my daily work.',
 			paragraph6: '',
 		},
 		downloadCV: 'Download CV',

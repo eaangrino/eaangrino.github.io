@@ -62,17 +62,18 @@ export default {
 		months: 'meses',
 		title: 'Acerca de Mí',
 		description:
-			'Ingeniero de software enfocado en el desarrollo de sistemas backend escalables utilizando Node.js y TypeScript, trabajando principalmente en entornos Linux y aplicaciones contenerizadas con Docker.',
+			'Ingeniero de software enfocado en construir y evolucionar sistemas con un enfoque práctico, mantenible y orientado a necesidades reales.',
 		content: {
 			paragraph1:
-				'He desarrollado soluciones end-to-end, cubriendo desde la construccion de APIs y logica de negocio hasta la gestion de bases de datos SQL y despliegues en entornos reales. Tengo experiencia administrando servidores Linux y estructurando servicios orientados a produccion.',
+				'Ingeniero de software enfocado en construir, mantener y evolucionar sistemas, desde MVPs hasta soluciones escalables y plataformas existentes.',
 			paragraph2:
-				'Mi enfoque es practico y orientado a problemas: selecciono tecnologias segun rendimiento, mantenibilidad y complejidad del sistema, evitando decisiones basadas en tendencias.',
+				'Mi enfoque es práctico: selecciono tecnologías según rendimiento, mantenibilidad y complejidad, evitando decisiones basadas únicamente en tendencias.',
 			paragraph3:
-				'Integro herramientas de inteligencia artificial dentro del flujo de desarrollo como apoyo en productividad y analisis, asegurando siempre validacion tecnica, refactorizacion y calidad antes de llegar a produccion.',
+				'Utilizo inteligencia artificial como herramienta complementaria para acelerar desarrollo, análisis y automatización, siempre con validación técnica, revisión del código y refactorización antes de producción.',
 			paragraph4:
-				'Estoy especialmente enfocado en diseno de sistemas, optimizacion de procesos y construccion de software que soporte crecimiento y carga real.',
-			paragraph5: '',
+				'Siempre que es posible, priorizo el desarrollo local en entornos aislados con Docker y herramientas que simulan servicios cloud, reduciendo costos y detectando problemas antes del despliegue.',
+			paragraph5:
+				'En mi tiempo libre suelo explorar herramientas y enfoques que puedan simplificar y mejorar mi trabajo diario.',
 			paragraph6: '',
 		},
 		downloadCV: 'Descargar CV',
