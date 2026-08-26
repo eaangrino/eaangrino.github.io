@@ -51,7 +51,7 @@ export default function Seo() {
 		setProperty('og:title', title);
 		setProperty('og:description', description);
 		setProperty('og:url', localizedUrl);
-		setProperty('og:site_name', 'Edgar Angrino');
+		setProperty('og:site_name', 'Edgar Andres Angrino Lafaux');
 		setProperty('og:locale', languageCode === 'en' ? 'en_US' : 'es_CO');
 		setProperty(
 			'og:locale:alternate',
