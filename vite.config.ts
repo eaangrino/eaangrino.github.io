@@ -7,6 +7,15 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        es: 'es/index.html',
+        en: 'en/index.html',
+      },
+    },
+  },
   preview: {
     allowedHosts: [
       "hp15da0011la",

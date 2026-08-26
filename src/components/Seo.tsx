@@ -32,9 +32,11 @@ export default function Seo() {
 
 	const siteUrl = 'https://eaangrino.github.io/';
 	useEffect(() => {
-		const language = i18n.language?.toLowerCase().startsWith('en')
+		const languageCode = i18n.language?.toLowerCase().startsWith('en')
 			? 'en'
-			: 'es-CO';
+			: 'es';
+		const language = languageCode === 'en' ? 'en' : 'es-CO';
+		const localizedUrl = `${siteUrl}${languageCode}/`;
 
 		const title = t('title');
 		const description = t('description');
@@ -48,9 +50,13 @@ export default function Seo() {
 
 		setProperty('og:title', title);
 		setProperty('og:description', description);
-		setProperty('og:url', siteUrl);
+		setProperty('og:url', localizedUrl);
 		setProperty('og:site_name', 'Edgar Angrino');
-		setProperty('og:locale', language === 'en' ? 'en_US' : 'es_CO');
+		setProperty('og:locale', languageCode === 'en' ? 'en_US' : 'es_CO');
+		setProperty(
+			'og:locale:alternate',
+			languageCode === 'en' ? 'es_CO' : 'en_US',
+		);
 	}, [t, i18n.language]);
 
 	return null;

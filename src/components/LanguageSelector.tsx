@@ -93,8 +93,11 @@ export default function LanguageSelector() {
 	const currentLanguage =
 		languages.find((lang) => lang.code === resolvedLanguageCode) || languages[0];
 
-	const changeLanguage = (languageCode: string) => {
-		i18n.changeLanguage(languageCode);
+	const getLanguageHref = (languageCode: string) =>
+		`/${languageCode}/${window.location.hash}`;
+
+	const rememberLanguage = (languageCode: string) => {
+		localStorage.setItem('i18nextLng', languageCode);
 		setIsOpen(false);
 	};
 
@@ -145,11 +148,17 @@ export default function LanguageSelector() {
 				<div className="bg-base-100/95 ring-base-300 absolute top-full right-0 z-50 mt-2 min-w-[150px] rounded-xl shadow-lg ring-1 backdrop-blur-md">
 					<div className="py-1">
 						{languages.map((language) => (
-							<button
+							<a
 								key={language.code}
-								onClick={() => changeLanguage(language.code)}
+								href={getLanguageHref(language.code)}
+								hrefLang={language.code}
+								lang={language.code}
+								aria-current={
+									resolvedLanguageCode === language.code ? 'page' : undefined
+								}
+								onClick={() => rememberLanguage(language.code)}
 								className={`hover:bg-base-200 flex w-full items-center space-x-3 px-4 py-2 text-sm transition-colors ${
-									i18n.language === language.code
+									resolvedLanguageCode === language.code
 										? 'bg-primary/10 text-primary'
 										: 'text-base-content'
 								}`}>
@@ -157,7 +166,7 @@ export default function LanguageSelector() {
 									{isMobile ? language.flag : language.flagSvg}
 								</span>
 								<span className="font-medium">{language.name}</span>
-								{i18n.language === language.code && (
+								{resolvedLanguageCode === language.code && (
 									<svg
 										className="text-primary ml-auto h-4 w-4"
 										fill="none"
@@ -171,7 +180,7 @@ export default function LanguageSelector() {
 										/>
 									</svg>
 								)}
-							</button>
+							</a>
 						))}
 					</div>
 				</div>
