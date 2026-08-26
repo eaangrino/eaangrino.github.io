@@ -1,83 +1,39 @@
 <!doctype html>
-<html lang="es-CO" data-theme="light">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<title>Edgar Angrino | Ingeniero de Software Full-Stack</title>
-
-		<meta
-			name="description"
-			content="Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA." />
-
-		<meta name="author" content="Edgar Angrino" />
-		<meta name="robots" content="index, follow" />
-
-		<link rel="canonical" href="https://eaangrino.github.io/" />
-
+		<title>Edgar Angrino</title>
+		<meta name="robots" content="noindex, follow" />
+		<link rel="alternate" hreflang="es" href="https://eaangrino.github.io/es/" />
+		<link rel="alternate" hreflang="en" href="https://eaangrino.github.io/en/" />
+		<link rel="alternate" hreflang="x-default" href="https://eaangrino.github.io/es/" />
 		<link rel="icon" type="image/svg+xml" href="/skull.svg" />
+		<script>
+			(function () {
+				var storedLanguage = localStorage.getItem('i18nextLng');
+				var browserLanguage =
+					navigator.language &&
+					navigator.language.toLowerCase().startsWith('en')
+						? 'en'
+						: 'es';
+				var language =
+					storedLanguage === 'en' || storedLanguage === 'es'
+						? storedLanguage
+						: browserLanguage;
 
-		<meta property="og:type" content="website" />
-		<meta property="og:locale" content="es_CO" />
-		<meta property="og:site_name" content="Edgar Angrino" />
-		<meta
-			property="og:title"
-			content="Edgar Angrino | Ingeniero de Software Full-Stack" />
-		<meta
-			property="og:description"
-			content="Portafolio de Edgar Andres Angrino Lafaux: desarrollo full-stack, backend con Node.js, TypeScript, React, SQL, Docker, Linux y automatización con IA." />
-		<meta property="og:url" content="https://eaangrino.github.io/" />
-
-		<meta name="twitter:card" content="summary" />
-		<meta
-			name="twitter:title"
-			content="Edgar Angrino | Ingeniero de Software Full-Stack" />
-		<meta
-			name="twitter:description"
-			content="Portafolio técnico de Edgar Andres Angrino Lafaux, desarrollador full-stack enfocado en Node.js, TypeScript, React, SQL, Docker y Linux." />
-
-		<meta name="theme-color" content="#0f172a" />
-
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Person",
-				"name": "Edgar Andres Angrino Lafaux",
-				"url": "https://eaangrino.github.io/",
-				"email": "mailto:eaangrino@gmail.com",
-				"jobTitle": "Ingeniero de Software Full-Stack",
-				"address": {
-					"@type": "PostalAddress",
-					"addressCountry": "CO"
-				},
-				"sameAs": [
-					"https://github.com/eaangrino",
-					"https://linkedin.com/in/eaangrino",
-					"https://instagram.com/eaangrino",
-					"https://t.me/eaangrino",
-					"https://stackblitz.com/@eaangrino"
-				],
-				"knowsAbout": [
-					"TypeScript",
-					"Node.js",
-					"React",
-					"SQL",
-					"Docker",
-					"Linux",
-					"Machine Learning",
-					"Software Architecture",
-					"Automation",
-					"AI Integration"
-					"Cloud Computing"
-					"DevOps"
-				]
-			}
+				window.location.replace('/' + language + '/');
+			})();
 		</script>
-		<script type="module" crossorigin src="/assets/index-ogllOE7M.js"></script>
-		<link rel="stylesheet" crossorigin href="/assets/index-KzX1g3lf.css">
 	</head>
 
 	<body>
-		<div id="root"></div>
+		<main>
+			<p>Select a language / Selecciona un idioma:</p>
+			<ul>
+				<li><a href="/en/" hreflang="en" lang="en">English</a></li>
+				<li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+			</ul>
+		</main>
 	</body>
 </html>
