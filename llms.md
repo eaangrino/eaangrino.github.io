@@ -1,4 +1,4 @@
-# Edgar Angrino
+# Edgar Andres Angrino Lafaux
 
 > Personal portfolio of Edgar Angrino, a software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.
 
