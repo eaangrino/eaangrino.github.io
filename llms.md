@@ -1,6 +1,6 @@
 # Edgar Andres Angrino Lafaux
 
-> Personal portfolio of Edgar Angrino, a software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.
+> Personal portfolio of Edgar Andres Angrino Lafaux, a software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.
 
 Official website: https://eaangrino.github.io/
 
@@ -8,7 +8,7 @@ Languages available on the website: English and Spanish.
 
 ## Profile
 
-Edgar Angrino is a software engineer with a practical approach focused on performance, maintainability, and technical complexity.
+Edgar Andres Angrino Lafaux is a software engineer with a practical approach focused on performance, maintainability, and technical complexity.
 
 He uses artificial intelligence as a complementary tool to accelerate development, analysis, and automation while maintaining technical validation, code review, and refactoring before production.
 
