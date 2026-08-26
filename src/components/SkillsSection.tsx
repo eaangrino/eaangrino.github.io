@@ -2,6 +2,7 @@ import SectionHeader from './SectionHeader';
 import SkillCard from './SkillCard';
 import TechnologyIcon from './TechnologyIcon';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../hooks/useTheme';
 
 interface SkillCategory {
 	name: string;
@@ -12,12 +13,14 @@ interface SkillCategory {
 		color: string;
 		isBlack?: boolean;
 		iconUrl?: string;
+		iconUrlAlt?: string;
 		iconSVG?: string;
 	}>;
 }
 
 export default function SkillsSection() {
 	const { t } = useTranslation('skills');
+	const { isDarkMode } = useTheme();
 
 	const skillCategories: SkillCategory[] = [
 		{
@@ -42,8 +45,8 @@ export default function SkillsSection() {
 					name: 'Node.js',
 					icon: 'N',
 					color: 'bg-green-600',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg',
+					iconUrl: '/nodejs-original-wordmark.svg',
+					iconUrlAlt: '/nodejs-original-wordmark-alt.svg',
 				},
 				{
 					name: 'TypeScript',
@@ -63,7 +66,8 @@ export default function SkillsSection() {
 					name: 'Next.js',
 					icon: 'N',
 					color: 'bg-black',
-					iconUrl: 'https://nextjs.org/favicon.ico',
+					isBlack: true,
+					iconUrl: '/nextjs_icon_132160.svg',
 				},
 				{
 					name: 'NestJS',
@@ -72,18 +76,25 @@ export default function SkillsSection() {
 					iconUrl: '/nestjs.svg',
 				},
 				{
+					name: 'Python',
+					icon: 'N',
+					color: 'bg-red-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg',
+				},
+				{
 					name: 'AWS',
 					icon: 'A',
 					color: 'bg-orange-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+					iconUrl: '/amazonwebservices-original-wordmark.svg',
+					iconUrlAlt: '/amazonwebservices-original-wordmark-alt.svg',
 				},
 				{
 					name: 'PostgreSQL',
 					icon: 'P',
 					color: 'bg-blue-500',
-					iconUrl:
-						'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg',
+					iconUrl: '/postgresql-original.svg',
+					iconUrlAlt: '/postgresql-original-alt.svg',
 				},
 				{
 					name: 'Oracle SQL',
@@ -237,7 +248,7 @@ export default function SkillsSection() {
 					icon: 'M',
 					color: 'bg-green-600',
 					iconUrl:
-						'https://raw.githubusercontent.com/marktext/marktext/refs/heads/develop/resources/icons/128x128/marktext.png',
+						'https://raw.githubusercontent.com/marktext/marktext/develop/docs/assets/logo-small.png',
 				},
 			],
 		},
@@ -269,7 +280,11 @@ export default function SkillsSection() {
 										key={techIndex}
 										icon={tech.icon}
 										color={tech.color}
-										iconUrl={tech.iconUrl}
+										iconUrl={
+											isDarkMode && tech.iconUrlAlt
+												? tech.iconUrlAlt
+												: tech.iconUrl
+										}
 										isBlack={tech.isBlack}
 										name={tech.name}
 									/>
