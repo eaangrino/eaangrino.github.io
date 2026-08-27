@@ -1,3 +1,4 @@
+import type { MouseEventHandler } from 'react';
 import { useTheme } from '../hooks/useTheme';
 
 interface TechnologyIconProps {
@@ -8,6 +9,10 @@ interface TechnologyIconProps {
 	className?: string;
 	iconUrl?: string;
 	isBlack?: boolean;
+	href?: string;
+	onClick?: MouseEventHandler<HTMLAnchorElement>;
+	highlighted?: boolean;
+	detailsLabel?: string;
 }
 
 export default function TechnologyIcon({
@@ -17,6 +22,10 @@ export default function TechnologyIcon({
 	className = '',
 	iconUrl,
 	isBlack = false,
+	href,
+	onClick,
+	highlighted = false,
+	detailsLabel,
 }: TechnologyIconProps) {
 	const { isDarkMode } = useTheme();
 
@@ -34,9 +43,13 @@ export default function TechnologyIcon({
 
 	const accessibleName = name || icon;
 
-	return (
+	const figure = (
 		<figure
-			className={`border-base-300/70 bg-base-200/65 flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border px-3 py-3.5 text-center ${className}`}>
+			className={`bg-base-200/65 flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border px-3 py-3.5 text-center transition-all ${
+				highlighted
+					? 'border-primary ring-primary/30 hover:bg-base-200/90 ring-1'
+					: 'border-base-300/70'
+			} ${className}`}>
 			<div className="flex h-11 w-11 items-center justify-center">
 				{iconUrl ? (
 					<img
@@ -57,5 +70,20 @@ export default function TechnologyIcon({
 				{name}
 			</figcaption>
 		</figure>
+	);
+
+	if (!href) {
+		return figure;
+	}
+
+	return (
+		<a
+			href={href}
+			onClick={onClick}
+			aria-haspopup="dialog"
+			aria-label={detailsLabel || accessibleName}
+			className="focus-visible:outline-primary block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2">
+			{figure}
+		</a>
 	);
 }

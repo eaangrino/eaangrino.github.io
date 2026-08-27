@@ -3,6 +3,11 @@ export default {
 		title: 'Edgar Angrino | Full-Stack Software Engineer',
 		description:
 			'Portfolio of Edgar Angrino, a full-stack software engineer specialized in TypeScript, Node.js, React, SQL, Docker, Linux, and AI-assisted automation.',
+		amazonWebServices: {
+			title: 'Amazon Web Services Experience | Edgar Angrino',
+			description:
+				'Practical experience with AWS Lambda, AWS SAM, Amazon DynamoDB, Amazon S3, Amazon SES, Amazon Connect, AWS Amplify, and Amazon Route 53.',
+		},
 	},
 	header: {
 		logo: 'Edgar Angrino',
@@ -53,6 +58,19 @@ export default {
 			database: 'Database',
 			mobile: 'Mobile',
 			tools: 'Tools',
+		},
+		awsDetails: {
+			open: 'View Amazon Web Services experience',
+			close: 'Close Amazon Web Services details',
+			eyebrow: 'Cloud experience',
+			title: 'Amazon Web Services',
+			intro:
+				'I have used AWS across different projects to build, deploy, and integrate cloud-based solutions. I have practical experience with several AWS services and use them according to the needs of each system.',
+			servicesTitle: 'AWS services I have used',
+			servicesDescription:
+				'These are AWS services I have worked with directly in development and integration workflows.',
+			learning:
+				'I am comfortable working with these services and learning or adopting additional AWS services when a project requires them.',
 		},
 	},
 	about: {

@@ -3,6 +3,11 @@ export default {
 		title: 'Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack',
 		description:
 			'Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA.',
+		amazonWebServices: {
+			title: 'Experiencia con Amazon Web Services | Edgar Angrino',
+			description:
+				'Experiencia práctica con AWS Lambda, AWS SAM, Amazon DynamoDB, Amazon S3, Amazon SES, Amazon Connect, AWS Amplify y Amazon Route 53.',
+		},
 	},
 	header: {
 		logo: 'Edgar Angrino',
@@ -53,6 +58,19 @@ export default {
 			database: 'Base de Datos',
 			mobile: 'Móvil',
 			tools: 'Herramientas',
+		},
+		awsDetails: {
+			open: 'Ver experiencia con Amazon Web Services',
+			close: 'Cerrar detalles de Amazon Web Services',
+			eyebrow: 'Experiencia cloud',
+			title: 'Amazon Web Services',
+			intro:
+				'He utilizado AWS en distintos proyectos para desarrollar, desplegar e integrar soluciones cloud. Tengo experiencia práctica con varios servicios de AWS y los utilizo según las necesidades de cada sistema.',
+			servicesTitle: 'Servicios de AWS que he utilizado',
+			servicesDescription:
+				'Estos son servicios de AWS con los que he trabajado directamente en flujos de desarrollo e integración.',
+			learning:
+				'Me siento cómodo trabajando con estos servicios y aprendiendo o incorporando otros servicios de AWS cuando un proyecto lo requiere.',
 		},
 	},
 	about: {

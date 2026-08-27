@@ -1,3 +1,5 @@
+import { useEffect, useState, type MouseEvent } from 'react';
+import AwsExperienceModal from './AwsExperienceModal';
 import SectionHeader from './SectionHeader';
 import SkillCard from './SkillCard';
 import TechnologyIcon from './TechnologyIcon';
@@ -15,12 +17,80 @@ interface SkillCategory {
 		iconUrl?: string;
 		iconUrlAlt?: string;
 		iconSVG?: string;
+		details?: {
+			slug: string;
+			highlighted?: boolean;
+		};
 	}>;
 }
 
+const AWS_DETAILS_SLUG = 'amazon-web-services';
+
+const getDetailsSlugFromPath = () =>
+	window.location.pathname.split('/').filter(Boolean)[1] ?? null;
+
 export default function SkillsSection() {
-	const { t } = useTranslation('skills');
+	const { t, i18n } = useTranslation('skills');
 	const { isDarkMode } = useTheme();
+	const languageCode = i18n.language?.toLowerCase().startsWith('en')
+		? 'en'
+		: 'es';
+	const [activeDetails, setActiveDetails] = useState<string | null>(() =>
+		getDetailsSlugFromPath() === AWS_DETAILS_SLUG ? AWS_DETAILS_SLUG : null,
+	);
+
+	useEffect(() => {
+		const syncDetailsWithPath = () => {
+			setActiveDetails(
+				getDetailsSlugFromPath() === AWS_DETAILS_SLUG ? AWS_DETAILS_SLUG : null,
+			);
+		};
+
+		window.addEventListener('popstate', syncDetailsWithPath);
+
+		return () => {
+			window.removeEventListener('popstate', syncDetailsWithPath);
+		};
+	}, []);
+
+	const notifyNavigation = () => {
+		window.dispatchEvent(new Event('portfolio:navigation'));
+	};
+
+	const openDetails = (event: MouseEvent<HTMLAnchorElement>, slug: string) => {
+		if (
+			event.defaultPrevented ||
+			event.button !== 0 ||
+			event.metaKey ||
+			event.ctrlKey ||
+			event.shiftKey ||
+			event.altKey
+		) {
+			return;
+		}
+
+		event.preventDefault();
+
+		const targetPath = `/${languageCode}/${slug}/`;
+
+		if (window.location.pathname !== targetPath) {
+			window.history.pushState({ skillModal: slug }, '', targetPath);
+		}
+
+		setActiveDetails(slug);
+		notifyNavigation();
+	};
+
+	const closeDetails = () => {
+		if (window.history.state?.skillModal === AWS_DETAILS_SLUG) {
+			window.history.back();
+			return;
+		}
+
+		window.history.replaceState(window.history.state, '', `/${languageCode}/`);
+		setActiveDetails(null);
+		notifyNavigation();
+	};
 
 	const skillCategories: SkillCategory[] = [
 		{
@@ -56,6 +126,13 @@ export default function SkillsSection() {
 						'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
 				},
 				{
+					name: 'Angular Material',
+					icon: 'AM',
+					color: 'bg-blue-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/angular/angular-original.svg',
+				},
+				{
 					name: 'React',
 					icon: 'R',
 					color: 'bg-blue-500',
@@ -88,6 +165,10 @@ export default function SkillsSection() {
 					color: 'bg-orange-500',
 					iconUrl: '/amazonwebservices-original-wordmark.svg',
 					iconUrlAlt: '/amazonwebservices-original-wordmark-alt.svg',
+					details: {
+						slug: AWS_DETAILS_SLUG,
+						highlighted: true,
+					},
 				},
 				{
 					name: 'PostgreSQL',
@@ -261,45 +342,66 @@ export default function SkillsSection() {
 	];
 
 	return (
-		<section
-			id="skills"
-			className="from-base-100 via-base-200/35 to-base-100 bg-gradient-to-b px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
-			<div className="mx-auto max-w-6xl">
-				<SectionHeader
-					title={t('title')}
-					subtitle={t('subtitle')}
-					className="max-w-3xl text-left"
-					titleClassName="text-left text-4xl sm:text-5xl font-semibold tracking-tight"
-					subtitleClassName="text-left text-base leading-7 sm:text-lg"
-				/>
+		<>
+			<section
+				id="skills"
+				className="from-base-100 via-base-200/35 to-base-100 bg-gradient-to-b px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
+				<div className="mx-auto max-w-6xl">
+					<SectionHeader
+						title={t('title')}
+						subtitle={t('subtitle')}
+						className="max-w-3xl text-left"
+						titleClassName="text-left text-4xl sm:text-5xl font-semibold tracking-tight"
+						subtitleClassName="text-left text-base leading-7 sm:text-lg"
+					/>
 
-				<div className="grid gap-4">
-					{skillCategories.map((category, index) => (
-						<SkillCard
-							key={index}
-							title={category.name}
-							icon={category.icon}
-							subtitle={t('cardSubtitle')}>
-							<div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
-								{category.technologies.map((tech, techIndex) => (
-									<TechnologyIcon
-										key={techIndex}
-										icon={tech.icon}
-										color={tech.color}
-										iconUrl={
-											isDarkMode && tech.iconUrlAlt
-												? tech.iconUrlAlt
-												: tech.iconUrl
-										}
-										isBlack={tech.isBlack}
-										name={tech.name}
-									/>
-								))}
-							</div>
-						</SkillCard>
-					))}
+					<div className="grid gap-4">
+						{skillCategories.map((category, index) => (
+							<SkillCard
+								key={index}
+								title={category.name}
+								icon={category.icon}
+								subtitle={t('cardSubtitle')}>
+								<div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
+									{category.technologies.map((tech, techIndex) => (
+										<TechnologyIcon
+											key={techIndex}
+											icon={tech.icon}
+											color={tech.color}
+											iconUrl={
+												isDarkMode && tech.iconUrlAlt
+													? tech.iconUrlAlt
+													: tech.iconUrl
+											}
+											isBlack={tech.isBlack}
+											name={tech.name}
+											href={
+												tech.details
+													? `/${languageCode}/${tech.details.slug}/`
+													: undefined
+											}
+											highlighted={tech.details?.highlighted}
+											detailsLabel={
+												tech.details ? t('awsDetails.open') : undefined
+											}
+											onClick={
+												tech.details
+													? (event) => openDetails(event, tech.details!.slug)
+													: undefined
+											}
+										/>
+									))}
+								</div>
+							</SkillCard>
+						))}
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<AwsExperienceModal
+				open={activeDetails === AWS_DETAILS_SLUG}
+				onClose={closeDetails}
+			/>
+		</>
 	);
 }

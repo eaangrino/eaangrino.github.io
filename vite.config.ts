@@ -13,6 +13,8 @@ export default defineConfig({
         main: 'index.html',
         es: 'es/index.html',
         en: 'en/index.html',
+        esAmazonWebServices: 'es/amazon-web-services/index.html',
+        enAmazonWebServices: 'en/amazon-web-services/index.html',
       },
     },
   },

@@ -93,8 +93,15 @@ export default function LanguageSelector() {
 	const currentLanguage =
 		languages.find((lang) => lang.code === resolvedLanguageCode) || languages[0];
 
-	const getLanguageHref = (languageCode: string) =>
-		`/${languageCode}/${window.location.hash}`;
+	const getLanguageHref = (languageCode: string) => {
+		const [, detailsSlug] = window.location.pathname
+			.split('/')
+			.filter(Boolean);
+		const detailsPath =
+			detailsSlug === 'amazon-web-services' ? `/${detailsSlug}` : '';
+
+		return `/${languageCode}${detailsPath}/${window.location.hash}`;
+	};
 
 	const rememberLanguage = (languageCode: string) => {
 		localStorage.setItem('i18nextLng', languageCode);
