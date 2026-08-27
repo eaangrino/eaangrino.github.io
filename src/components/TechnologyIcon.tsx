@@ -32,12 +32,20 @@ export default function TechnologyIcon({
 		isBlack && isDarkMode ? 'brightness-0 invert' : ''
 	}`;
 
+	const accessibleName = name || icon;
+
 	return (
-		<div
+		<figure
 			className={`border-base-300/70 bg-base-200/65 flex min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border px-3 py-3.5 text-center ${className}`}>
 			<div className="flex h-11 w-11 items-center justify-center">
 				{iconUrl ? (
-					<img src={iconUrl} alt={icon} className={imageClasses} />
+					<img
+						src={iconUrl}
+						alt={`${accessibleName} logo`}
+						loading="lazy"
+						decoding="async"
+						className={imageClasses}
+					/>
 				) : (
 					<div
 						className={`${sizeClasses[size]} flex items-center justify-center`}>
@@ -45,9 +53,9 @@ export default function TechnologyIcon({
 					</div>
 				)}
 			</div>
-			<span className="text-base-content text-center text-[0.8rem] leading-tight font-semibold">
+			<figcaption className="text-base-content text-center text-[0.8rem] leading-tight font-semibold">
 				{name}
-			</span>
-		</div>
+			</figcaption>
+		</figure>
 	);
 }

@@ -250,6 +250,12 @@ export default function SkillsSection() {
 					iconUrl:
 						'https://raw.githubusercontent.com/marktext/marktext/develop/docs/assets/logo-small.png',
 				},
+				{
+					name: 'LM Studio',
+					icon: 'LS',
+					color: '',
+					iconUrl: '/lm-studio.svg',
+				},
 			],
 		},
 	];
