@@ -8,7 +8,7 @@ interface HeroSectionProps {
 export default function HeroSection({
 	name = 'Edgar Angrino',
 }: HeroSectionProps) {
-	const { t } = useTranslation('hero');
+	const { t } = useTranslation(['hero', 'about']);
 
 	// Configuration for rotating text
 	const TEXT_DURATION = 6000; // 6 seconds per text
@@ -52,6 +52,30 @@ export default function HeroSection({
 						}`}>
 						{currentText}
 					</p>
+
+					<div className="mt-6 flex justify-center lg:justify-start">
+						<a
+							href="https://drive.google.com/file/d/1q8YK4sP0qsJVj7IhrdUdxWw8VddTOFmG/view?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary btn-lg gap-2 rounded-xl px-6 shadow-lg transition-transform hover:-translate-y-0.5">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.8}
+								stroke="currentColor"
+								className="h-5 w-5">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5A3.375 3.375 0 0 0 10.125 2.25H8.25m0 12.75h7.5m-7.5 3h7.5M10.5 2.25H5.625A1.875 1.875 0 0 0 3.75 4.125v15.75a1.875 1.875 0 0 0 1.875 1.875h12.75a1.875 1.875 0 0 0 1.875-1.875V12.375a9 9 0 0 0-9-9Z"
+								/>
+							</svg>
+
+							{t('about:downloadCV')}
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>

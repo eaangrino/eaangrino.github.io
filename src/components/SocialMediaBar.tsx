@@ -153,7 +153,7 @@ export default function SocialMediaBar() {
 			{isOpen && (
 				<button
 					type="button"
-					className="fixed inset-0 z-40 bg-black/20 backdrop-blur-md"
+					className="fixed inset-0 z-[60] bg-black/20 backdrop-blur-md"
 					onClick={() => {
 						setIsOpen(false);
 						if (document.activeElement instanceof HTMLElement) {
@@ -166,7 +166,7 @@ export default function SocialMediaBar() {
 
 			<section
 				ref={wrapperRef}
-				className="fixed right-4 bottom-5 z-50 hidden md:right-8 md:bottom-8 md:block"
+				className="fixed right-4 bottom-5 z-[70] hidden md:right-8 md:bottom-8 md:block"
 				onFocusCapture={() => setIsOpen(true)}
 				onBlurCapture={(event) => {
 					if (
