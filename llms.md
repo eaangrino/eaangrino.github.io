@@ -1,6 +1,6 @@
 # Edgar Andres Angrino Lafaux
 
-> Personal portfolio of Edgar Andres Angrino Lafaux, a software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.
+> Personal portfolio of Edgar Andres Angrino Lafaux, a software engineer focused on building, maintaining, and evolving products and systems, from MVPs to existing platforms and scalable solutions.
 
 Official website: https://eaangrino.github.io/
 
@@ -8,13 +8,9 @@ Languages available on the website: English and Spanish.
 
 ## Profile
 
-Edgar Andres Angrino Lafaux is a software engineer with a practical approach focused on performance, maintainability, and technical complexity.
+Edgar Andres Angrino Lafaux focuses on building, maintaining, and evolving products and systems, from MVPs to existing platforms and scalable solutions. He adapts easily to frontend, backend, AWS, and external service integration tasks, working with a practical approach and choosing technologies according to the problem, performance, and maintainability. He also integrates artificial intelligence to accelerate development, analysis, automation, and prototyping, always with technical judgment and validation.
 
-He uses artificial intelligence as a complementary tool to accelerate development, analysis, and automation while maintaining technical validation, code review, and refactoring before production.
-
-Whenever possible, he prioritizes local development in isolated environments using Docker and tools that simulate cloud services to reduce costs and detect issues before deployment.
-
-In his free time, he explores tools and approaches that can simplify and improve his daily work.
+He is accustomed to moving across different areas of a project and taking on new tasks when necessary, even when they require researching or learning a tool along the way. He aims to work autonomously and resolve the blockers he can control, while preferring to validate decisions that may have a future impact. He is comfortable both building new solutions and working with existing systems to understand, maintain, and improve them.
 
 ## Technologies and Skills
 
