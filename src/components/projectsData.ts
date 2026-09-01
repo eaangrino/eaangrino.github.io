@@ -1,11 +1,17 @@
 // src/pages/projectsData.ts
 export default [
 	{
+		id: 9,
+		title: 'project.itemNine.title',
+		tech: 'project.itemNine.tech',
+		description: 'project.itemNine.description',
+		link: 'https://github.com/eaangrino/kinewall-video-wallpaper',
+	},
+	{
 		id: 8,
 		title: 'project.itemEight.title',
 		tech: 'project.itemEight.tech',
 		description: 'project.itemEight.description',
-		image: '/projects/linux_shell.png',
 		link: 'https://github.com/eaangrino/mcp-shell-sudo',
 	},
 	{
@@ -13,7 +19,6 @@ export default [
 		title: 'project.itemSeven.title',
 		tech: 'project.itemSeven.tech',
 		description: 'project.itemSeven.description',
-		image: '/projects/voice-isolator.png',
 		link: 'https://github.com/eaangrino/obs-voice-isolator',
 	},
 	{
@@ -21,7 +26,6 @@ export default [
 		title: 'project.itemSix.title',
 		tech: 'project.itemSix.tech',
 		description: 'project.itemSix.description',
-		image: '/projects/orqent.png',
 		link: 'https://github.com/eaangrino/orqent',
 	},
 	{
@@ -29,7 +33,6 @@ export default [
 		title: 'project.itemFive.title',
 		tech: 'project.itemFive.tech',
 		description: 'project.itemFive.description',
-		image: '/projects/multiwa.png',
 		link: 'https://github.com/eaangrino/multi-whatsapp',
 	},
 	{
@@ -37,7 +40,6 @@ export default [
 		title: 'project.itemFour.title',
 		tech: 'project.itemFour.tech',
 		description: 'project.itemFour.description',
-		image: '/projects/hammer.png',
 		link: 'https://github.com/eaangrino/mine-hammers',
 	},
 	{
@@ -45,7 +47,6 @@ export default [
 		title: 'project.itemThree.title',
 		tech: 'project.itemThree.tech',
 		description: 'project.itemThree.description',
-		image: '/projects/excavator.png',
 		link: 'https://github.com/eaangrino/mine-excavators',
 	},
 	{
@@ -53,7 +54,6 @@ export default [
 		title: 'project.itemTwo.title',
 		tech: 'project.itemTwo.tech',
 		description: 'project.itemTwo.description',
-		image: '/projects/brave_lGDmttIy9E.png',
 		// link: "https://arteslafaux.github.io"
 	},
 	{
@@ -61,7 +61,6 @@ export default [
 		title: 'project.itemOne.title',
 		tech: 'project.itemOne.tech',
 		description: 'project.itemOne.description',
-		image: '/projects/brave_xxLcYyD2AZ.png',
 		link: 'https://arteslafaux.github.io',
 	},
 ];

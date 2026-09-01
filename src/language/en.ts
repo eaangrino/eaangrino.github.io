@@ -188,6 +188,12 @@ export default {
 		link: 'Link',
 		backButton: 'Back',
 		project: {
+			itemNine: {
+				title: 'KineWall — KDE Plasma 6',
+				tech: 'QML + KDE Plasma 6 + Qt 6 + Qt Multimedia',
+				description:
+					'QML video wallpaper plugin for KDE Plasma 6 that plays local videos in a continuous loop without audio and can automatically pause playback when a maximized window covers the desktop.',
+			},
 			itemOne: {
 				title: 'ArtesLafaux - Landing Page',
 				tech: 'React + TypeScript + TailwindCSS + DaisyUI + Vite',
