@@ -1,6 +1,13 @@
 // src/pages/projectsData.ts
 export default [
 	{
+		id: 10,
+		title: 'project.itemTen.title',
+		tech: 'project.itemTen.tech',
+		description: 'project.itemTen.description',
+		link: 'https://github.com/eaangrino/kinewall-video-wallpaper-android',
+	},
+	{
 		id: 9,
 		title: 'project.itemNine.title',
 		tech: 'project.itemNine.tech',

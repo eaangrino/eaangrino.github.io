@@ -188,6 +188,12 @@ export default {
 		link: 'Link',
 		backButton: 'Back',
 		project: {
+			itemTen: {
+				title: 'KineWall — Android 14+',
+				tech: 'Kotlin + Android 14+ + WallpaperService + MediaPlayer',
+				description:
+					'Native Android video live wallpaper app that lets users select a local video and apply it as a live wallpaper, with infinite looping, muted playback, and configurable scaling modes.',
+			},
 			itemNine: {
 				title: 'KineWall — KDE Plasma 6',
 				tech: 'QML + KDE Plasma 6 + Qt 6 + Qt Multimedia',
