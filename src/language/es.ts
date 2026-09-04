@@ -190,7 +190,7 @@ export default {
 		project: {
 			itemTen: {
 				title: 'KineWall — Android',
-				tech: 'Kotlin + Android 14+ + WallpaperService + MediaPlayer',
+				tech: 'Kotlin + Android 11+ + WallpaperService + MediaPlayer',
 				description:
 					'Aplicación nativa de fondos de video para Android que permite seleccionar un video local y aplicarlo como fondo de pantalla animado, con reproducción en bucle infinito, sin audio y modos de escalado configurables.',
 			},

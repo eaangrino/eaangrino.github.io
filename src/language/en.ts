@@ -190,7 +190,7 @@ export default {
 		project: {
 			itemTen: {
 				title: 'KineWall — Android',
-				tech: 'Kotlin + Android 14+ + WallpaperService + MediaPlayer',
+				tech: 'Kotlin + Android 11+ + WallpaperService + MediaPlayer',
 				description:
 					'Native Android video live wallpaper app that lets users select a local video and apply it as a live wallpaper, with infinite looping, muted playback, and configurable scaling modes.',
 			},
