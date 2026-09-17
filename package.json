@@ -14,7 +14,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview --port 3173 --host 0.0.0.0",
-    "deploy": "gh-pages -d dist",
+    "check:seo": "node scripts/check-seo-indexability.mjs",
+    "deploy": "make build && npm run check:seo && gh-pages -d dist",
     "test": "jest --env=jsdom"
   },
   "dependencies": {
