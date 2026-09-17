@@ -11,8 +11,9 @@ export default function Header() {
 
 	const navItems = [
 		{ name: t('navigation.personalWebsite'), sectionId: 'home' },
+		{ name: t('navigation.projects'), sectionId: 'projects' },
 		{ name: t('navigation.skills'), sectionId: 'skills' },
-		{ name: t('navigation.about'), sectionId: 'about' },
+		{ name: t('navigation.experience'), sectionId: 'experience' },
 	];
 
 	const handleNavigation = (sectionId: string) => {
@@ -30,7 +31,7 @@ export default function Header() {
 	};
 
 	useEffect(() => {
-		const sectionIds = ['home', 'skills', 'about'];
+		const sectionIds = ['home', 'projects', 'skills', 'experience'];
 
 		const updateActiveSection = () => {
 			const scrollMarker = window.scrollY + 160;
