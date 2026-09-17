@@ -82,6 +82,9 @@ export default function Seo() {
 			normalizedPath === `/${languageCode}/amazon-web-services`;
 		const detailPath = isAmazonWebServices ? 'amazon-web-services/' : '';
 		const localizedUrl = `${siteUrl}${languageCode}/${detailPath}`;
+		const xDefaultUrl = isAmazonWebServices
+			? `${siteUrl}es/${detailPath}`
+			: siteUrl;
 
 		const title = isAmazonWebServices
 			? t('amazonWebServices.title')
@@ -110,7 +113,7 @@ export default function Seo() {
 		setCanonical(localizedUrl);
 		setAlternate('es', `${siteUrl}es/${detailPath}`);
 		setAlternate('en', `${siteUrl}en/${detailPath}`);
-		setAlternate('x-default', `${siteUrl}es/${detailPath}`);
+		setAlternate('x-default', xDefaultUrl);
 	}, [t, i18n.language, pathname]);
 
 	return null;
