@@ -1,15 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import TimelineItem from './TimelineItem';
-
-interface ExperienceItem {
-	id: number;
-	title: string;
-	location: string;
-	dates: string;
-	graduated?: boolean;
-	work?: boolean;
-	isCurrentWork?: boolean;
-}
+import ExperienceTimeline, { type ExperienceTimelineEntry } from './ExperienceTimeline';
 
 export default function AboutPageContent() {
 	const { t } = useTranslation(['about', 'experience']);
@@ -17,124 +7,80 @@ export default function AboutPageContent() {
 	const aboutParagraphs = [
 		t('about:content.paragraph1'),
 		t('about:content.paragraph2'),
-		t('about:content.paragraph3'),
-		t('about:content.paragraph4'),
-		t('about:content.paragraph5'),
-		t('about:content.paragraph6'),
-	].filter(Boolean);
-
-	const workItems: ExperienceItem[] = [
-		{
-			id: 1,
-			title: 'Fullstack Developer',
-			location: 'Applivio - Remote, Puerto Rico',
-			dates: 'Sep 2020 - Present',
-			work: true,
-			isCurrentWork: true,
-		},
-		{
-			id: 2,
-			title: 'Soporte TI / Desarrollador Java',
-			location: 'IP Total Software - Cali, Colombia',
-			dates: 'Nov 2018 - Abr 2019',
-			work: true,
-		},
 	];
 
-	const educationItems: ExperienceItem[] = [
+	const timelineItems: ExperienceTimelineEntry[] = [
 		{
-			id: 1,
-			title: 'Bootcamp de Inteligencia Artificial Intermedio',
-			location: 'MinTIC (Virtual, Colombia)',
-			dates: 'Dic 2024 - Ene 2025',
-			graduated: true,
-		},
-		{
-			id: 2,
+			id: 'education-sena',
 			title: 'Tecnólogo en Análisis y Desarrollo de Sistemas de Información',
 			location: 'SENA Salomia - Cali, Colombia',
 			dates: '2017 - 2019',
-			graduated: true,
+			type: 'education',
+		},
+		{
+			id: 'work-ip-total',
+			title: 'Soporte TI / Desarrollador Java',
+			location: 'IP Total Software - Cali, Colombia',
+			dates: 'Nov 2018 - Abr 2019',
+			type: 'work',
+		},
+		{
+			id: 'work-applivio',
+			title: 'Fullstack Developer',
+			location: 'Applivio - Remote, Puerto Rico',
+			dates: 'Sep 2020 - Present',
+			type: 'work',
+			isCurrentWork: true,
+		},
+		{
+			id: 'education-mintic',
+			title: 'Bootcamp de Inteligencia Artificial Intermedio',
+			location: 'MinTIC (Virtual, Colombia)',
+			dates: 'Dic 2024 - Ene 2025',
+			type: 'education',
 		},
 	];
 
 	return (
 		<div className="px-4 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
-			<div
-				id="about"
-				className="mx-auto max-w-6xl scroll-mt-28 space-y-16 md:scroll-mt-32">
-				<section>
+			<div className="mx-auto max-w-6xl space-y-20 md:space-y-28">
+				<section
+					id="experience"
+					className="scroll-mt-28 md:scroll-mt-32">
 					<div className="mb-10 max-w-3xl">
 						<p className="text-primary mb-3 text-sm font-semibold tracking-[0.28em] uppercase">
-							{t('about:sections.eyebrow')}
+							{t('experience:eyebrow')}
 						</p>
-						<h1 className="text-base-content text-4xl font-semibold tracking-tight sm:text-5xl">
+						<h2 className="text-base-content text-4xl font-semibold tracking-tight sm:text-5xl">
 							{t('experience:title')}
-						</h1>
+						</h2>
 						<p className="text-base-content/70 mt-4 text-base leading-7 sm:text-lg">
 							{t('experience:subtitle')}
 						</p>
 					</div>
 
-					<div className="grid gap-5 lg:grid-cols-2">
-						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)]">
-							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
-								{t('experience:tabs.work')}
-							</h2>
-							<div className="space-y-4">
-								{workItems.map((item, index) => (
-									<TimelineItem
-										key={item.id}
-										title={item.title}
-										location={item.location}
-										dates={item.dates}
-										position={index % 2 === 0 ? 'left' : 'right'}
-										work={item.work}
-										isCurrentWork={item.isCurrentWork}
-									/>
-								))}
-							</div>
-						</div>
-
-						<div className="border-base-300/60 bg-base-200/55 rounded-[1.5rem] border p-5 shadow-[0_10px_24px_rgba(15,23,42,0.06)] sm:p-6 dark:shadow-[0_10px_24px_rgba(255,255,255,0.05)]">
-							<h2 className="text-base-content mb-6 text-xl font-semibold sm:text-2xl">
-								{t('experience:tabs.education')}
-							</h2>
-							<div className="space-y-4">
-								{educationItems.map((item, index) => (
-									<TimelineItem
-										key={item.id}
-										title={item.title}
-										location={item.location}
-										dates={item.dates}
-										position={index % 2 === 0 ? 'left' : 'right'}
-										graduated={item.graduated}
-									/>
-								))}
-							</div>
-						</div>
-					</div>
+					<ExperienceTimeline items={timelineItems} />
 				</section>
 
-				<section className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
-					<div className="lg:sticky lg:top-28">
+				<section
+					id="about"
+					className="border-base-300/60 scroll-mt-28 border-t pt-14 md:scroll-mt-32 md:pt-20">
+					<div className="max-w-4xl">
 						<p className="text-primary mb-3 text-sm font-semibold tracking-[0.28em] uppercase">
-							{t('about:sections.storyEyebrow')}
+							{t('about:sections.eyebrow')}
 						</p>
 						<h2 className="text-base-content text-3xl font-semibold tracking-tight sm:text-4xl">
 							{t('about:title')}
 						</h2>
-						<p className="text-base-content/70 mt-4 text-base leading-7 sm:text-lg">
+						<p className="text-base-content/70 mt-4 max-w-3xl text-base leading-7 sm:text-lg">
 							{t('about:description')}
 						</p>
-					</div>
 
-					<div className="border-base-300/70 bg-base-100 rounded-[2rem] border p-6 shadow-[0_18px_60px_rgba(15,23,42,0.08)] sm:p-8 dark:shadow-[0_18px_60px_rgba(255,255,255,0.08)]">
-						<div className="space-y-5">
+						<div className="mt-8 grid gap-6 md:grid-cols-2 md:gap-10">
 							{aboutParagraphs.map((paragraph, index) => (
 								<p
 									key={index}
-									className="text-base-content/80 text-base leading-8">
+									className="border-primary/30 text-base-content/80 border-l-2 pl-5 text-base leading-8">
 									{paragraph}
 								</p>
 							))}

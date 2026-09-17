@@ -14,6 +14,7 @@ export default {
 		navigation: {
 			home: 'Home',
 			personalWebsite: 'Personal Website',
+			projects: 'Projects',
 			about: 'About',
 			skills: 'Skills',
 			experience: 'Experience',
@@ -26,7 +27,6 @@ export default {
 		languageSelector: 'Select language',
 	},
 	hero: {
-		eyebrow: 'Personal Website',
 		greeting: "Hi, I'm",
 		role: 'Software Engineer',
 		description: {
@@ -45,6 +45,9 @@ export default {
 				'I enjoy building complete solutions to complex problems through technology.',
 		},
 		contactButton: 'Contact Me',
+		playVideo: 'Watch presentation',
+		closeVideo: 'Close video',
+		videoTitle: 'Edgar Angrino presentation video',
 	},
 	skills: {
 		title: 'Skills',
@@ -80,24 +83,16 @@ export default {
 		months: 'months',
 		title: 'About Me',
 		description:
-			'Software engineer focused on building and evolving systems with a practical approach centered on maintainability and real-world needs.',
+			'I build, maintain, and improve products and systems, from MVPs to existing platforms and scalable solutions.',
 		content: {
 			paragraph1:
-				'Software engineer focused on building, maintaining, and evolving systems, from MVPs to scalable solutions and existing platforms.',
+				'I work flexibly across frontend, backend, AWS, and integrations with external services. I choose technologies based on the problem, performance, and maintainability, and I use artificial intelligence to accelerate development, analysis, automation, and prototyping with technical validation.',
 			paragraph2:
-				'My approach is practical: I select technologies based on performance, maintainability, and complexity, avoiding decisions based solely on trends.',
-			paragraph3:
-				'I use artificial intelligence as a complementary tool to accelerate development, analysis, and automation, always with technical validation, code review, and refactoring before production.',
-			paragraph4:
-				'Whenever possible, I prioritize local development in isolated environments using Docker and tools that simulate cloud services, reducing costs and detecting issues before deployment.',
-			paragraph5:
-				'In my free time, I usually explore tools and approaches that can simplify and improve my daily work.',
-			paragraph6: '',
+				'I am comfortable moving across different areas of a project, researching new tools, and independently resolving the blockers I can control. When a decision may affect the system\'s future evolution, I prefer to validate it before introducing unnecessary complexity or technical debt.',
 		},
 		downloadCV: 'Download CV',
 		sections: {
-			eyebrow: 'About',
-			storyEyebrow: 'More about me',
+			eyebrow: 'Profile',
 		},
 		stats: {
 			experience: {
@@ -147,9 +142,15 @@ export default {
 		message: 'Site under construction - Coming soon!',
 	},
 	experience: {
+		eyebrow: 'Career',
 		title: 'Experience',
-		subtitle: 'My personal journey',
+		subtitle: 'Professional experience and education',
 		currentWork: 'Current role',
+		timeline: {
+			label: 'Professional and education timeline',
+			previous: 'Previous timeline item',
+			next: 'Next timeline item',
+		},
 		tabs: {
 			work: 'Work',
 			education: 'Education',
@@ -169,6 +170,8 @@ export default {
 				'A selection of recent projects that reflect the kind of products, tools, and solutions I enjoy building.',
 			cardLabel: 'Project {{index}}',
 			visitProject: 'Visit project',
+			showAll: 'View all projects ({{count}})',
+			showLess: 'Show less',
 		},
 	},
 	services: {

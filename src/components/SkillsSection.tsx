@@ -337,6 +337,20 @@ export default function SkillsSection() {
 					color: '',
 					iconUrl: '/lm-studio.svg',
 				},
+				{
+					name: 'SKILL.md',
+					icon: 'S',
+					color: 'bg-gray-600',
+					iconUrl: '/skill_md.svg',
+					iconUrlAlt: '/skill_md_alt.svg',
+				},
+				{
+					name: 'AGENTS.md',
+					icon: 'A',
+					color: 'bg-gray-600',
+					isBlack: true,
+					iconUrl: '/agents_md.svg',
+				},
 			],
 		},
 	];

@@ -14,6 +14,7 @@ export default {
 		navigation: {
 			home: 'Inicio',
 			personalWebsite: 'Personal Website',
+			projects: 'Proyectos',
 			about: 'Acerca de',
 			skills: 'Habilidades',
 			experience: 'Experiencia',
@@ -26,7 +27,6 @@ export default {
 		languageSelector: 'Seleccionar idioma',
 	},
 	hero: {
-		eyebrow: 'Personal Website',
 		greeting: 'Hola, soy',
 		role: 'Ingeniero de Software',
 		description: {
@@ -45,6 +45,9 @@ export default {
 				'Disfruto construir soluciones completas para problemas complejos con tecnologia.',
 		},
 		contactButton: 'Contáctame',
+		playVideo: 'Ver presentación',
+		closeVideo: 'Cerrar video',
+		videoTitle: 'Video de presentación de Edgar Angrino',
 	},
 	skills: {
 		title: 'Habilidades',
@@ -80,24 +83,16 @@ export default {
 		months: 'meses',
 		title: 'Acerca de Mí',
 		description:
-			'Ingeniero de software enfocado en construir y evolucionar sistemas con un enfoque práctico, mantenible y orientado a necesidades reales.',
+			'Construyo, mantengo y mejoro productos y sistemas, desde MVPs hasta plataformas existentes y soluciones escalables.',
 		content: {
 			paragraph1:
-				'Ingeniero de software enfocado en construir, mantener y evolucionar sistemas, desde MVPs hasta soluciones escalables y plataformas existentes.',
+				'Trabajo de forma flexible entre frontend, backend, AWS e integraciones con servicios externos. Elijo tecnologías según el problema, el rendimiento y la mantenibilidad, e integro inteligencia artificial para acelerar desarrollo, análisis, automatización y prototipado con validación técnica.',
 			paragraph2:
-				'Mi enfoque es práctico: selecciono tecnologías según rendimiento, mantenibilidad y complejidad, evitando decisiones basadas únicamente en tendencias.',
-			paragraph3:
-				'Utilizo inteligencia artificial como herramienta complementaria para acelerar desarrollo, análisis y automatización, siempre con validación técnica, revisión del código y refactorización antes de producción.',
-			paragraph4:
-				'Siempre que es posible, priorizo el desarrollo local en entornos aislados con Docker y herramientas que simulan servicios cloud, reduciendo costos y detectando problemas antes del despliegue.',
-			paragraph5:
-				'En mi tiempo libre suelo explorar herramientas y enfoques que puedan simplificar y mejorar mi trabajo diario.',
-			paragraph6: '',
+				'Estoy acostumbrado a moverme entre distintas áreas de un proyecto, investigar herramientas nuevas y resolver de forma autónoma los bloqueos que puedo controlar. Cuando una decisión puede afectar la evolución del sistema, prefiero validarla antes de introducir complejidad o deuda técnica.',
 		},
 		downloadCV: 'Descargar CV',
 		sections: {
-			eyebrow: 'About',
-			storyEyebrow: 'Más sobre mí',
+			eyebrow: 'Perfil',
 		},
 		stats: {
 			experience: {
@@ -147,9 +142,15 @@ export default {
 		message: 'Sitio en construcción - ¡Próximamente!',
 	},
 	experience: {
+		eyebrow: 'Trayectoria',
 		title: 'Experiencia',
-		subtitle: 'Mi trayectoria personal',
+		subtitle: 'Experiencia profesional y formación',
 		currentWork: 'Trabajo actual',
+		timeline: {
+			label: 'Línea de tiempo profesional y educativa',
+			previous: 'Elemento anterior de la línea de tiempo',
+			next: 'Siguiente elemento de la línea de tiempo',
+		},
 		tabs: {
 			work: 'Experiencia',
 			education: 'Educación',
@@ -169,6 +170,8 @@ export default {
 				'Una selección de proyectos recientes que reflejan el tipo de productos, herramientas y soluciones que disfruto construir.',
 			cardLabel: 'Proyecto {{index}}',
 			visitProject: 'Ver proyecto',
+			showAll: 'Ver todos los proyectos ({{count}})',
+			showLess: 'Mostrar menos',
 		},
 	},
 	services: {

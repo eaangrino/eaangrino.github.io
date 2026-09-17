@@ -1,14 +1,19 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../hooks/useTheme';
 import ProjectsData from './projectsData';
 
 const GITHUB_ICON_URL =
 	'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/github/github-original.svg';
+const INITIAL_PROJECTS = 5;
 
 export default function ProjectsShowcase() {
 	const { t } = useTranslation(['home', 'portfolio']);
 	const { isDarkMode } = useTheme();
+	const [showAll, setShowAll] = useState(false);
+	const visibleProjects = showAll ? ProjectsData : ProjectsData.slice(0, INITIAL_PROJECTS);
+	const hasHiddenProjects = ProjectsData.length > INITIAL_PROJECTS;
 
 	return (
 		<section
@@ -27,8 +32,10 @@ export default function ProjectsShowcase() {
 					</p>
 				</div>
 
-				<div className="border-base-300/70 bg-base-100/80 divide-base-300/70 overflow-hidden rounded-2xl border shadow-[0_18px_55px_rgba(15,23,42,0.07)] divide-y backdrop-blur dark:shadow-[0_18px_55px_rgba(255,255,255,0.06)]">
-					{ProjectsData.map((project) => {
+				<div
+					id="projects-list"
+					className="border-base-300/70 bg-base-100/80 divide-base-300/70 overflow-hidden rounded-2xl border shadow-[0_18px_55px_rgba(15,23,42,0.07)] divide-y backdrop-blur dark:shadow-[0_18px_55px_rgba(255,255,255,0.06)]">
+					{visibleProjects.map((project) => {
 						const projectLink = project.link;
 
 						return (
@@ -80,6 +87,21 @@ export default function ProjectsShowcase() {
 						);
 					})}
 				</div>
+
+				{hasHiddenProjects && (
+					<div className="mt-6 flex justify-center">
+						<button
+							type="button"
+							onClick={() => setShowAll((current) => !current)}
+							aria-controls="projects-list"
+							aria-expanded={showAll}
+							className="btn btn-ghost text-primary rounded-xl px-5 font-semibold">
+							{showAll
+								? t('home:projects.showLess')
+								: t('home:projects.showAll', { count: ProjectsData.length })}
+						</button>
+					</div>
+				)}
 			</div>
 		</section>
 	);
