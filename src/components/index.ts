@@ -1,9 +1,0 @@
-export { default as Header } from './Header';
-export { default as SocialMediaBar } from './SocialMediaBar';
-export { default as HeroSection } from './HeroSection';
-export { default as Layout } from './Layout';
-export { default as SectionHeader } from './SectionHeader';
-export { default as SkillsSection } from './SkillsSection';
-export { default as SkillCard } from './SkillCard';
-export { default as TechnologyIcon } from './TechnologyIcon';
-export { default as Footer } from './Footer';

@@ -1,0 +1,237 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes: light --default, dark --prefersdark;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.timeline-scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.timeline-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.floating-surface {
+  background-image:
+    radial-gradient(circle at top left, color-mix(in srgb, currentColor 5%, transparent) 0%, transparent 42%),
+    radial-gradient(circle at bottom right, color-mix(in srgb, currentColor 3.5%, transparent) 0%, transparent 40%);
+}
+
+/* Root language selector: faithful to the previous static landing page. */
+.language-shell {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(255, 255, 255, 0.06), transparent 30rem),
+    radial-gradient(circle at 88% 86%, rgba(255, 255, 255, 0.04), transparent 28rem),
+    linear-gradient(180deg, #111318 0%, #0b0d10 100%);
+  color: #f4f4f5;
+}
+
+.language-card {
+  width: min(100%, 48rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.75rem;
+  background: rgba(24, 27, 33, 0.9);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.language-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.language-brand-mark {
+  display: grid;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: 1.5rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.35rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.language-brand-mark svg {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+
+.language-eyebrow {
+  margin: 0 0 0.75rem;
+  color: rgba(244, 244, 245, 0.52);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.language-brand h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.language-intro {
+  max-width: 34rem;
+  margin: 1.25rem auto 0;
+  color: rgba(244, 244, 245, 0.68);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.7;
+}
+
+.language-intro span {
+  display: block;
+}
+
+.language-intro span + span {
+  margin-top: 0.35rem;
+}
+
+.language-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 2.25rem;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 6.25rem;
+  padding: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.035);
+  color: #f4f4f5;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.language-option:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.language-option:focus-visible {
+  outline: 2px solid #a1a1aa;
+  outline-offset: 4px;
+}
+
+.language-flag {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.language-copy {
+  min-width: 0;
+}
+
+.language-name {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.language-caption {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(244, 244, 245, 0.55);
+  font-size: 0.82rem;
+}
+
+.language-code {
+  margin-left: auto;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: rgba(244, 244, 245, 0.62);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.language-footer-note {
+  margin: 1.5rem 0 0;
+  color: rgba(244, 244, 245, 0.52);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (max-width: 39rem) {
+  .language-shell {
+    padding: 1rem;
+  }
+
+  .language-card {
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+  }
+
+  .language-options {
+    grid-template-columns: 1fr;
+  }
+
+  .language-option {
+    min-height: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-option {
+    transition: none;
+  }
+
+  .language-option:hover {
+    transform: none;
+  }
+}

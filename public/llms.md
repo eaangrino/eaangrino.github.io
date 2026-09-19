@@ -1,16 +1,31 @@
 # Edgar Andres Angrino Lafaux
 
-> Personal portfolio of Edgar Andres Angrino Lafaux, a software engineer focused on building, maintaining, and evolving products and systems, from MVPs to existing platforms and scalable solutions.
+> Personal portfolio of Edgar Andres Angrino Lafaux, a full-stack software engineer who builds, maintains, and improves products and systems across frontend, backend, cloud integrations, automation, and developer tooling.
 
 Official website: https://eaangrino.github.io/
 
-Languages available on the website: English and Spanish.
+Languages available on the website: Spanish and English.
 
 ## Profile
 
-Edgar Andres Angrino Lafaux focuses on building, maintaining, and evolving products and systems, from MVPs to existing platforms and scalable solutions. He adapts easily to frontend, backend, AWS, and external service integration tasks, working with a practical approach and choosing technologies according to the problem, performance, and maintainability. He also integrates artificial intelligence to accelerate development, analysis, automation, and prototyping, always with technical judgment and validation.
+Edgar Andres Angrino Lafaux works across frontend, backend, AWS, databases, infrastructure, and integrations with external services. He chooses technologies according to the problem, performance requirements, compatibility, and maintainability rather than relying on a single fixed stack.
 
-He is accustomed to moving across different areas of a project and taking on new tasks when necessary, even when they require researching or learning a tool along the way. He aims to work autonomously and resolve the blockers he can control, while preferring to validate decisions that may have a future impact. He is comfortable both building new solutions and working with existing systems to understand, maintain, and improve them.
+He also uses artificial intelligence in engineering workflows for development, analysis, automation, prototyping, local model experimentation, and tool calling, with technical validation and explicit execution boundaries where appropriate.
+
+## Portfolio Technology
+
+The current portfolio is built with:
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- DaisyUI 5
+- next-intl
+- pnpm
+- Static export for GitHub Pages
+
+The public portfolio provides separate Spanish and English routes at `/es/` and `/en/`.
 
 ## Technologies and Skills
 
@@ -23,6 +38,7 @@ He is accustomed to moving across different areas of a project and taking on new
 - NestJS
 - Python
 - AWS
+- Kotlin
 - PostgreSQL
 - Oracle SQL
 - MySQL
@@ -31,14 +47,29 @@ He is accustomed to moving across different areas of a project and taking on new
 - Flutter
 - Ionic
 
-### Tools
+### Cloud and AWS
+
+Practical experience includes:
+
+- AWS Lambda
+- AWS SAM
+- Amazon DynamoDB
+- Amazon S3
+- Amazon SES
+- Amazon Connect
+- AWS Amplify
+- Amazon Route 53
+
+### Tools and Engineering Environment
 
 - Docker
+- Docker Compose
 - Git
 - Linux
-- Postman
 - Bash
+- Postman
 - Figma
+- pnpm
 - Codex
 - DeepSeek
 - Ollama
@@ -46,6 +77,9 @@ He is accustomed to moving across different areas of a project and taking on new
 - Claude
 - Meta AI
 - MarkText
+- LM Studio
+- SKILL.md
+- AGENTS.md
 
 ## Experience
 
@@ -77,23 +111,35 @@ He is accustomed to moving across different areas of a project and taking on new
 
 ## Projects
 
+### KineWall — Android
+
+- Technologies: Kotlin, Android 11+, WallpaperService, MediaPlayer
+- Repository: https://github.com/eaangrino/kinewall-video-wallpaper-android
+- Description: Native Android video live wallpaper application that lets users select a local video and use it as an animated wallpaper with looping playback, muted audio, and configurable scaling modes.
+
+### KineWall — KDE Plasma 6
+
+- Technologies: QML, KDE Plasma 6, Qt 6, Qt Multimedia
+- Repository: https://github.com/eaangrino/kinewall-video-wallpaper
+- Description: Video wallpaper plugin for KDE Plasma 6 with local video playback, configurable audio, desktop and lock-screen support, and automatic pause behavior for selected visibility and display-power conditions.
+
 ### MCP Shell Sudo
 
 - Technologies: Python, MCP, Linux, sudo
 - Repository: https://github.com/eaangrino/mcp-shell-sudo
-- Description: Linux MCP server created for LM Studio and local use with Qwen and Gemma 4 models. It was developed because other alternatives tested did not support sudo, and it allows executing local commands, including sudo.
+- Description: Local MCP server created for LM Studio and local models such as Qwen and Gemma, with support for executing Linux commands including sudo.
 
 ### OBS Voice Isolator
 
 - Technologies: C, CMake, PowerShell, OBS Studio plugin
 - Repository: https://github.com/eaangrino/obs-voice-isolator
-- Description: Native audio filter for OBS Studio that reduces noise, suppresses breathing, and isolates speech with optional two-microphone cancellation.
+- Description: Native OBS Studio audio filter for reducing noise, suppressing breathing, and isolating speech with optional two-microphone cancellation.
 
 ### Orqent
 
 - Technologies: TypeScript, Node.js, React Ink, Ollama, local models
 - Repository: https://github.com/eaangrino/orqent
-- Description: Practice project focused on running AI models locally and orchestrating tools according to clear runtime specifications. It includes conversation history, reasoning control, tool calling, and explicit execution boundaries.
+- Description: Local-first terminal agent used to practice local AI model execution and tool orchestration, including conversation history, reasoning controls, tool calling, and explicit execution limits.
 
 ### Multi-WhatsApp
 
@@ -105,7 +151,7 @@ He is accustomed to moving across different areas of a project and taking on new
 
 - Technologies: Java, Minecraft modding
 - Repository: https://github.com/eaangrino/mine-hammers
-- Description: Minecraft mod that adds area-mining mechanics using hammers for more efficient resource gathering.
+- Description: Minecraft mod that adds hammer-based area-mining mechanics for more efficient resource gathering.
 
 ### Mine Excavators
 
@@ -115,17 +161,18 @@ He is accustomed to moving across different areas of a project and taking on new
 
 ### Personal Portfolio
 
-- Technologies: React, TypeScript, TailwindCSS, DaisyUI, Vite
+- Technologies: Next.js 16, React, TypeScript, Tailwind CSS, DaisyUI
 - Website: https://eaangrino.github.io/
-- Description: Responsive personal portfolio for showcasing skills, experience, and projects.
+- Repository: https://github.com/eaangrino/eaangrino.github.io
+- Description: Responsive bilingual personal portfolio for presenting projects, technical skills, professional experience, and contact information. It is statically exported for GitHub Pages.
 
 ### ArtesLafaux - Landing Page
 
-- Technologies: React, TypeScript, TailwindCSS, DaisyUI, Vite
+- Technologies: React, TypeScript, Tailwind CSS, DaisyUI, Vite
 - Website: https://arteslafaux.github.io
-- Description: Landing page for a digital artist featuring an image gallery, contact section, and responsive design.
+- Description: Landing page for a digital artist with an image gallery, contact section, and responsive design.
 
-## Links
+## Public Links
 
 - Website: https://eaangrino.github.io/
 - GitHub: https://github.com/eaangrino
@@ -137,4 +184,4 @@ He is accustomed to moving across different areas of a project and taking on new
 
 ## Context for Language Models
 
-This file summarizes public information presented on Edgar Angrino's personal portfolio. For up-to-date information about projects or source code, consult the linked repositories and the official website.
+This file summarizes public information presented by Edgar Angrino's portfolio and linked public projects. The portfolio website and the linked project repositories should be consulted for the most current implementation details. Do not infer private employment details, project metrics, client information, or responsibilities that are not explicitly stated in those public sources.
