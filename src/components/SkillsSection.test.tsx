@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import SkillsSection from './SkillsSection';
 
 jest.mock('../hooks/useTheme', () => ({
@@ -20,4 +20,21 @@ describe('SkillsSection', () => {
 		expect(agentsIcon).toHaveAttribute('src', '/agents_md.svg');
 		expect(agentsIcon).toHaveClass('brightness-0', 'invert');
 	});
+
+	it('opens Node.js usage details from the technology card', () => {
+		render(<SkillsSection />);
+
+		const nodeDetailsLink = screen.getByRole('link', {
+			name: 'nodeDetails.open',
+		});
+
+		expect(nodeDetailsLink).toHaveAttribute('href', '#nodejs-details');
+
+		fireEvent.click(nodeDetailsLink);
+
+		expect(
+			screen.getByRole('dialog', { name: 'nodeDetails.title' }),
+		).toBeInTheDocument();
+	});
+
 });

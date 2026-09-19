@@ -1,5 +1,6 @@
 import { useEffect, useState, type MouseEvent } from 'react';
 import AwsExperienceModal from './AwsExperienceModal';
+import NodeExperienceModal from './NodeExperienceModal';
 import SectionHeader from './SectionHeader';
 import SkillCard from './SkillCard';
 import TechnologyIcon from './TechnologyIcon';
@@ -38,6 +39,7 @@ export default function SkillsSection() {
 	const [activeDetails, setActiveDetails] = useState<string | null>(() =>
 		getDetailsSlugFromPath() === AWS_DETAILS_SLUG ? AWS_DETAILS_SLUG : null,
 	);
+	const [nodeDetailsOpen, setNodeDetailsOpen] = useState(false);
 
 	useEffect(() => {
 		const syncDetailsWithPath = () => {
@@ -169,6 +171,13 @@ export default function SkillsSection() {
 						slug: AWS_DETAILS_SLUG,
 						highlighted: true,
 					},
+				},
+				{
+					name: 'Kotlin',
+					icon: 'K',
+					color: 'bg-purple-500',
+					iconUrl:
+						'https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/kotlin/kotlin-original.svg',
 				},
 				{
 					name: 'PostgreSQL',
@@ -390,18 +399,31 @@ export default function SkillsSection() {
 											isBlack={tech.isBlack}
 											name={tech.name}
 											href={
-												tech.details
-													? `/${languageCode}/${tech.details.slug}/`
-													: undefined
+												tech.name === 'Node.js'
+													? '#nodejs-details'
+													: tech.details
+														? `/${languageCode}/${tech.details.slug}/`
+														: undefined
 											}
-											highlighted={tech.details?.highlighted}
+											highlighted={
+												tech.name === 'Node.js' || tech.details?.highlighted
+											}
 											detailsLabel={
-												tech.details ? t('awsDetails.open') : undefined
+												tech.name === 'Node.js'
+													? t('nodeDetails.open')
+													: tech.details
+														? t('awsDetails.open')
+														: undefined
 											}
 											onClick={
-												tech.details
-													? (event) => openDetails(event, tech.details!.slug)
-													: undefined
+												tech.name === 'Node.js'
+													? (event) => {
+															event.preventDefault();
+															setNodeDetailsOpen(true);
+														}
+													: tech.details
+														? (event) => openDetails(event, tech.details!.slug)
+														: undefined
 											}
 										/>
 									))}
@@ -415,6 +437,10 @@ export default function SkillsSection() {
 			<AwsExperienceModal
 				open={activeDetails === AWS_DETAILS_SLUG}
 				onClose={closeDetails}
+			/>
+			<NodeExperienceModal
+				open={nodeDetailsOpen}
+				onClose={() => setNodeDetailsOpen(false)}
 			/>
 		</>
 	);

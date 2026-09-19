@@ -62,6 +62,26 @@ export default {
 			mobile: 'Mobile',
 			tools: 'Tools',
 		},
+		nodeDetails: {
+			open: 'View how I use Node.js',
+			close: 'Close Node.js details',
+			eyebrow: 'Development workflow',
+			title: 'Node.js',
+			intro:
+				'I use Node.js across backend and frontend development, as well as for command-line tools and automation. I aim to keep each project environment reproducible and appropriate for its dependencies.',
+			versionTitle: 'Version management with nvm',
+			versionDescription:
+				'I use nvm to quickly switch to the Node.js version required by each project without reinstalling the runtime.',
+			dockerTitle: 'Docker based on project requirements',
+			dockerDescription:
+				'I prefer Alpine-based Node.js images for services with minimal requirements. When a project relies on native libraries or requires broader compatibility, I use Debian-based images.',
+			pnpmTitle: 'Dependency management with pnpm',
+			pnpmDescription:
+				'I prefer pnpm for dependency management and keep explicit control over scripts executed during installation, especially when working with third-party packages.',
+			approachTitle: 'General approach',
+			approachDescription:
+				'I keep environments lightweight when possible, while prioritizing compatibility and reproducibility when the project requires it.',
+		},
 		awsDetails: {
 			open: 'View Amazon Web Services experience',
 			close: 'Close Amazon Web Services details',
