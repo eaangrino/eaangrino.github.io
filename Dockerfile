@@ -22,10 +22,15 @@ RUN groupmod --gid $USER_GID $USERNAME \
     && usermod --uid $USER_UID --gid $USER_GID $USERNAME \
     && chown -R $USER_UID:$USER_GID /home/$USERNAME
 
-RUN npm install -g pnpm && corepack enable && corepack prepare pnpm@12.3.4 --activate
+ENV COREPACK_HOME=/usr/local/share/corepack
 
-#Working on this path
+RUN mkdir -p "$COREPACK_HOME" \
+    && corepack enable \
+    && chown -R $USER_UID:$USER_GID "$COREPACK_HOME"
+
 WORKDIR /app
 
-#Default user within the container
 USER $USERNAME
+
+RUN corepack prepare pnpm@12.3.4 --activate \
+    && pnpm --version
