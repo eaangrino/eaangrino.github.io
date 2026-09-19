@@ -1,0 +1,38 @@
+1:"$Sreact.fragment"
+3:I[70119,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+4:I[33936,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+5:I[23271,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+6:I[76172,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+7:I[51996,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+8:I[19266,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+9:I[56691,["/_next/static/chunks/050p6g54m0fzo.js","/_next/static/chunks/1-h0xwkt63lf8.js","/_next/static/chunks/0si_xuxg3ldlx.js","/_next/static/chunks/1clqe0z3v_f7m.js"],"default"]
+a:I[63522,["/_next/static/chunks/033vn8_iixth7.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+f:I[63522,["/_next/static/chunks/033vn8_iixth7.js"],"ViewportBoundary"]
+10:I[63522,["/_next/static/chunks/033vn8_iixth7.js"],"MetadataBoundary"]
+2:T7aa,{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://eaangrino.github.io/#person","name":"Edgar Andres Angrino Lafaux","url":"https://eaangrino.github.io/","email":"mailto:eaangrino@gmail.com","jobTitle":"Ingeniero de Software Full-Stack","address":{"@type":"PostalAddress","addressCountry":"CO"},"sameAs":["https://github.com/eaangrino","https://linkedin.com/in/eaangrino","https://instagram.com/eaangrino","https://t.me/eaangrino","https://stackblitz.com/@eaangrino"],"knowsAbout":["Software Engineering","Full-Stack Development","Backend Development","Frontend Development","System Design","Software Architecture","Scalable Systems","Distributed Systems","Web Applications","REST APIs","API Design","Microservices","Serverless Architecture","Cloud Computing","Cloud Architecture","DevOps","CI/CD","Infrastructure as Code","Containerization","Automation","Testing","Technical Design","Troubleshooting","Production Support","End-to-End Development","TypeScript","JavaScript","Node.js","React","Next.js","NestJS","Python","Java",".NET","Flutter","Ionic","SQL","PostgreSQL","MySQL","Oracle SQL","Relational Databases","Database Design","Data Modeling","SQL Optimization","Docker","Docker Compose","Linux","Bash","Git","AWS","AWS Lambda","AWS SAM","Amazon DynamoDB","Amazon S3","Amazon SES","Amazon Connect","AWS Amplify","Amazon Route 53","Artificial Intelligence","AI Integration","AI-Assisted Development","AI Agents","Local LLMs","Large Language Models","Tool Calling","Model Context Protocol","MCP","Ollama","LM Studio","Machine Learning","Electron","Tailwind CSS","DaisyUI","Responsive Web Design","Internationalization","i18n","SEO","Structured Data","JSON-LD","GitHub Pages"]},{"@type":"WebPage","@id":"https://eaangrino.github.io/es/#webpage","url":"https://eaangrino.github.io/es/","name":"Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack","inLanguage":"es-CO","about":{"@id":"https://eaangrino.github.io/#person"}}]}e:X
+0:{"buildId":"L5PoqWdIVOTE5sXsYy8Fb","data":[{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","div",null,{"className":"bg-base-100 relative min-h-screen overflow-x-hidden","children":[["$","div",null,{"aria-hidden":true,"className":"floating-surface pointer-events-none fixed inset-0 z-0"}],["$","div",null,{"className":"relative z-10","children":[["$","$L3",null,{}],["$","$L4",null,{}],["$","main",null,{"children":["$","article",null,{"className":"from-base-100 via-base-200/40 to-base-100 bg-gradient-to-b","children":[["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}]]}]}],["$","$L9",null,{}]]}]]}]],[["$","script","script-0",{"src":"/_next/static/chunks/0si_xuxg3ldlx.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/1clqe0z3v_f7m.js","async":true}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"isPartial":"$@d","staleTime":"$e","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0f172a"}]]}],["$","div",null,{"hidden":true,"children":["$","$L10",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack"}],["$","meta","1",{"name":"description","content":"Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA."}],["$","meta","2",{"name":"author","content":"Edgar Andres Angrino Lafaux"}],["$","meta","3",{"name":"robots","content":"index, follow"}],"$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20"]}]}]}],null]}],"isPartial":"$@21","staleTime":"$e","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@22","rootVaryParams":null,"needsRuntimeRequest":"$@23"}
+24:I[82040,["/_next/static/chunks/033vn8_iixth7.js"],"IconMark"]
+c:null
+11:["$","link","4",{"rel":"canonical","href":"https://eaangrino.github.io/es/"}]
+12:["$","link","5",{"rel":"alternate","hrefLang":"es","href":"https://eaangrino.github.io/es/"}]
+13:["$","link","6",{"rel":"alternate","hrefLang":"en","href":"https://eaangrino.github.io/en/"}]
+14:["$","link","7",{"rel":"alternate","hrefLang":"x-default","href":"https://eaangrino.github.io/"}]
+15:["$","meta","8",{"property":"og:title","content":"Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack"}]
+16:["$","meta","9",{"property":"og:description","content":"Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA."}]
+17:["$","meta","10",{"property":"og:url","content":"https://eaangrino.github.io/es/"}]
+18:["$","meta","11",{"property":"og:site_name","content":"Edgar Andres Angrino Lafaux"}]
+19:["$","meta","12",{"property":"og:locale","content":"es_CO"}]
+1a:["$","meta","13",{"property":"og:locale:alternate","content":"en_US"}]
+1b:["$","meta","14",{"property":"og:type","content":"website"}]
+1c:["$","meta","15",{"name":"twitter:card","content":"summary"}]
+1d:["$","meta","16",{"name":"twitter:title","content":"Edgar Andres Angrino Lafaux | Ingeniero de Software Full-Stack"}]
+1e:["$","meta","17",{"name":"twitter:description","content":"Portafolio de Edgar Andres Angrino Lafaux, ingeniero de software full-stack especializado en TypeScript, Node.js, React, SQL, Docker, Linux y automatización con IA."}]
+1f:["$","link","18",{"rel":"icon","href":"/skull.svg","type":"image/svg+xml"}]
+20:["$","$L24","19",{}]
+23:true
+e:300
+e:C
+22:0
+21:"$undefined"
+d:"$undefined"
