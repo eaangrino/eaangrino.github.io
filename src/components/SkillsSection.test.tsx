@@ -37,4 +37,34 @@ describe('SkillsSection', () => {
 		).toBeInTheDocument();
 	});
 
+	it('opens AWS details without changing the current URL', () => {
+		window.history.replaceState({}, '', '/es/');
+
+		render(<SkillsSection />);
+
+		const awsDetailsLink = screen.getByRole('link', {
+			name: 'awsDetails.open',
+		});
+		const currentUrl = window.location.href;
+
+		expect(awsDetailsLink).toHaveAttribute('href', '#aws-details');
+
+		fireEvent.click(awsDetailsLink);
+
+		expect(
+			screen.getByRole('dialog', { name: 'awsDetails.title' }),
+		).toBeInTheDocument();
+		expect(window.location.href).toBe(currentUrl);
+	});
+
+	it('does not auto-open AWS details from the URL path', () => {
+		window.history.replaceState({}, '', '/es/amazon-web-services/');
+
+		render(<SkillsSection />);
+
+		expect(
+			screen.queryByRole('dialog', { name: 'awsDetails.title' }),
+		).not.toBeInTheDocument();
+	});
+
 });

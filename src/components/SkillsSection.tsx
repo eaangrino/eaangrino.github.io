@@ -1,4 +1,4 @@
-import { useEffect, useState, type MouseEvent } from 'react';
+import { useState } from 'react';
 import AwsExperienceModal from './AwsExperienceModal';
 import NodeExperienceModal from './NodeExperienceModal';
 import SectionHeader from './SectionHeader';
@@ -19,80 +19,16 @@ interface SkillCategory {
 		iconUrlAlt?: string;
 		iconSVG?: string;
 		details?: {
-			slug: string;
 			highlighted?: boolean;
 		};
 	}>;
 }
 
-const AWS_DETAILS_SLUG = 'amazon-web-services';
-
-const getDetailsSlugFromPath = () =>
-	window.location.pathname.split('/').filter(Boolean)[1] ?? null;
-
 export default function SkillsSection() {
-	const { t, i18n } = useTranslation('skills');
+	const { t } = useTranslation('skills');
 	const { isDarkMode } = useTheme();
-	const languageCode = i18n.language?.toLowerCase().startsWith('en')
-		? 'en'
-		: 'es';
-	const [activeDetails, setActiveDetails] = useState<string | null>(() =>
-		getDetailsSlugFromPath() === AWS_DETAILS_SLUG ? AWS_DETAILS_SLUG : null,
-	);
+	const [awsDetailsOpen, setAwsDetailsOpen] = useState(false);
 	const [nodeDetailsOpen, setNodeDetailsOpen] = useState(false);
-
-	useEffect(() => {
-		const syncDetailsWithPath = () => {
-			setActiveDetails(
-				getDetailsSlugFromPath() === AWS_DETAILS_SLUG ? AWS_DETAILS_SLUG : null,
-			);
-		};
-
-		window.addEventListener('popstate', syncDetailsWithPath);
-
-		return () => {
-			window.removeEventListener('popstate', syncDetailsWithPath);
-		};
-	}, []);
-
-	const notifyNavigation = () => {
-		window.dispatchEvent(new Event('portfolio:navigation'));
-	};
-
-	const openDetails = (event: MouseEvent<HTMLAnchorElement>, slug: string) => {
-		if (
-			event.defaultPrevented ||
-			event.button !== 0 ||
-			event.metaKey ||
-			event.ctrlKey ||
-			event.shiftKey ||
-			event.altKey
-		) {
-			return;
-		}
-
-		event.preventDefault();
-
-		const targetPath = `/${languageCode}/${slug}/`;
-
-		if (window.location.pathname !== targetPath) {
-			window.history.pushState({ skillModal: slug }, '', targetPath);
-		}
-
-		setActiveDetails(slug);
-		notifyNavigation();
-	};
-
-	const closeDetails = () => {
-		if (window.history.state?.skillModal === AWS_DETAILS_SLUG) {
-			window.history.back();
-			return;
-		}
-
-		window.history.replaceState(window.history.state, '', `/${languageCode}/`);
-		setActiveDetails(null);
-		notifyNavigation();
-	};
 
 	const skillCategories: SkillCategory[] = [
 		{
@@ -168,7 +104,6 @@ export default function SkillsSection() {
 					iconUrl: '/amazonwebservices-original-wordmark.svg',
 					iconUrlAlt: '/amazonwebservices-original-wordmark-alt.svg',
 					details: {
-						slug: AWS_DETAILS_SLUG,
 						highlighted: true,
 					},
 				},
@@ -402,7 +337,7 @@ export default function SkillsSection() {
 												tech.name === 'Node.js'
 													? '#nodejs-details'
 													: tech.details
-														? `/${languageCode}/${tech.details.slug}/`
+														? '#aws-details'
 														: undefined
 											}
 											highlighted={
@@ -422,7 +357,10 @@ export default function SkillsSection() {
 															setNodeDetailsOpen(true);
 														}
 													: tech.details
-														? (event) => openDetails(event, tech.details!.slug)
+														? (event) => {
+															event.preventDefault();
+															setAwsDetailsOpen(true);
+														}
 														: undefined
 											}
 										/>
@@ -435,8 +373,8 @@ export default function SkillsSection() {
 			</section>
 
 			<AwsExperienceModal
-				open={activeDetails === AWS_DETAILS_SLUG}
-				onClose={closeDetails}
+				open={awsDetailsOpen}
+				onClose={() => setAwsDetailsOpen(false)}
 			/>
 			<NodeExperienceModal
 				open={nodeDetailsOpen}
