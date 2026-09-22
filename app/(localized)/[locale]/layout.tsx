@@ -1,36 +1,42 @@
-import type {Metadata, Viewport} from 'next';
-import {hasLocale, NextIntlClientProvider} from 'next-intl';
-import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import type {ReactNode} from 'react';
-import {routing} from '@/i18n/routing';
+import type { Metadata, Viewport } from 'next';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
+import { routing } from '@/i18n/routing';
 import ThemeScript from '@/components/ThemeScript';
 import '../../globals.css';
 
 type Props = {
   children: ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
   themeColor: '#0f172a',
 };
 
-export async function generateMetadata({params}: Pick<Props, 'params'>): Promise<Metadata> {
-  const {locale} = await params;
+export async function generateMetadata({
+  params,
+}: Pick<Props, 'params'>): Promise<Metadata> {
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
 
-  const t = await getTranslations({locale, namespace: 'seo'});
+  const t = await getTranslations({ locale, namespace: 'seo' });
   const canonical = `https://eaangrino.github.io/${locale}/`;
 
   return {
     title: t('title'),
     description: t('description'),
-    authors: [{name: 'Edgar Andres Angrino Lafaux'}],
+    authors: [{ name: 'Edgar Andres Angrino Lafaux' }],
     alternates: {
       canonical,
       languages: {
@@ -39,9 +45,16 @@ export async function generateMetadata({params}: Pick<Props, 'params'>): Promise
         'x-default': 'https://eaangrino.github.io/',
       },
     },
-    robots: {index: true, follow: true},
+    robots: { index: true, follow: true },
     icons: {
-      icon: [{url: '/skull.svg', type: 'image/svg+xml'}],
+      icon: [
+        // { url: '/skull.svg', type: 'image/svg+xml' },
+        { url: '/skull_48x48.png', sizes: '48x48', type: 'image/png' },
+        { url: '/skull_64x64.png', sizes: '64x64', type: 'image/png' },
+        { url: '/skull_96x96.png', sizes: '96x96', type: 'image/png' },
+        { url: '/skull_128x128.png', sizes: '128x128', type: 'image/png' },
+        { url: '/skull_192x192.png', sizes: '192x192', type: 'image/png' },
+      ],
     },
     openGraph: {
       type: 'website',
@@ -60,17 +73,21 @@ export async function generateMetadata({params}: Pick<Props, 'params'>): Promise
   };
 }
 
-export default async function LocaleLayout({children, params}: Props) {
-  const {locale} = await params;
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
     <html lang={locale === 'es' ? 'es-CO' : 'en'} suppressHydrationWarning>
-      <head><ThemeScript /></head>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="bg-base-100 text-base-content min-h-screen">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
