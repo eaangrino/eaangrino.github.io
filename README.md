@@ -21,8 +21,6 @@ pnpm build
 pnpm check:seo
 ```
 
-`next build` genera el sitio estático en `out/`. El workflow de GitHub Pages despliega esa carpeta mediante GitHub Actions.
-
 ## Internacionalización
 Las rutas públicas son `/es/` y `/en/`. La raíz `/` conserva el selector de idioma y no redirige automáticamente.
 
